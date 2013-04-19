@@ -1,4 +1,61 @@
 Registration and administration for the Becske 2013 Course
+
+class Person {
+    personID
+    firstName
+    secondName
+    homeCountry
+    phoneNumber
+    eMail
+    priceMethod
+    priceCategory
+    payMent
+    childCare
+    childAge
+    childLanguage
+    creationDate
+    referenceNumber
+    GUID
+}
+
+class Program {
+    programID
+    programNameHu
+    programNameEn
+    priceFullHuf
+    priceEscortHuf
+    priceChildMinorHuf
+    priceChildMajorHuf
+    priceElderlyHuf
+    priceFamilyHuf
+    priceTravellerHuf
+    priceTeamHuf
+    priceFullEur
+    priceEscortEur
+    priceChildMinorEur
+    priceChildMajorEur
+    priceElderlyEur
+    priceFamilyEur
+    priceTravellerEur
+    priceTeamEur
+}
+
+class Meal {
+    mealID
+    personID
+    mealDate
+    foodType
+    mealType
+    GUID
+}
+class Registration {
+    registrationID
+    personID
+    registrationDate
+    programID
+    referenceNumber
+    GUID
+}
 ____________________
 
 Written in: Ruby on Rails
