@@ -1,0 +1,65 @@
+<%= form_for(@person) do |f| %>
+  <% if @person.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@person.errors.count, "error") %> prohibited this person from being saved:</h2>
+
+      <ul>
+      <% @person.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :second_name %><br />
+    <%= f.text_field :second_name %>
+  </div>
+  <div class="field">
+    <%= f.label :home_country %><br />
+    <%= f.text_field :home_country %>
+  </div>
+  <div class="field">
+    <%= f.label :phone_number %><br />
+    <%= f.text_field :phone_number %>
+  </div>
+  <div class="field">
+    <%= f.label :email_address %><br />
+    <%= f.text_field :email_address %>
+  </div>
+  <div class="field">
+    <%= f.label :price_method %><br />
+    <%= f.text_field :price_method %>
+  </div>
+  <div class="field">
+    <%= f.label :price_category %><br />
+    <%= f.text_field :price_category %>
+  </div>
+  <div class="field">
+    <%= f.label :payment %><br />
+    <%= f.text_field :payment %>
+  </div>
+  <div class="field">
+    <%= f.label :child_care %><br />
+    <%= f.text_field :child_care %>
+  </div>
+  <div class="field">
+    <%= f.label :child_age %><br />
+    <%= f.text_field :child_age %>
+  </div>
+  <div class="field">
+    <%= f.label :child_language %><br />
+    <%= f.text_field :child_language %>
+  </div>
+  <div class="field">
+    <%= f.label :reference_number %><br />
+    <%= f.text_field :reference_number %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

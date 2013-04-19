@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Program name hu:</b>
+  <%= @program.program_name_hu %>
+</p>
+
+<p>
+  <b>Program name en:</b>
+  <%= @program.program_name_en %>
+</p>
+
+<p>
+  <b>Price full:</b>
+  <%= @program.price_full %>
+</p>
+
+<p>
+  <b>Price member:</b>
+  <%= @program.price_member %>
+</p>
+
+<p>
+  <b>Price discount:</b>
+  <%= @program.price_discount %>
+</p>
+
+<p>
+  <b>Exchange rate:</b>
+  <%= @program.exchange_rate %>
+</p>
+
+
+<%= link_to 'Edit', edit_program_path(@program) %> |
+<%= link_to 'Back', programs_path %>

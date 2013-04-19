@@ -12,10 +12,10 @@ development:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: brk2013_development
+  database: brk2013
   pool: 5
-  username: root
-  password:
+  username: database_user
+  password: password
   socket: /tmp/mysql.sock
 
 # Warning: The database defined as "test" will be erased and

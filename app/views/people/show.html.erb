@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>First name:</b>
+  <%= @person.first_name %>
+</p>
+
+<p>
+  <b>Second name:</b>
+  <%= @person.second_name %>
+</p>
+
+<p>
+  <b>Home country:</b>
+  <%= @person.home_country %>
+</p>
+
+<p>
+  <b>Phone number:</b>
+  <%= @person.phone_number %>
+</p>
+
+<p>
+  <b>Email address:</b>
+  <%= @person.email_address %>
+</p>
+
+<p>
+  <b>Price method:</b>
+  <%= @person.price_method %>
+</p>
+
+<p>
+  <b>Price category:</b>
+  <%= @person.price_category %>
+</p>
+
+<p>
+  <b>Payment:</b>
+  <%= @person.payment %>
+</p>
+
+<p>
+  <b>Child care:</b>
+  <%= @person.child_care %>
+</p>
+
+<p>
+  <b>Child age:</b>
+  <%= @person.child_age %>
+</p>
+
+<p>
+  <b>Child language:</b>
+  <%= @person.child_language %>
+</p>
+
+<p>
+  <b>Reference number:</b>
+  <%= @person.reference_number %>
+</p>
+
+
+<%= link_to 'Edit', edit_person_path(@person) %> |
+<%= link_to 'Back', people_path %>
