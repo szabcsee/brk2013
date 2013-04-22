@@ -14,9 +14,9 @@ development:
   reconnect: false
   database: brk2013
   pool: 5
-  username: database_user
-  password: password
-  socket: /tmp/mysql.sock
+  username: root
+  password: Lajos10
+  socket: /var/run/mysqld/mysqld.sock
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -25,18 +25,18 @@ test:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: brk2013_test
+  database: brk2013
   pool: 5
   username: root
-  password:
-  socket: /tmp/mysql.sock
+  password: Lajos10
+  socket: /var/run/mysqld/mysqld.sock
 
 production:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: brk2013_production
+  database: brk2013
   pool: 5
   username: root
-  password:
+  password: Lajos10
   socket: /tmp/mysql.sock
