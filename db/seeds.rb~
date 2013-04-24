@@ -1,6 +1,6 @@
-People.delete_all
+people.delete_all
 
-People.create(first_name: 'Szabolcs',
+people.create(first_name: 'Szabolcs',
   second_name: 'Examplename',
   home_country: 'Hungary',
   phone_number: '+36202211111',
@@ -14,7 +14,7 @@ People.create(first_name: 'Szabolcs',
   reference_number: 0001
 )
 
-People.create(first_name: 'Ludwig',
+people.create(first_name: 'Ludwig',
   second_name: 'Mysecondname',
   home_country: 'Germany',
   phone_number: '+49 11 2222',
@@ -28,9 +28,9 @@ People.create(first_name: 'Ludwig',
   reference_number: 0002
 )
 
-Program.delete_all
+program.delete_all
 
-Program.create(program_name_hu: 'Lama Ole tanitas',
+program.create(program_name_hu: 'Lama Ole tanitas',
   program_name_en: 'Lama Ole Nydahl teaching',
   price_full: 3500,
   price_member: 3500,
@@ -38,7 +38,7 @@ Program.create(program_name_hu: 'Lama Ole tanitas',
   exchange_rate: 280
 )
 
-Program.create(program_name_hu: 'Lama Sherab Gyaltsen Rinpoche tanitas',
+program.create(program_name_hu: 'Lama Sherab Gyaltsen Rinpoche tanitas',
   program_name_en: 'Lama Sherab Gyaltsen Rinpoche teaching',
   price_full: '3500',
   price_member: '3500',
@@ -46,7 +46,7 @@ Program.create(program_name_hu: 'Lama Sherab Gyaltsen Rinpoche tanitas',
   exchange_rate: '280'
 )
 
-Program.create(program_name_hu: 'Beavatas',
+program.create(program_name_hu: 'Beavatas',
   program_name_en: 'Empowerment',
   price_full: 7000,
   price_member: 7000,
