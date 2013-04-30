@@ -11,7 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130422111925) do
+ActiveRecord::Schema.define(:version => 20130430113635) do
+
+  create_table "children", :force => true do |t|
+    t.string   "name"
+    t.integer  "age"
+    t.string   "language"
+    t.boolean  "child_care"
+    t.integer  "person_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "children", ["person_id"], :name => "index_children_on_person_id"
 
   create_table "meals", :force => true do |t|
     t.date     "meal_date"
@@ -31,9 +43,6 @@ ActiveRecord::Schema.define(:version => 20130422111925) do
     t.string   "price_method"
     t.string   "price_category"
     t.string   "payment"
-    t.string   "child_care"
-    t.integer  "child_age"
-    t.string   "child_language"
     t.string   "reference_number"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false

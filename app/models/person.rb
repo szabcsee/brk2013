@@ -1,14 +1,16 @@
 class Person < ActiveRecord::Base
 
-  attr_accessible :child_age, :child_care, :child_language, :email_address, :first_name, :home_country, :payment, :phone_number, :price_category, :price_method, :reference_number, :second_name, :meals_attributes, :registrations_attributes
+  attr_accessible :email_address, :first_name, :home_country, :payment, :phone_number, :price_category, :price_method, :reference_number, :second_name, :meals_attributes, :registrations_attributes, :children_attributes
 
-  validate :first_name, :second_name, :home_country, :email_address, :child_care, :payment, :price_method, :presence => true
+  validate :first_name, :second_name, :home_country, :email_address, :payment, :price_method, :presence => true
 
   has_many :meals
   has_many :registrations, :dependent => :destroy
   has_many :programs, :through => :registrations
+  has_many :children
   accepts_nested_attributes_for :meals
   accepts_nested_attributes_for :registrations
+  accepts_nested_attributes_for :children
   
 
   def reference_it

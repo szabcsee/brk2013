@@ -43,18 +43,13 @@
     <%= f.label :payment %><br />
     <%= f.text_field :payment %>
   </div>
-  <div class="field">
-    <%= f.label :child_care %><br />
-    <%= f.text_field :child_care %>
-  </div>
-  <div class="field">
-    <%= f.label :child_age %><br />
-    <%= f.text_field :child_age %>
-  </div>
-  <div class="field">
-    <%= f.label :child_language %><br />
-    <%= f.text_field :child_language %>
-  </div>
+  <h2>Children</h2>
+  <%= f.fields_for :children do |builder| %>
+    <%= render "child_fields", :f => builder %>
+  <% end %>
+  <%= f.fields_for :meals do |builder| %>
+    <%= render "meal_fields", :f => builder %>
+  <% end %>
   <h2>Meals</h2>
   <%= f.fields_for :meals do |builder| %>
     <%= render "meal_fields", :f => builder %>

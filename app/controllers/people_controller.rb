@@ -26,6 +26,7 @@ class PeopleController < ApplicationController
     @person = Person.new
     meal = @person.meals.build
     registration = @person.registrations.build
+    child = @person.children.build
     @programs = Program.all
     respond_to do |format|
       format.html # new.html.erb
@@ -36,6 +37,7 @@ class PeopleController < ApplicationController
   # GET /people/1/edit
   def edit
     @person = Person.find(params[:id])
+    @programs = Program.all
   end
 
   # POST /people
