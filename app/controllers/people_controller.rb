@@ -13,7 +13,9 @@ class PeopleController < ApplicationController
   # GET /people/1.json
   def show
     @person = Person.find(params[:id])
-
+    @registrations = Registration.where(:person_id => @person.id)
+    @meals = Meal.where(:person_id => @person.id)
+    @children = Child.where(:person_id => @person.id)
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @person }

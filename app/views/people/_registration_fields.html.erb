@@ -1,7 +1,0 @@
-<div class="field">
-    <%= f.label :registration_date %><br />
-    <%= f.datetime_select :registration_date %>
- </div>
- <div class="field">
- 	<%= f.label :program_id %><br/>
- 	<%= f.select(:program_id, @programs.collect {|a| [a.program_name_hu, a.id]}) -%>

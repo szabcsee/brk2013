@@ -9,7 +9,7 @@
       <% end %>
       </ul>
     </div>
-  <% end %>
+      <% end %>
 
   <div class="field">
     <%= f.label :first_name %><br />
@@ -47,17 +47,34 @@
   <%= f.fields_for :children do |builder| %>
     <%= render "child_fields", :f => builder %>
   <% end %>
-  <%= f.fields_for :meals do |builder| %>
-    <%= render "meal_fields", :f => builder %>
-  <% end %>
-  <h2>Meals</h2>
-  <%= f.fields_for :meals do |builder| %>
-    <%= render "meal_fields", :f => builder %>
-  <% end %>
+  <%= link_to_add_fields 'Add Children', f, :children %> 
   <h2>Registrations</h2>
-  <%= f.fields_for :registrations do |builder| %>
-    <%= render "registration_fields", :f => builder %>
-  <% end %>
+  <table>
+  <tr>
+    <th>Program name hu</th>
+    <th>Program name en</th>
+    <th>Price full</th>
+    <th>Price member</th>
+    <th>Price discount</th>
+    <th></th>
+  </tr>
+
+<% @programs.each do |program| %>
+  <tr>
+    <td><%= program.program_name_hu %></td>
+    <td><%= program.program_name_en %></td>
+    <td><%= program.price_full %></td>
+    <td><%= program.price_member %></td>
+    <td><%= program.price_discount %></td>
+    <td>
+    <%= f.fields_for :registrations do |f| %>
+      <%= f.check_box :program_id %>
+      <%= f.hidden_field :program_id, :value => program.id %>
+    <% end %>
+    </td>
+  </tr>
+<% end %>
+</table>
     <%= f.hidden_field :reference_number %>
   <div class="actions">
     <%= f.submit %>

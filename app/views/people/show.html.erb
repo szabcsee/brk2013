@@ -44,6 +44,72 @@
   <%= @person.reference_number %>
 </p>
 
+<h3>Meals</h3>
+<table>
+  <tr>
+    <th>Meal date</th>
+    <th>Food type</th>
+    <th>Meal type</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @meals.each do |meal| %>
+  <tr>
+    <td><%= meal.meal_date %></td>
+    <td><%= meal.food_type %></td>
+    <td><%= meal.meal_type %></td>
+    <td><%= link_to 'Show', meal %></td>
+    <td><%= link_to 'Edit', edit_meal_path(meal) %></td>
+    <td><%= link_to 'Destroy', meal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+<h3>Children</h3>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Language</th>
+    <th>Child care</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @children.each do |child| %>
+  <tr>
+    <td><%= child.name %></td>
+    <td><%= child.age %></td>
+    <td><%= child.language %></td>
+    <td><%= child.child_care %></td>
+    <td><%= link_to 'Show', child %></td>
+    <td><%= link_to 'Edit', edit_child_path(child) %></td>
+    <td><%= link_to 'Destroy', child, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<table>
+  <tr>
+    <th>Registration date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @registrations.each do |registration| %>
+  <tr>
+    <td><%= registration.registration_date %></td>
+    <td><%= link_to 'Show', registration %></td>
+    <td><%= link_to 'Edit', edit_registration_path(registration) %></td>
+    <td><%= link_to 'Destroy', registration, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
 
 <%= link_to 'Edit', edit_person_path(@person) %> |
 <%= link_to 'Back', people_path %>

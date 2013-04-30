@@ -3,4 +3,10 @@ class Registration < ActiveRecord::Base
 
   belongs_to :person
   belongs_to :program
+
+  def registration_autofill
+     self.registration_date = DateTime.now
+  end
+
+  before_save :registration_autofill
 end

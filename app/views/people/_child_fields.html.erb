@@ -1,16 +1,20 @@
-<div class="field">
+<fieldset>
+    <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
-  </div>
-  <div class="field">
+    </div>
+    <div class="field">
     <%= f.label :age %><br />
     <%= f.number_field :age %>
-  </div>
-  <div class="field">
+    </div>
+    <div class="field">
     <%= f.label :language %><br />
     <%= f.text_field :language %>
-  </div>
-  <div class="field">
+    </div>
+    <div class="field">
     <%= f.label :child_care %><br />
     <%= f.check_box :child_care %>
-  </div>
+    </div>
+    <%= f.hidden_field :_destroy %>
+    <%= link_to "remove", '#', class: "remove_fields" %>
+  </fieldset>
