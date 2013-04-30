@@ -1,13 +1,7 @@
 Brk2013::Application.routes.draw do
   resources :registrations
-
-
   resources :meals
-
-
   resources :programs
-
-
   resources :people
 
 

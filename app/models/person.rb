@@ -5,7 +5,8 @@ class Person < ActiveRecord::Base
   validate :first_name, :second_name, :home_country, :email_address, :child_care, :payment, :price_method, :reference_number, :presence => true
 
   has_many :meals
-  has_many :registrations
+  has_many :registrations, :dependent => :destroy
   has_many :programs, :through => :registrations
-  accepts_nested_attributes_for :meals, :reject_if => lambda { |a| a[:content].blank? }, :allow_destroy => true
+  accepts_nested_attributes_for :meals
+  accepts_nested_attributes_for :registrations
 end

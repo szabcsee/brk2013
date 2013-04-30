@@ -56,17 +56,12 @@
     <%= f.text_field :child_language %>
   </div>
   <h2>Meals</h2>
-  <%= f.fields_for(:meals) do |meals_form| %>
-
-    <%= meals_form.label :meal_date %>
-    <%= f.text_field :meal_date %>
-
-    <%= meals_form.label :food_type %>
-    <%= f.text_field :food_type %>
-
-    <%= meals_form.label :meal_type %>
-    <%= f.text_field :meal_type %>
-    
+  <%= f.fields_for :meals do |builder| %>
+    <%= render "meal_fields", :f => builder %>
+  <% end %>
+  <h2>Registrations</h2>
+  <%= f.fields_for :registrations do |builder| %>
+    <%= render "registration_fields", :f => builder %>
   <% end %>
   <div class="field">
     <%= f.label :reference_number %><br />

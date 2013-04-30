@@ -3,7 +3,6 @@ class PeopleController < ApplicationController
   # GET /people.json
   def index
     @people = Person.all
-
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @people }
@@ -26,7 +25,8 @@ class PeopleController < ApplicationController
   def new
     @person = Person.new
     meal = @person.meals.build
-
+    registration = @person.registrations.build
+    @programs = Program.all
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @person }
