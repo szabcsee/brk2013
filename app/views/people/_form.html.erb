@@ -63,10 +63,7 @@
   <%= f.fields_for :registrations do |builder| %>
     <%= render "registration_fields", :f => builder %>
   <% end %>
-  <div class="field">
-    <%= f.label :reference_number %><br />
-    <%= f.text_field :reference_number %>
-  </div>
+    <%= f.hidden_field :reference_number %>
   <div class="actions">
     <%= f.submit %>
   </div>
