@@ -27,6 +27,7 @@ class PeopleController < ApplicationController
   def new
     @person = Person.new
     meal = @person.meals.build
+    @meal_dates = ["2013-07-09","2013-07-10","2013-07-11","2013-07-12","2013-07-13","2013-07-14"]
     registration = @person.registrations.build
     child = @person.children.build
     @programs = Program.all

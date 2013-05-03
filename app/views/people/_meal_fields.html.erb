@@ -1,12 +1,19 @@
-<div class="field">
-	<%= f.label :meal_date %>
-    <%= f.date_select :meal_date %>
-</div>
-<div class="field">
-    <%= f.label :food_type %>
-    <%= f.text_field :food_type %>
-</div>
-<div class="field">
-    <%= f.label :meal_type %>
-    <%= f.text_field :meal_type %>
-</div>
+<table>
+	<tr>
+	<th>Date</th>
+	<th>Food type</th>
+	<th>Lunch</th>
+	<th>3 meals</th>
+	</tr>
+<% @meal_dates.each do |meal_date| %>
+	<%= fields_for :meals do |f2| %>
+	<tr>
+	<td><%= f2.text_field :meal_date, :value => meal_date %></td>
+    <td><%= f2.hidden_field :food_type, :class => 'FoodType', :value => 'vegetarian'%></td>
+    <td><%= radio_button_tag(f2,:meal_type,"1",:class => "OneTimeMeal", :id => meal_date, :name => meal_date) %></td>
+    <td><%= radio_button_tag(f2,:meal_type,"3",:class => "ThreeTimeMeal", :id => meal_date, :name => meal_date) %></td>
+	</tr>
+	<% end %>
+<% end %>
+
+<table>
