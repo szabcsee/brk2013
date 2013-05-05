@@ -15,6 +15,24 @@
     <%= f.label :child_care %><br />
     <%= f.check_box :child_care %>
     </div>
+    <h3>Child's meals</h3>
+      <table>
+      <tr>
+      <th>Date</th>
+      <th>Food type</th>
+      <th>Meal type</th>
+      </tr>
+      <% @meal_dates.each do |meal_date| %>
+        <%= f.fields_for :meals do |f3| %>
+        <tr>
+        <td><%= f3.text_field :meal_date, :value => meal_date %></td>
+        <td><%= f3.hidden_field :food_type, :class => 'FoodType', :value => 'vegetarian'%></td>
+        <td><%= f3.select(:meal_type, [['Lunch', 1], ['Three Meals', 3], ['None', nil]]) %></td>
+        </tr>
+        <% end %>
+      <% end %>
+      </table>
+
     <%= f.hidden_field :_destroy %>
     <%= link_to "remove", '#', class: "remove_fields" %>
   </fieldset>

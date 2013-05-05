@@ -3,7 +3,6 @@ class MealsController < ApplicationController
   # GET /meals.json
   def index
     @meals = Meal.all
-
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @meals }

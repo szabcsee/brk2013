@@ -43,6 +43,13 @@
     <%= f.label :payment %><br />
     <%= f.text_field :payment %>
   </div>
+
+  <h2>Children</h2>
+  <%= f.fields_for :children do |builder| %>
+    <%= render "child_fields", :f => builder %>
+  <% end %>
+  <%= link_to_add_fields 'Add Children', f, :children %>
+  
   <h2>Meals</h2>
   <table>
   <tr>
@@ -54,18 +61,12 @@
     <%= f.fields_for :meals do |f2| %>
     <tr>
     <td><%= f2.text_field :meal_date, :value => meal_date %></td>
-      <td><%= f2.hidden_field :food_type, :class => 'FoodType', :value => 'vegetarian'%></td>
-      <td><%= f2.select(:meal_type, [['Lunch', 1], ['Three Meals', 3]]) %></td>
+    <td><%= f2.hidden_field :food_type, :class => 'FoodType', :value => 'vegetarian'%></td>
+    <td><%= f2.select(:meal_type, [['Lunch', 1], ['Three Meals', 3], ['None', nil]]) %></td>
     </tr>
     <% end %>
   <% end %>
-
-  <table>
-  <h2>Children</h2>
-  <%= f.fields_for :children do |builder| %>
-    <%= render "child_fields", :f => builder %>
-  <% end %>
-  <%= link_to_add_fields 'Add Children', f, :children %> 
+  </table>
   <h2>Registrations</h2>
   <table>
   <tr>
@@ -76,7 +77,6 @@
     <th>Price discount</th>
     <th></th>
   </tr>
-
 <% @programs.each do |program| %>
   <tr>
     <td><%= program.program_name_hu %></td>
@@ -92,7 +92,7 @@
     </td>
   </tr>
 <% end %>
-</table>
+</table> 
     <%= f.hidden_field :reference_number %>
   <div class="actions">
     <%= f.submit :class => 'RegistrationButton' =%>

@@ -3,7 +3,6 @@ class ChildrenController < ApplicationController
   # GET /children.json
   def index
     @children = Child.all
-
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @children }
@@ -14,7 +13,6 @@ class ChildrenController < ApplicationController
   # GET /children/1.json
   def show
     @child = Child.find(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @child }
@@ -25,7 +23,6 @@ class ChildrenController < ApplicationController
   # GET /children/new.json
   def new
     @child = Child.new
-
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @child }
