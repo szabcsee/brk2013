@@ -1,16 +1,10 @@
 Brk2013::Application.routes.draw do
-  resources :children do
-    resources :meals
-  end
+  
+  resources :children
   resources :registrations
   resources :meals
   resources :programs
-  resources :people do
-    resources :meals
-    resources :children
-    resources :registrations
-  end
-
+  resources :people 
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

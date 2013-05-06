@@ -1,4 +1,6 @@
 <fieldset>
+  <%= f.fields_for :children do |builder| %>
+  <h2>Children</h2>
     <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
@@ -23,11 +25,11 @@
       <th>Meal type</th>
       </tr>
       <% @meal_dates.each do |meal_date| %>
-        <%= fields_for :meals do |f2| %>
+        <%= f.fields_for :meals do |ff| %>
         <tr>
-        <td><%= f2.text_field :meal_date, :value => meal_date %></td>
-        <td><%= f2.hidden_field :food_type, :class => 'FoodType', :value => 'vegetarian'%></td>
-        <td><%= f2.select(:meal_type, [['Lunch', 1], ['Three Meals', 3], ['None', nil]]) %></td>
+        <td><%= ff.text_field :meal_date, :value => meal_date %></td>
+        <td><%= ff.hidden_field :food_type, :class => 'FoodType', :value => 'vegetarian'%></td>
+        <td><%= ff.select(:meal_type, [['Lunch', 1], ['Three Meals', 3], ['None', nil]]) %></td>
         </tr>
         <% end %>
       <% end %>
@@ -35,4 +37,5 @@
 
     <%= f.hidden_field :_destroy %>
     <%= link_to "remove", '#', class: "remove_fields" %>
+    <% end %>
   </fieldset>

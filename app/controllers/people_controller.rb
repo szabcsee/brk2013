@@ -27,11 +27,11 @@ class PeopleController < ApplicationController
   # GET /people/new.json
   def new
     @person = Person.new
-    @eater = @person
-    meal = @eater.meals.build
+    @child = @person.children.build
+    meals = @person.meals.build
+    childmeals = @child.meals.build
     @meal_dates = ["2013-07-09","2013-07-10","2013-07-11","2013-07-12","2013-07-13","2013-07-14"]
     registration = @person.registrations.build
-    child = @person.children.build
     @programs = Program.all
     respond_to do |format|
       format.html # new.html.erb
@@ -49,7 +49,6 @@ class PeopleController < ApplicationController
   # POST /people.json
   def create
     @person = Person.new(params[:person])
-    @eater = @person
     respond_to do |format|
       if @person.save
         format.html { redirect_to @person, notice: 'Person was successfully created.' }

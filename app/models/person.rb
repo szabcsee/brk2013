@@ -5,13 +5,11 @@ class Person < ActiveRecord::Base
   has_many :programs, :through => :registrations
   has_many :children
 
-  attr_accessible :email_address, :first_name, :home_country, :payment, :phone_number, :price_category, :price_method, :reference_number, :second_name, :meals_attributes, :registrations_attributes, :children_attributes
+  attr_accessible :email_address, :first_name, :home_country, :payment, :phone_number, :price_category, :price_method, :reference_number, :second_name, :meals_attributes, :registrations_attributes, :children_attributes, :eater_id, :eater_type
   
   validate :first_name, :second_name, :home_country, :email_address, :payment, :price_method, :presence => true
   
-  accepts_nested_attributes_for :meals, :allow_destroy => true, :reject_if => proc { |attributes| attributes['meal_type'].blank? }
-  accepts_nested_attributes_for :registrations, :allow_destroy => true
-  accepts_nested_attributes_for :children, :allow_destroy => true
+  accepts_nested_attributes_for :meals, :registrations, :children, :allow_destroy => true
   
 
   def reference_it

@@ -43,10 +43,9 @@
     <%= f.label :payment %><br />
     <%= f.text_field :payment %>
   </div>
-
   <h2>Children</h2>
   <%= f.fields_for :children do |builder| %>
-    <%= render "child_fields", :f => builder %>
+    <%= render 'child_fields', f: builder %>
   <% end %>
   <%= link_to_add_fields 'Add Children', f, :children %>
   
