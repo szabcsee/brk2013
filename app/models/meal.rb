@@ -3,6 +3,6 @@ class Meal < ActiveRecord::Base
 
   validate :food_type, :meal_date, :meal_type, :presence => true
   
-  belongs_to :person
+  belongs_to :eater, :polymorphic => true
 
 end

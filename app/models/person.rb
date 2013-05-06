@@ -1,6 +1,6 @@
 class Person < ActiveRecord::Base
 
-  has_many :meals
+  has_many :meals, :as => :eater
   has_many :registrations, :dependent => :destroy
   has_many :programs, :through => :registrations
   has_many :children
