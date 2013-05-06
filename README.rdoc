@@ -1,52 +1,27 @@
 - Registration and administration for the Becske 2013 Course
 
-Model idea -
+v.0.63 beta
+-----------
 
-class Person {
-    firstName
-    secondName
-    homeCountry
-    phoneNumber
-    eMail
-    priceMethod
-    priceCategory
-    payMent
-    childCare
-    childAge
-    childLanguage
-    creationDate
-    referenceNumber
-}
+Can be useful, probably will be needed for the Child, Meal, Person problem.
+http://guides.rubyonrails.org/association_basics.html#polymorphic-associations
 
-class Program {
-    programNameHu
-    programNameEn
-    priceFull
-    priceSupport
-    priceDiscount
-    ExchangeRate
-}
+Useful link for testing:
+https://gist.github.com/jeanres/5523857
 
-class Meal {
-    personID
-    mealDate
-    foodType
-    mealType
-}
-class Registration {
-    personID
-    registrationDate
-    programID
-    referenceNumber
-}
-class Travel {
-    personID
-    outwardTrip
-    inwardTrip
-    flightNumber
-    flightDate
-}
+Have a look at pry-rails
 ____________________
 
+Meals <-> Child <-> Person relation has to be adjusted
+
+Person has_many Children
+Person has_many Meals
+
+Child belongs_to Person
+Child has_many Meals
+
+Meal belongs_to Person
+Meal (sometimes) belongs_to Child
+_________________________
 Written in: Ruby on Rails
 
