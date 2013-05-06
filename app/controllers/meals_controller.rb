@@ -1,8 +1,10 @@
 class MealsController < ApplicationController
   # GET /meals
   # GET /meals.json
+  before_filter :load_eater
+
   def index
-    @meals = Meal.all
+    @meals = @eater.meals
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @meals }
@@ -23,7 +25,13 @@ class MealsController < ApplicationController
   # GET /meals/new
   # GET /meals/new.json
   def new
-    @meal = Meal.new
+    @meal = @eater.meals.new(params[:meal])
+    if @meal.save
+      redirect_to @eater, notice: "Meal created."
+    else
+      render :new
+    end
+
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @meal }
@@ -78,4 +86,12 @@ class MealsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+private
+
+  def load_eater
+    resource, id = request.path.split('/')[1,2]
+    @eater = resource.singularize.classify.constantize.find(id)  
+  end
+
 end

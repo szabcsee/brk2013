@@ -14,7 +14,8 @@ class PeopleController < ApplicationController
   def show
     @person = Person.find(params[:id])
     @registrations = Registration.where(:person_id => @person.id)
-    @meals = Meal.where(:person_id => @person.id)
+    @eater = @person
+    @meals = @eater.meals.all
     @children = Child.where(:person_id => @person.id)
     respond_to do |format|
       format.html # show.html.erb
@@ -26,7 +27,8 @@ class PeopleController < ApplicationController
   # GET /people/new.json
   def new
     @person = Person.new
-    meal = @person.meals.build
+    @eater = @person
+    meal = @eater.meals.build
     @meal_dates = ["2013-07-09","2013-07-10","2013-07-11","2013-07-12","2013-07-13","2013-07-14"]
     registration = @person.registrations.build
     child = @person.children.build
@@ -47,7 +49,7 @@ class PeopleController < ApplicationController
   # POST /people.json
   def create
     @person = Person.new(params[:person])
-    meals = @person.meals.build
+    @eater = @person
     respond_to do |format|
       if @person.save
         format.html { redirect_to @person, notice: 'Person was successfully created.' }
