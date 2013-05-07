@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :home_country %><br />
-    <%= f.text_field :home_country %>
+    <%= select_tag(:home_country, options_for_select(@countries)) %>
   </div>
   <div class="field">
     <%= f.label :phone_number %><br />
@@ -33,22 +33,16 @@
   </div>
   <div class="field">
     <%= f.label :price_method %><br />
-    <%= f.text_field :price_method %>
+    <%= f.select(:price_method, [['on the course', 'course'], ['in advance', 'advance']]) %> 
   </div>
   <div class="field">
     <%= f.label :price_category %><br />
-    <%= f.text_field :price_category %>
+    <%= f.select(:price_category, [['full', 'full'], ['support', 'support'], ['escort', 'escort'], ['discount', 'discount']]) %>
   </div>
   <div class="field">
     <%= f.label :payment %><br />
     <%= f.text_field :payment %>
   </div>
-  <h2>Children</h2>
-  <%= f.fields_for :children do |builder| %>
-    <%= render 'child_fields', f: builder %>
-  <% end %>
-  <%= link_to_add_fields 'Add Children', f, :children %>
-  
   <h2>Meals</h2>
   <table>
   <tr>
@@ -66,6 +60,13 @@
     <% end %>
   <% end %>
   </table>
+
+  <h2>Children</h2>
+  <%= f.fields_for :children do |builder| %>
+    <%= render 'child_fields', f: builder %>
+  <% end %>
+  <%= link_to_add_fields 'Add Children', f, :children %>
+  
   <h2>Registrations</h2>
   <table>
   <tr>

@@ -1,4 +1,4 @@
-<fieldset>
+  <fieldset>
   <%= f.fields_for :children do |builder| %>
   <h2>Children</h2>
     <div class="field">
@@ -34,8 +34,8 @@
         <% end %>
       <% end %>
       </table>
-
     <%= f.hidden_field :_destroy %>
     <%= link_to "remove", '#', class: "remove_fields" %>
     <% end %>
   </fieldset>
+  

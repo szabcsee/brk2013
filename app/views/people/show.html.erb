@@ -88,9 +88,32 @@
     <td><%= link_to 'Edit', edit_child_path(child) %></td>
     <td><%= link_to 'Destroy', child, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
+    <table>
+      <h4>Child's meals</h4>
+      <tr>
+        <th>Meal date</th>
+        <th>Food type</th>
+        <th>Meal type</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+
+    <% child.meals.each do |meal| %>
+      <tr>
+        <td><%= meal.meal_date %></td>
+        <td><%= meal.food_type %></td>
+        <td><%= meal.meal_type %></td>
+        <td><%= link_to 'Show', meal %></td>
+        <td><%= link_to 'Edit', edit_meal_path(meal) %></td>
+        <td><%= link_to 'Destroy', meal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+    </table>
 <% end %>
 </table>
 
+<h2>Program Registration</h2>
 <table>
   <tr>
     <th>Registration date</th>
