@@ -29,7 +29,7 @@ class PeopleController < ApplicationController
     @person = Person.new
     @child = @person.children.build
     meals = @person.meals.build
-    childmeals = @child.meals.build
+    @child.meals.build
     @meal_dates = ["2013-07-09","2013-07-10","2013-07-11","2013-07-12","2013-07-13","2013-07-14"]
     @countries = [
                 "Afghanistan",
