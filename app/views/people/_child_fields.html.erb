@@ -34,8 +34,7 @@
         <% end %>
       <% end %>
       </table>
-    <%= f.hidden_field :_destroy %>
-    <%= link_to "remove", '#', class: "remove_fields" %>
+    <%= f.link_to_remove "Remove child", class: "remove_fields" %>
     <% end %>
   </fieldset>
   
