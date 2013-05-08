@@ -10,7 +10,10 @@
       </ul>
     </div>
   <% end %>
-
+  <div class="field">
+    <%= f.label :event_date %><br />
+    <%= f.date_select :event_date %>
+  </div>
   <div class="field">
     <%= f.label :program_name_hu %><br />
     <%= f.text_field :program_name_hu %>

@@ -43,12 +43,12 @@
     <%= f.label :payment %><br />
     <%= f.text_field :payment %>
   </div>
-  <h2>Meals</h2>
+  <h2><%= t 'meals' %></h2>
   <table>
   <tr>
-  <th>Date</th>
-  <th>Food type</th>
-  <th>Meal type</th>
+  <th><%= f.label :meal_date %></th>
+  <th><%= f.label :food_type %></th>
+  <th><%= f.label :meal_type %></th>
   </tr>
   <% @meal_dates.each do |meal_date| %>
     <%= f.fields_for :meals do |f2| %>
@@ -61,24 +61,26 @@
   <% end %>
   </table>
 
-  <h2>Children</h2>
+  <h2><%= t 'children' %></h2>
   <%= f.fields_for :children do |builder| %>
     <%= render 'child_fields', f: builder %>
   <% end %>
   <%= link_to_add_fields 'Add Children', f, :children %>
   
-  <h2>Registrations</h2>
+  <h2><%= t 'registrations' %></h2>
   <table>
   <tr>
-    <th>Program name hu</th>
-    <th>Program name en</th>
-    <th>Price full</th>
-    <th>Price member</th>
-    <th>Price discount</th>
+    <th><%= Program.human_attribute_name(:event_date) %></th>
+    <th><%= Program.human_attribute_name(:program_name_hu) %></th>
+    <th><%= Program.human_attribute_name(:program_name_en) %></th>
+    <th><%= Program.human_attribute_name(:price_full) %></th>
+    <th><%= Program.human_attribute_name(:price_member) %></th>
+    <th><%= Program.human_attribute_name(:price_discount) %></th>
     <th></th>
   </tr>
 <% @programs.each do |program| %>
   <tr>
+    <td><%= program.event_date %></td>
     <td><%= program.program_name_hu %></td>
     <td><%= program.program_name_en %></td>
     <td><%= program.price_full %></td>

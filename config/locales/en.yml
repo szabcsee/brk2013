@@ -3,6 +3,11 @@
 
 en:
   sitename: "Becske Guru Yoga Course Registration 2013"
+  meals: "Meals"
+  children: "Children"
+  child: "Child"
+  childmeal: "Child meal"
+  registrations: "Program registration"
   activerecord:
     models:
       person: 'Participant'
@@ -12,26 +17,32 @@ en:
       registration: 'Registration'
     attributes:
       person:
-      email_address: 'Email address'
-      first_name: 'Firstname'
-      second_name: 'Surname'
-      home_country: 'Country'
-      payment: 'Payment'
-      price_category: 'Payment category'
-      phone_number: 'Telephone number'
-      price_method: 'Payment method'
-      reference_number: 'Registration number'
+        email_address: 'Email address'
+        first_name: 'Firstname'
+        second_name: 'Surname'
+        home_country: 'Country'
+        payment: 'Payment'
+        price_category: 'Payment category'
+        phone_number: 'Telephone number'
+        price_method: 'Payment method'
+        reference_number: 'Registration number'
       child:
-       age: 'Age'
-       child_care: 'Child care'
-       language: 'Spoken language'
-       name: 'Name'
+        age: 'Age'
+        child_care: 'Child care'
+        language: 'Spoken language'
+        name: 'Name'
       meal:
-       food_type: 'Food type'
-       meal_date: 'Meal date'
-       meal_type: 'Meal type'
-       meal_id: 'Meal id'
+        food_type: 'Food type'
+        meal_date: 'Meal date'
+        meal_type: 'Meal type'
+        meal_id: 'Meal id'
       program:
+        program_name_hu: 'Program name HU'
+        program_name_en: 'Program name EN'
+        price_full: 'Full price'
+        price_member: 'Supporter price'
+        price_discount: 'Discount price'
+        event_date: 'Event date'
       registration:
   date:
     abbr_day_names:

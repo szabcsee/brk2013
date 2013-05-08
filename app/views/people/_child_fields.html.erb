@@ -1,6 +1,6 @@
   <fieldset>
   <%= f.fields_for :children do |builder| %>
-  <h2>Children</h2>
+  <h2><%= t 'child' %></h2>
     <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
@@ -17,12 +17,12 @@
     <%= f.label :child_care %><br />
     <%= f.check_box :child_care %>
     </div>
-    <h3>Child's meals</h3>
+    <h3><%= t 'childmeal' %></h3>
       <table>
       <tr>
-      <th>Date</th>
-      <th>Food type</th>
-      <th>Meal type</th>
+      <th><%= Meal.human_attribute_name(:meal_date) %></th>
+      <th><%= Meal.human_attribute_name(:food_type) %></th>
+      <th><%= Meal.human_attribute_name(:meal_type) %></th>
       </tr>
       <% @meal_dates.each do |meal_date| %>
         <%= f.fields_for :meals do |ff| %>

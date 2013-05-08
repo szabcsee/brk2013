@@ -116,7 +116,7 @@
 <h2>Program Registration</h2>
 <table>
   <tr>
-    <th>Registration date</th>
+    <th>Program id</th>
     <th></th>
     <th></th>
     <th></th>
@@ -124,7 +124,7 @@
 
 <% @registrations.each do |registration| %>
   <tr>
-    <td><%= registration.registration_date %></td>
+    <td><%= registration.program_id %></td>
     <td><%= link_to 'Show', registration %></td>
     <td><%= link_to 'Edit', edit_registration_path(registration) %></td>
     <td><%= link_to 'Destroy', registration, method: :delete, data: { confirm: 'Are you sure?' } %></td>

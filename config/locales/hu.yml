@@ -1,5 +1,10 @@
 hu:
   sitename: "Becskei Guru Jóga Kurzus Regisztráció 2013"
+  meals: "Étkezések"
+  children: "Gyerekek"
+  child: "Gyerek"
+  childmeal: "Gyerek étkezése"
+  registrations: "Program regisztráció"
   activerecord:
     models:
       person: "Résztvevő"
@@ -24,11 +29,17 @@ hu:
         language: "Beszélt nyelv"
         name: "Név"
       meal:
-         food_type: "Diéta típusa"
-         meal_date: "Étkezés ideje"
-         meal_type: "Étkezés típusa"
-         meal_id: "Étkezés id"
+        food_type: "Diéta típusa"
+        meal_date: "Étkezés ideje"
+        meal_type: "Étkezés típusa"
+        meal_id: "Étkezés id"
       program:
+        program_name_hu: 'Program magyar neve'
+        program_name_en: 'Program angol neve'
+        price_full: 'Teljes ár'
+        price_member: 'Pártolói ár'
+        price_discount: 'Kedvezményes ár'
+        event_date: 'Esemény dátuma'
       registration:
   date:
     abbr_day_names:
@@ -221,10 +232,3 @@ hu:
       long: ! '%Y. %B %e., %A, %H:%M'
       short: ! '%b %e., %H:%M'
     pm: du.
-  # remove these aliases after 'activemodel' and 'activerecord' namespaces are removed from Rails repository
-  activemodel:
-    errors:
-      <<: *errors
-  activerecord:
-    errors:
-      <<: *errors
