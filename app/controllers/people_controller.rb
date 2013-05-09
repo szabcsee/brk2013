@@ -29,8 +29,10 @@ class PeopleController < ApplicationController
     @person = Person.new
     @child = @person.children.build
     meals = @person.meals.build
-    @child.meals.build
+    childmeals = @child.meals.build
     @meal_dates = ["2013-07-09","2013-07-10","2013-07-11","2013-07-12","2013-07-13","2013-07-14"]
+    registration = @person.registrations.build
+    @programs = Program.all
     @countries = [
                 "Afghanistan",
                 "Aland Islands",
@@ -278,8 +280,6 @@ class PeopleController < ApplicationController
                 "Zambia",
                 "Zimbabwe"
               ]
-    registration = @person.registrations.build
-    @programs = Program.all
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @person }

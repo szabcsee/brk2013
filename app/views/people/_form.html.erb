@@ -60,13 +60,11 @@
     <% end %>
   <% end %>
   </table>
-
   <h2><%= t 'children' %></h2>
   <%= f.fields_for :children do |builder| %>
     <%= render 'child_fields', f: builder %>
   <% end %>
   <%= f.link_to_add 'Add Children', :children %>
-  
   <h2><%= t 'registrations' %></h2>
   <table>
   <tr>
