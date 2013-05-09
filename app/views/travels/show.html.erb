@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Arrival:</b>
+  <%= @travel.arrival %>
+</p>
+
+<p>
+  <b>Bus trip:</b>
+  <%= @travel.bus_trip %>
+</p>
+
+<p>
+  <b>Arrival seats:</b>
+  <%= @travel.arrival_seats %>
+</p>
+
+<p>
+  <b>Departure seats:</b>
+  <%= @travel.departure_seats %>
+</p>
+
+<p>
+  <b>Departure:</b>
+  <%= @travel.departure %>
+</p>
+
+<p>
+  <b>Flight number:</b>
+  <%= @travel.flight_number %>
+</p>
+
+<p>
+  <b>Flight date:</b>
+  <%= @travel.flight_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_travel_path(@travel) %> |
+<%= link_to 'Back', travels_path %>

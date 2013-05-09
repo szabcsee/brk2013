@@ -5,6 +5,8 @@ hu:
   child: "Gyerek"
   childmeal: "Gyerek étkezése"
   registrations: "Program regisztráció"
+  travel: "Utazás"
+  travel_description: "Amennyiben szeretnél regisztrálni a busz útra Budapest Becske között és a kurzus után vissza, töltsd ki a releváns mezőket lentebb."
   activerecord:
     models:
       person: "Résztvevő"

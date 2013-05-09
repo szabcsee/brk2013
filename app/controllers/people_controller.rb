@@ -14,6 +14,7 @@ class PeopleController < ApplicationController
   def show
     @person = Person.find(params[:id])
     @registrations = Registration.where(:person_id => @person.id)
+    @travels = Travel.where(:person_id => @person.id)
     @eater = @person
     @meals = @eater.meals.all
     @children = Child.where(:person_id => @person.id)
@@ -29,6 +30,7 @@ class PeopleController < ApplicationController
     @person = Person.new
     @child = @person.children.build
     meals = @person.meals.build
+    travels = @person.travels.build
     childmeals = @child.meals.build
     @meal_dates = ["2013-07-09","2013-07-10","2013-07-11","2013-07-12","2013-07-13","2013-07-14"]
     registration = @person.registrations.build

@@ -132,6 +132,36 @@
 <% end %>
 </table>
 
+<table>
+  <tr>
+    <th>Arrival</th>
+    <th>Bus trip</th>
+    <th>Arrival seats</th>
+    <th>Departure seats</th>
+    <th>Departure</th>
+    <th>Flight number</th>
+    <th>Flight date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @travels.each do |travel| %>
+  <tr>
+    <td><%= travel.arrival %></td>
+    <td><%= travel.bus_trip %></td>
+    <td><%= travel.arrival_seats %></td>
+    <td><%= travel.departure_seats %></td>
+    <td><%= travel.departure %></td>
+    <td><%= travel.flight_number %></td>
+    <td><%= travel.flight_date %></td>
+    <td><%= link_to 'Show', travel %></td>
+    <td><%= link_to 'Edit', edit_travel_path(travel) %></td>
+    <td><%= link_to 'Destroy', travel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
 <br />
 
 <%= link_to 'Edit', edit_person_path(@person) %> |

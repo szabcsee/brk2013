@@ -93,6 +93,11 @@
   </tr>
 <% end %>
 </table> 
+<h2><%= t 'travel' %></h2>
+<p><%= t 'travel_description' %></p>
+  <%= f.fields_for :travels do |travel| %>
+    <%= render 'travel_fields', f: travel %>
+  <% end %>
     <%= f.hidden_field :reference_number %>
   <div class="actions">
     <%= f.submit :class => 'RegistrationButton' =%>
