@@ -4,7 +4,7 @@ class ChildrenController < ApplicationController
   def index
     @children = Child.all
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # index.html.haml
       format.json { render json: @children }
     end
   end
@@ -28,7 +28,7 @@ class ChildrenController < ApplicationController
     @eater = @child
     meal = @eater.meals.build
     respond_to do |format|
-      format.html # new.html.erb
+      format.html # new.html.haml
       format.json { render json: @child }
     end
   end

@@ -1,0 +1,32 @@
+%h1 Listing people
+.well
+  = link_to 'New Person', new_person_path, class: 'btn btn-success btn-large'
+%table.table.table-bordered.table-hover
+  %tr
+    %th First name
+    %th Second name
+    %th Home country
+    %th Phone number
+    %th Email address
+    %th Price method
+    %th Price category
+    %th Payment
+    %th Reference number
+    %th
+    %th
+    %th
+  - @people.each do |person|
+    %tr
+      %td= person.first_name
+      %td= person.second_name
+      %td= person.home_country
+      %td= person.phone_number
+      %td= person.email_address
+      %td= person.price_method
+      %td= person.price_category
+      %td= person.payment
+      %td= person.reference_number
+      %td= link_to 'Show', person, class: 'btn'
+      %td= link_to 'Edit', edit_person_path(person), class: 'btn'
+      %td= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn'
+%br/

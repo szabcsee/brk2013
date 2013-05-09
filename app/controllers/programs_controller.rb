@@ -5,7 +5,7 @@ class ProgramsController < ApplicationController
     @programs = Program.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # index.html.haml
       format.json { render json: @programs }
     end
   end
@@ -27,7 +27,7 @@ class ProgramsController < ApplicationController
     @program = Program.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html # new.html.haml
       format.json { render json: @program }
     end
   end

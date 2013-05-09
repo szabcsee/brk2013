@@ -1,0 +1,8 @@
+= f.semantic_fields_for :travels do
+  =f.input :bus_trip
+  =f.input :arrival, as: :select, collection: [['2013-07-12 11:00', '2013-07-12 11:00'], ['2013-07-12 11:00', '2013-07-12 15:00']]
+  =f.input :arrival_seats, as: :select, collection: (0...6)
+  =f.input :departure, as: :select, collection: [['2013-07-18 20:00', '2013-07-18 20:00'],['2013-07-18 20:00', '2013-07-18 20:00']]
+  =f.input :departure_seats, as: :select, collection: (0...6)
+  =f.input :flight_date, as: :date
+  =f.input :flight_number

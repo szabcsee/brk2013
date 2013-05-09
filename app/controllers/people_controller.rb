@@ -4,7 +4,7 @@ class PeopleController < ApplicationController
   def index
     @people = Person.all
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # index.html.haml
       format.json { render json: @people }
     end
   end
@@ -29,11 +29,11 @@ class PeopleController < ApplicationController
   def new
     @person = Person.new
     @child = @person.children.build
-    meals = @person.meals.build
-    travels = @person.travels.build
-    childmeals = @child.meals.build
+    @meals = @person.meals.build
+    @travels = @person.travels.build
+    @childmeals = @child.meals.build
     @meal_dates = ["2013-07-09","2013-07-10","2013-07-11","2013-07-12","2013-07-13","2013-07-14"]
-    registration = @person.registrations.build
+    @registration = @person.registrations.build
     @countries = [ "Afghanistan",
                 "Aland Islands",
                 "Albania",
@@ -281,7 +281,7 @@ class PeopleController < ApplicationController
                 "Zimbabwe"]
     @programs = Program.all
     respond_to do |format|
-      format.html # new.html.erb
+      format.html # new.html.haml
       format.json { render json: @person }
     end
   end

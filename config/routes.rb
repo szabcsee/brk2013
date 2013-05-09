@@ -1,4 +1,7 @@
 Brk2013::Application.routes.draw do
+
+  root :to => 'home#index'
+
   scope ":locale" do
     resources :children
     resources :registrations
@@ -56,7 +59,7 @@ Brk2013::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'people#new'
+
 
   # See how all your routes lay out with "rake routes"
 

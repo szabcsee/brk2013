@@ -5,7 +5,7 @@ class TravelsController < ApplicationController
     @travels = Travel.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # index.html.haml
       format.json { render json: @travels }
     end
   end
@@ -27,7 +27,7 @@ class TravelsController < ApplicationController
     @travel = Travel.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html # new.html.haml
       format.json { render json: @travel }
     end
   end

@@ -1,0 +1,79 @@
+@import url(http://fonts.googleapis.com/css?family=Dosis:600)
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Sans+Mono|Droid+Serif:400,700,400italic,700italic)
+
+//Customized bootstrap variables have to import before bootstrap css files. It is important!
+@import "variables"
+@import "bootstrap-responsive"
+@import "bootstrap"
+
+body
+  padding-top: 40px
+  min-width: 700px
+
+.content
+  background-color: #eee
+  padding: 20px
+  margin: 0 -20px /* negative indent the amount of the padding to maintain the grid system */
+  -webkit-border-radius: 0 0 6px 6px
+  -moz-border-radius: 0 0 6px 6px
+  border-radius: 0 0 6px 6px
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15)
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15)
+  box-shadow: 0 1px 2px rgba(0,0,0,.15)
+
+.logo
+  background-image: image-url('website_logo.png')
+  background-repeat: none
+  height: 38px
+  width: 206px
+  margin-bottom: 10px
+
+.nav
+  margin-bottom: 5px
+
+//  This style help to be compatible the formtastic generated code with bootstrap
+.form-inline
+  .controls, .control-group
+    display: inline-block
+  .control-label
+    margin-right: 5px
+  .radio, .checkbox
+    &:first-child
+      padding-top: 0
+
+//Formtastic heavily use ol
+ol
+  list-style-type: none
+
+
+// Makeing grid boxes visible with gray background.
+.show-grid
+  margin-top: 10px
+  margin-bottom: 20px
+  [class*="span"]
+    background-color: #eee
+    text-align: center
+    -webkit-border-radius: 3px
+    -moz-border-radius: 3px
+    border-radius: 3px
+    min-height: 40px
+    line-height: 40px
+    &:hover
+      background-color: #ddd
+  .show-grid
+    margin-top: 0
+    margin-bottom: 0
+    [class*="span"]
+      margin-top: 5px
+  [class*="span"] [class*="span"]
+    background-color: #ccc
+    [class*="span"]
+      background-color: #999
+
+//Responsive design elements could come here
+@media only screen and (max-width: 979px)
+  .breadcrumb
+    display: none
+  body
+    padding-top: 0px
+

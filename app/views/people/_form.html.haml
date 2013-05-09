@@ -1,0 +1,53 @@
+= semantic_nested_form_for @person do |f|
+  =f.inputs 'Alap Adatok', id: 'basic' do
+    =f.input :first_name
+    =f.input :second_name
+    =f.input :home_country
+    =f.input :phone_number
+    =f.input :email_address
+    =f.input :price_category, collection: [['full', 'full'], ['support', 'support'], ['escort', 'escort'], ['discount', 'discount']]
+    =f.input :price_method, collection: [['helyszínen', 'course'], ['előre utal', 'bank'],['előre készpénz', 'cash']]
+    =f.input :payment
+  =f.inputs t 'meals', id: 'meals' do
+    %table.table
+      %tr
+        %th= f.label :meal_date
+        %th= f.label :food_type
+        %th= f.label :meal_type
+      - @meal_dates.each do |meal_date|
+        = f.semantic_fields_for @meals do |meal|
+          %tr
+            %td= meal_date
+            %td= meal.input :food_type
+            %td= meal.input :meal_type, as: :select, collection: [['Lunch', 1], ['Three Meals', 3], ['None', nil]]
+  =f.inputs t 'children', id: 'children' do
+    = f.semantic_fields_for :children do |builder|
+      = render 'child_fields', f: builder
+      = f.link_to_add 'Add Children', :children, class: 'btn btn-warning'
+  =f.inputs t 'registrations', id: 'registrations' do
+    %table.table
+      %tr
+        %th= Program.human_attribute_name(:event_date)
+        %th= Program.human_attribute_name(:program_name_hu)
+        %th= Program.human_attribute_name(:program_name_en)
+        %th= Program.human_attribute_name(:price_full)
+        %th= Program.human_attribute_name(:price_member)
+        %th= Program.human_attribute_name(:price_discount)
+        %th
+      - @programs.each do |program|
+        %tr
+          %td= program.event_date
+          %td= program.program_name_hu
+          %td= program.program_name_en
+          %td= program.price_full
+          %td= program.price_member
+          %td= program.price_discount
+          %td
+            = f.fields_for :registrations do |f|
+              = f.input :participate, as: :check_boxes
+  =f.inputs t 'travel', id: 'travel' do
+    %p= t 'travel_description'
+    = f.fields_for :travels do |travel|
+      = render 'travel_fields', f: travel
+    = f.hidden_field :reference_number
+  =f.actions class: 'btn btn-large btn-success'

@@ -1,0 +1,31 @@
+!!!
+%html
+  %head
+    %title= t 'sitename'
+    = stylesheet_link_tag    "application", media: "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tag
+  %body
+    %header.navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          =link_to "HOME", root_path, class: 'brand'
+          %ul.nav.pull-left
+            %li=link_to "People", people_path
+            %li=link_to "Children", children_path
+            %li=link_to "Programs", programs_path
+            %li=link_to "Registrations", registrations_path
+            %li=link_to "Travels", travels_path
+          %ul.nav.pull-righ
+            %li= link_to "English", locale: "en"
+            %li= link_to "Magyar", locale: "hu"
+
+
+    .container
+      -flash.each do |name, msg|
+        - if msg.is_a?(String)
+          %div{class: "alert alert-#{name == :notice ? "success" : "error"}"}
+            %a.close{data: {dismiss: 'alert'}} ×
+            =content_tag :div, msg, id: "flash_#{name}"
+    .container
+      = yield

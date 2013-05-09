@@ -34,4 +34,7 @@ Brk2013::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  # Prefered css engine is:
+  config.sass.preferred_syntax = :sass
 end

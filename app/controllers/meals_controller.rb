@@ -6,7 +6,7 @@ class MealsController < ApplicationController
   def index
     @meals = @eater.meals
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # index.html.haml
       format.json { render json: @meals }
     end
   end
@@ -33,7 +33,7 @@ class MealsController < ApplicationController
     end
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html # new.html.haml
       format.json { render json: @meal }
     end
   end

@@ -5,7 +5,7 @@ class RegistrationsController < ApplicationController
     @registrations = Registration.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # index.html.haml
       format.json { render json: @registrations }
     end
   end
@@ -27,7 +27,7 @@ class RegistrationsController < ApplicationController
     @registration = Registration.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html # new.html.haml
       format.json { render json: @registration }
     end
   end

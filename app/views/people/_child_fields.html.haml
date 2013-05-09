@@ -1,0 +1,17 @@
+= f.semantic_fields_for :children do |child|
+  =child.input :name
+  =child.input :age
+  =child.input :language
+  =child.input :child_care, as: :boolean
+  %table
+    %tr
+      %th= Meal.human_attribute_name(:meal_date)
+      %th= Meal.human_attribute_name(:food_type)
+      %th= Meal.human_attribute_name(:meal_type)
+    -@meal_dates.each do |meal_date|
+      =f.semantic_fields_for :meals do |ff|
+        %tr
+          %td= meal_date
+          %td= ff.input :food_type
+          %td= ff.input :meal_type, as: :select, collection: [['Lunch', 1], ['Three Meals', 3], ['None', nil]]
+  =child.link_to_remove "Remove child", class: 'btn btn-danger'
