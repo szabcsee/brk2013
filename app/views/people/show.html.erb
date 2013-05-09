@@ -131,7 +131,7 @@
   </tr>
 <% end %>
 </table>
-
+<h3><%= t 'travel' %></h3>
 <table>
   <tr>
     <th>Arrival</th>
@@ -146,7 +146,7 @@
     <th></th>
   </tr>
 
-<% @travels.each do |travel| %>
+  <% @travels.each do |travel| %>
   <tr>
     <td><%= travel.arrival %></td>
     <td><%= travel.bus_trip %></td>
@@ -159,7 +159,7 @@
     <td><%= link_to 'Edit', edit_travel_path(travel) %></td>
     <td><%= link_to 'Destroy', travel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
-<% end %>
+  <% end %>
 </table>
 
 <br />

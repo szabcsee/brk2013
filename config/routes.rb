@@ -1,13 +1,11 @@
 Brk2013::Application.routes.draw do
-  resources :travels
-
-
   scope ":locale" do
     resources :children
     resources :registrations
     resources :meals
     resources :programs
     resources :people 
+    resources :travels
   end
   # The priority is based upon order of creation:
   # first created -> highest priority.

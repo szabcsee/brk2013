@@ -4,7 +4,7 @@ class Person < ActiveRecord::Base
   has_many :registrations, :dependent => :destroy
   has_many :programs, :through => :registrations
   has_many :children
-  has_one  :travel
+  has_many  :travels
 
   attr_accessible :email_address, :first_name, :home_country, :payment, :phone_number, :price_category, :price_method, :reference_number, :second_name, :meals_attributes, :registrations_attributes, :children_attributes, :travels_attributes, :eater_id, :eater_type
   
