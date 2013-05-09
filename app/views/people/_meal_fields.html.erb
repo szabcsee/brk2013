@@ -10,7 +10,7 @@
         <tr>
         <td><%= f3.text_field :meal_date, :value => meal_date %></td>
         <td><%= f3.hidden_field :food_type, :class => 'FoodType', :value => 'vegetarian'%></td>
-        <td><%= f3.select(:meal_type, [['Lunch', 1], ['Three Meals', 3], ['None', nil]]) %></td>
+        <td><%= f3.select(:meal_type, [['None', nil],['Lunch', 1], ['Three Meals', 3]]) %></td>
         </tr>
         <% end %>
       <% end %>

@@ -10,7 +10,10 @@ class Person < ActiveRecord::Base
   
   validate :first_name, :second_name, :home_country, :email_address, :payment, :price_method, :presence => true
   
-  accepts_nested_attributes_for :meals, :registrations, :travels, :children, :allow_destroy => true
+  accepts_nested_attributes_for :meals, :allow_destroy => true
+  accepts_nested_attributes_for :registrations, :allow_destroy => true
+  accepts_nested_attributes_for :travels, :allow_destroy => true
+  accepts_nested_attributes_for :children, :reject_if => proc { |attributes| attributes['name'].blank? }, :allow_destroy => true
   
 
   def reference_it

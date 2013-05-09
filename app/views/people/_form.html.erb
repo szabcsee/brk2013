@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :home_country %><br />
-    <%= select_tag(:home_country, options_for_select(@countries)) %>
+    <%= f.select(:home_country, @countries) %>
   </div>
   <div class="field">
     <%= f.label :phone_number %><br />
@@ -32,12 +32,12 @@
     <%= f.text_field :email_address %>
   </div>
   <div class="field">
-    <%= f.label :price_method %><br />
-    <%= f.select(:price_method, [['on the course', 'course'], ['in advance', 'advance']]) %> 
-  </div>
-  <div class="field">
     <%= f.label :price_category %><br />
     <%= f.select(:price_category, [['full', 'full'], ['support', 'support'], ['escort', 'escort'], ['discount', 'discount']]) %>
+  </div>
+  <div class="field">
+    <%= f.label :price_method %><br />
+    <%= f.select(:price_method, [['helyszínen', 'course'], ['előre utal', 'bank'],['előre készpénz', 'cash']]) %> 
   </div>
   <div class="field">
     <%= f.label :payment %><br />
@@ -86,7 +86,7 @@
     <td><%= program.price_discount %></td>
     <td>
     <%= f.fields_for :registrations do |f| %>
-      <%= f.check_box :program_id %>
+      <%= f.check_box :participate %>
       <%= f.hidden_field :program_id, :value => program.id %>
     <% end %>
     </td>

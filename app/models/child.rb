@@ -4,4 +4,5 @@ class Child < ActiveRecord::Base
   attr_accessible :age, :child_care, :language, :name, :eater_id, :eater_type, :meals_attributes
 
   accepts_nested_attributes_for :meals
+  validate :age, :child_care, :language, :name, :presence => true
 end

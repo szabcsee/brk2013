@@ -34,9 +34,7 @@ class PeopleController < ApplicationController
     childmeals = @child.meals.build
     @meal_dates = ["2013-07-09","2013-07-10","2013-07-11","2013-07-12","2013-07-13","2013-07-14"]
     registration = @person.registrations.build
-    @programs = Program.all
-    @countries = [
-                "Afghanistan",
+    @countries = [ "Afghanistan",
                 "Aland Islands",
                 "Albania",
                 "Algeria",
@@ -280,8 +278,8 @@ class PeopleController < ApplicationController
                 "Western Sahara",
                 "Yemen",
                 "Zambia",
-                "Zimbabwe"
-              ]
+                "Zimbabwe"]
+    @programs = Program.all
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @person }
@@ -292,6 +290,7 @@ class PeopleController < ApplicationController
   def edit
     @person = Person.find(params[:id])
     @programs = Program.all
+
   end
 
   # POST /people
