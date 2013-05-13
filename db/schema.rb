@@ -47,10 +47,11 @@ ActiveRecord::Schema.define(:version => 20130509111227) do
   end
 
   create_table "registrations", :force => true do |t|
-    t.integer  "user_id",    :null => false
-    t.integer  "program_id", :null => false
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.boolean  "participate"
+    t.integer  "user_id",     :null => false
+    t.integer  "program_id",  :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "travels", :force => true do |t|

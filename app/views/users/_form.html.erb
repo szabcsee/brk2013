@@ -86,9 +86,9 @@
     <td><%= program.price_member %></td>
     <td><%= program.price_discount %></td>
     <td>
-    <%= f.fields_for :registrations do |f| %>
-      <%= f.check_box :participate, true, false, :class => "participate" %>
-      <%= f.hidden_field :program_id, :value => program.id %>
+    <%= f.fields_for :registrations do |reg| %>
+      <%= reg.check_box :participate  %>
+      <%= reg.hidden_field :program_id, :value => program.id %>
     <% end %>
     </td>
   </tr>
