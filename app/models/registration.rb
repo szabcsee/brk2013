@@ -4,5 +4,4 @@ class Registration < ActiveRecord::Base
   belongs_to :user
   belongs_to :program
 
-  validates :participate, :acceptance => true
 end
