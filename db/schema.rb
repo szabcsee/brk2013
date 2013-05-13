@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130509132910) do
+ActiveRecord::Schema.define(:version => 20130513122227) do
 
   create_table "children", :force => true do |t|
     t.string   "name"
@@ -31,9 +31,10 @@ ActiveRecord::Schema.define(:version => 20130509132910) do
     t.integer  "meal_type"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.integer  "eater_id"
-    t.string   "eater_type"
+    t.integer  "person_id"
   end
+
+  add_index "meals", ["person_id"], :name => "index_meals_on_person_id"
 
   create_table "people", :force => true do |t|
     t.string   "first_name"
@@ -48,7 +49,13 @@ ActiveRecord::Schema.define(:version => 20130509132910) do
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
     t.integer  "registration_id"
+    t.integer  "meal_id"
+    t.integer  "travel_id"
   end
+
+  add_index "people", ["meal_id"], :name => "index_people_on_meal_id"
+  add_index "people", ["registration_id"], :name => "index_people_on_registration_id"
+  add_index "people", ["travel_id"], :name => "index_people_on_travel_id"
 
   create_table "programs", :force => true do |t|
     t.string   "program_name_hu"

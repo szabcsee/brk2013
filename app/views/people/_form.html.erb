@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :home_country %><br />
-    <%= f.select(:home_country, @countries) %>
+    <%= f.select :home_country, options_for_select(@countries) %>
   </div>
   <div class="field">
     <%= f.label :phone_number %><br />
@@ -60,6 +60,7 @@
     <% end %>
   <% end %>
   </table>
+  <%= f.link_to_add 'Add another Meal', :meals %>
   <h2><%= t 'children' %></h2>
   <%= f.fields_for :children do |builder| %>
     <%= render 'child_fields', f: builder %>
@@ -96,7 +97,36 @@
 <h2><%= t 'travel' %></h2>
 <p><%= t 'travel_description' %></p>
   <%= f.fields_for :travels do |travel| %>
-    <%= render 'travel_fields', f: travel %>
+  <fieldset>
+  <div class="field">
+    <%= travel.label :bus_trip %><br />
+    <%= travel.check_box :bus_trip %>
+  </div>
+  <div class="field">
+    <%= travel.label :arrival %><br />
+    <%= travel.select(:arrival, [['2013-07-12 11:00', '2013-07-12 11:00'], ['2013-07-12 11:00', '2013-07-12 15:00']]) %>
+  </div>
+  <div class="field">
+    <%= travel.label :arrival_seats %><br />
+    <%= travel.select(:arrival_seats, (0...6)) %>
+  </div>
+  <div class="field">
+    <%= travel.label :departure %><br />
+    <%= travel.select(:departure, [['2013-07-18 20:00', '2013-07-18 20:00'],['2013-07-18 20:00', '2013-07-18 20:00']]) %>
+  </div>
+  <div class="field">
+    <%= travel.label :departure_seats %><br />
+    <%= travel.select(:departure_seats, (0...6)) %>
+  </div>
+  <div class="field">
+    <%= travel.label :flight_date %><br />
+    <%= travel.datetime_select :flight_date %>
+  </div>
+  <div class="field">
+    <%= travel.label :flight_number %><br />
+    <%= travel.text_field :flight_number %>
+  </div>
+  </fieldset>
   <% end %>
     <%= f.hidden_field :reference_number %>
   <div class="actions">

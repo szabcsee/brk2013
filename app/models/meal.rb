@@ -1,8 +1,8 @@
 class Meal < ActiveRecord::Base
-  attr_accessible :food_type, :meal_date, :meal_type, :meal_id, :eater_type, :eater_id
+  attr_accessible :food_type, :meal_date, :meal_type, :meal_id, :person_id
 
-  validate :food_type, :meal_date, :meal_type, :eater_id, :presence => true
+  validate :food_type, :meal_date, :meal_type, :person_id, :presence => true
   
-  belongs_to :eater, :polymorphic => true
+  belongs_to :person
 
 end

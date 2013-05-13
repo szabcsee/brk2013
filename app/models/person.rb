@@ -1,19 +1,19 @@
 class Person < ActiveRecord::Base
 
-  has_many :meals, :as => :eater
+  has_many :meals
   has_many :registrations, :dependent => :destroy
   has_many :programs, :through => :registrations
   has_many :children
-  has_many  :travels
+  has_many :travels
 
-  attr_accessible :email_address, :first_name, :home_country, :payment, :phone_number, :price_category, :price_method, :reference_number, :second_name, :meals_attributes, :registrations_attributes, :children_attributes, :travels_attributes, :eater_id, :eater_type
+  attr_accessible :email_address, :first_name, :home_country, :payment, :phone_number, :price_category, :price_method, :reference_number, :second_name, :meals_attributes, :registrations_attributes, :children_attributes, :travels_attributes
   
   validate :first_name, :second_name, :home_country, :email_address, :payment, :price_method, :presence => true
   
   accepts_nested_attributes_for :meals, :allow_destroy => true
   accepts_nested_attributes_for :registrations, :allow_destroy => true
   accepts_nested_attributes_for :travels, :allow_destroy => true
-  accepts_nested_attributes_for :children, :reject_if => proc { |attributes| attributes['name'].blank? }, :allow_destroy => true
+  accepts_nested_attributes_for :children, :allow_destroy => true
   
 
   def reference_it

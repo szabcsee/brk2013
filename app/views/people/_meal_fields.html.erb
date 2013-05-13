@@ -1,17 +1,17 @@
-<h3><%= t 'childmeal' %></h3>
-      <table>
-      <tr>
-      <th><%= Meal.human_attribute_name(:meal_date) %></th>
-      <th><%= Meal.human_attribute_name(:food_type) %></th>
-      <th><%= Meal.human_attribute_name(:meal_type) %></th>
-      </tr>
-      <% @meal_dates.each do |meal_date| %>
-        <%= f.fields_for :meals do |f3| %>
-        <tr>
-        <td><%= f3.text_field :meal_date, :value => meal_date %></td>
-        <td><%= f3.hidden_field :food_type, :class => 'FoodType', :value => 'vegetarian'%></td>
-        <td><%= f3.select(:meal_type, [['None', nil],['Lunch', 1], ['Three Meals', 3]]) %></td>
-        </tr>
-        <% end %>
-      <% end %>
-      </table>
+<h2><%= t 'meals' %></h2>
+  <table>
+  <tr>
+  <th><%= f.label :meal_date %></th>
+  <th><%= f.label :food_type %></th>
+  <th><%= f.label :meal_type %></th>
+  </tr>
+  <% @meal_dates.each do |meal_date| %>
+    <%= f.fields_for :meals do |f2| %>
+    <tr>
+    <td><%= f2.text_field :meal_date, :value => meal_date %></td>
+    <td><%= f2.hidden_field :food_type, :class => 'FoodType', :value => 'vegetarian'%></td>
+    <td><%= f2.select(:meal_type, [['Lunch', 1], ['Three Meals', 3], ['None', nil]]) %></td>
+    </tr>
+    <% end %>
+  <% end %>
+</table>
