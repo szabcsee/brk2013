@@ -2,6 +2,8 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  countries:
+    1: ""
   sitename: "Becske Guru Yoga Course Registration 2013"
   meals: "Meals"
   children: "Children"
