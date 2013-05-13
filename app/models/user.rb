@@ -1,4 +1,4 @@
-class Person < ActiveRecord::Base
+class User < ActiveRecord::Base
 
   has_many :meals
   has_many :registrations, :dependent => :destroy
@@ -11,7 +11,7 @@ class Person < ActiveRecord::Base
   validate :first_name, :second_name, :home_country, :email_address, :payment, :price_method, :presence => true
   
   accepts_nested_attributes_for :meals, :allow_destroy => true
-  accepts_nested_attributes_for :registrations, :allow_destroy => true
+  accepts_nested_attributes_for :registrations, :reject_if => lambda { |a| a[:participate].nil? }, :allow_destroy => true
   accepts_nested_attributes_for :travels, :allow_destroy => true
   accepts_nested_attributes_for :children, :allow_destroy => true
   

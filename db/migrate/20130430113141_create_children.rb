@@ -5,10 +5,10 @@ class CreateChildren < ActiveRecord::Migration
       t.integer :age
       t.string :language
       t.boolean :child_care
-      t.references :person
+      t.references :user
 
       t.timestamps
     end
-    add_index :children, :person_id
+    add_index :children, :user_id
   end
 end

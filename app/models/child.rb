@@ -1,5 +1,5 @@
 class Child < ActiveRecord::Base
-  belongs_to :person
-  attr_accessible :age, :child_care, :language, :name, :person_id
+  belongs_to :user
+  attr_accessible :age, :child_care, :language, :name, :user_id
   validate :age, :child_care, :language, :name, :presence => true
 end

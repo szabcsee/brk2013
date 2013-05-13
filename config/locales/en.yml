@@ -2,8 +2,6 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  countries:
-    1: ""
   sitename: "Becske Guru Yoga Course Registration 2013"
   meals: "Meals"
   children: "Children"
@@ -14,13 +12,13 @@ en:
   travel_description: "If you require assistance with travel, please fill in the fields below. We try to assist you with airport pick-up and will provide shuttle service between the Budapest centre and Becske and return after the course."
   activerecord:
     models:
-      person: 'Participant'
+      user: 'Participant'
       child: 'Child'
       meal: 'Meal'
       program: 'Program'
       registration: 'Registration'
     attributes:
-      person:
+      user:
         email_address: 'Email address'
         first_name: 'Firstname'
         second_name: 'Surname'

@@ -11,32 +11,62 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130513122227) do
+ActiveRecord::Schema.define(:version => 20130509111227) do
 
   create_table "children", :force => true do |t|
     t.string   "name"
     t.integer  "age"
     t.string   "language"
     t.boolean  "child_care"
-    t.integer  "person_id"
+    t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
-  add_index "children", ["person_id"], :name => "index_children_on_person_id"
+  add_index "children", ["user_id"], :name => "index_children_on_user_id"
 
   create_table "meals", :force => true do |t|
     t.date     "meal_date"
     t.string   "food_type"
     t.integer  "meal_type"
+    t.integer  "user_id",    :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.integer  "person_id"
   end
 
-  add_index "meals", ["person_id"], :name => "index_meals_on_person_id"
+  create_table "programs", :force => true do |t|
+    t.string   "program_name_hu"
+    t.string   "program_name_en"
+    t.integer  "price_full"
+    t.integer  "price_member"
+    t.integer  "price_discount"
+    t.integer  "exchange_rate"
+    t.datetime "event_date"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
 
-  create_table "people", :force => true do |t|
+  create_table "registrations", :force => true do |t|
+    t.integer  "user_id",    :null => false
+    t.integer  "program_id", :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "travels", :force => true do |t|
+    t.string   "arrival"
+    t.boolean  "bus_trip"
+    t.integer  "arrival_seats"
+    t.integer  "departure_seats"
+    t.string   "departure"
+    t.string   "flight_number"
+    t.datetime "flight_date"
+    t.integer  "user_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  create_table "users", :force => true do |t|
     t.string   "first_name"
     t.string   "second_name"
     t.string   "home_country"
@@ -48,46 +78,6 @@ ActiveRecord::Schema.define(:version => 20130513122227) do
     t.string   "reference_number"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
-    t.integer  "registration_id"
-    t.integer  "meal_id"
-    t.integer  "travel_id"
-  end
-
-  add_index "people", ["meal_id"], :name => "index_people_on_meal_id"
-  add_index "people", ["registration_id"], :name => "index_people_on_registration_id"
-  add_index "people", ["travel_id"], :name => "index_people_on_travel_id"
-
-  create_table "programs", :force => true do |t|
-    t.string   "program_name_hu"
-    t.string   "program_name_en"
-    t.integer  "price_full"
-    t.integer  "price_member"
-    t.integer  "price_discount"
-    t.integer  "exchange_rate"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
-    t.datetime "event_date"
-  end
-
-  create_table "registrations", :force => true do |t|
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-    t.integer  "person_id",   :null => false
-    t.integer  "program_id",  :null => false
-    t.boolean  "participate"
-  end
-
-  create_table "travels", :force => true do |t|
-    t.string   "arrival"
-    t.boolean  "bus_trip"
-    t.integer  "arrival_seats"
-    t.integer  "departure_seats"
-    t.string   "departure"
-    t.string   "flight_number"
-    t.datetime "flight_date"
-    t.integer  "person_id"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
   end
 
 end

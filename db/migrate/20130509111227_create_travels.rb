@@ -1,14 +1,14 @@
 class CreateTravels < ActiveRecord::Migration
   def change
     create_table :travels do |t|
-      t.datetime :arrival
+      t.string :arrival
       t.boolean :bus_trip
       t.integer :arrival_seats
       t.integer :departure_seats
-      t.datetime :departure
+      t.string :departure
       t.string :flight_number
       t.datetime :flight_date
-      t.references :person
+      t.references :user
 
       t.timestamps
     end

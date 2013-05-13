@@ -1,10 +1,10 @@
 Brk2013::Application.routes.draw do
   scope ":locale" do
+    resources :users
     resources :children
     resources :registrations
     resources :meals
     resources :programs
-    resources :people 
     resources :travels
   end
   # The priority is based upon order of creation:
@@ -56,7 +56,7 @@ Brk2013::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'people#new'
+  root :to => 'users#new'
 
   # See how all your routes lay out with "rake routes"
 

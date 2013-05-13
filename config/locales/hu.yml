@@ -9,13 +9,13 @@ hu:
   travel_description: "Amennyiben szeretnél regisztrálni a busz útra Budapest Becske között és a kurzus után vissza, töltsd ki a releváns mezőket lentebb."
   activerecord:
     models:
-      person: "Résztvevő"
+      user: "Résztvevő"
       child: "Gyermek"
       meal: "Étkezés"
       program: "Program"
       registration: "Regisztráció"
     attributes:
-      person:
+      user:
         email_address: "Email cím"
         first_name: "Keresztnév"
         second_name: "Vezetéknév"

@@ -7,7 +7,7 @@ class CreatePrograms < ActiveRecord::Migration
       t.integer :price_member
       t.integer :price_discount
       t.integer :exchange_rate
-
+      t.datetime :event_date
       t.timestamps
     end
   end

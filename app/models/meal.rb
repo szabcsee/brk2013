@@ -1,8 +1,8 @@
 class Meal < ActiveRecord::Base
-  attr_accessible :food_type, :meal_date, :meal_type, :meal_id, :person_id
+  attr_accessible :food_type, :meal_date, :meal_type, :user_id
 
-  validate :food_type, :meal_date, :meal_type, :person_id, :presence => true
+  validate :food_type, :meal_date, :meal_type, :user_id, :presence => true
   
-  belongs_to :person
+  belongs_to :user
 
 end

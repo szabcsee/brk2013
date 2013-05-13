@@ -1,13 +1,6 @@
-@countries  = [ "Afghanistan",
-                "Aland Islands",
-                "Albania",
-                "Algeria",
-                "American Samoa",
-                "Andorra",
-                "Angola",
-                "Anguilla",
-                "Antarctica",
-                "Antigua And Barbuda",
+
+@countries  = [ 
+                
                 "Argentina",
                 "Armenia",
                 "Aruba",
