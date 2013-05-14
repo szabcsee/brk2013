@@ -81,9 +81,37 @@ hu:
     1: "Csak ebéd"
     3: "Háromszori étkezés"
     0: "Nem kérek"
+  second_day_meal_type:
+    1: "Csak ebéd"
+    3: "Háromszori étkezés"
+    0: "Nem kérek"
+  third_day_meal_type:
+    1: "Csak ebéd"
+    3: "Háromszori étkezés"
+    0: "Nem kérek"
+  fourth_day_meal_type:
+    1: "Csak ebéd"
+    3: "Háromszori étkezés"
+    0: "Nem kérek"
+  fifth_day_meal_type:
+    1: "Csak ebéd"
+    3: "Háromszori étkezés"
+    0: "Nem kérek"
+  sixth_day_meal_type:
+    1: "Csak ebéd"
+    3: "Háromszori étkezés"
+    0: "Nem kérek"
+  seventh_day_meal_type:
+    1: "Csak ebéd"
+    3: "Háromszori étkezés"
+    0: "Nem kérek"
   sitename: "Becskei Guru Jóga Kurzus Regisztráció 2013"
   meals: "Étkezések"
+  food_type:
+    vegetarian: "Vegetáriánus" 
+    meat: "Húsos"
   add_more_meals: "További étkezés hozzáadása"
+  remove_meal: "Étkezés eltávolítása"
   children: "Gyerekek"
   add_children: "Gyerek hozzáadása"
   child: "Gyerek"
