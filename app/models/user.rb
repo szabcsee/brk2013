@@ -31,46 +31,46 @@ class User < ActiveRecord::Base
         
         
 
-def calculate_price    
-  case @user.programs.size    
+def calculate_price 
+  case self.programs.size   
     when 9
-      case :price_method
+      case self.price_method
         when 'course'
-          case :price_category
+          case self.price_category
            when 'full'
-            :payment => 35000
+            self.payment = '35000'
            when 'support'
-            :payment => 30000
+            self.payment = '30000'
            when 'escort'
-            :payment => 5000
+            self.payment = '5000'
            when 'discount'
-            :payment => 17500
+            self.payment = '17500'
           end
-        when 'bank' || 'cash'
-          case :price_category
+        else
+          case self.price_category
            when 'full'
-            :payment => 30000
+            self.payment = '30000'
            when 'support'
-            :payment => 30000
+            self.payment = '30000'
            when 'escort'
-            :payment => 5000
+            self.payment = '5000'
            when 'discount'
-            :payment => 17500
+            self.payment = '17500'
           end
       end        
-    when 0 .. 8
-      case :price_category
+    else
+      case self.price_category
         when 'full'
-          @user.programs.each do |program|
-            :payment += program.price_full.to_i
+          self.programs.each do |program|
+            self.payment.to_i += program.price_full.to_i
           end
-        when 'support' || 'escort' || 'discount'
-          @user.programs.each do |program|
-             :payment += program.price_member.to_i
+        else
+          self.programs.each do |program|
+             self.payment.to_i += program.price_member.to_i
           end
       end
   end
-  :payment = :payment.to_s   
+  self.payment = self.payment.to_s   
 end
 
   before_save :reference_it
