@@ -36,8 +36,14 @@
     <%= f.select :price_method, price_method_list %>
   </div>
   <div class="field">
-    <%= f.label :price_category %><br />
-    <%= f.select :price_category, price_category_list %>
+    <%= f.label t 'price_category.full' %>
+    <%= f.radio_button :price_category, 'full', :class => 'price_category' %>
+    <br />
+    <%= f.label t 'price_category.escort' %>
+    <%= f.radio_button :price_category, 'escort', :class => 'price_category'  %>
+    <br />
+    <%= f.label t 'price_category.discount' %>
+    <%= f.radio_button :price_category, 'discount', :class => 'price_category'  %>
   </div>
   <div class="field">
     <%= f.label :payment %><br />

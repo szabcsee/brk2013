@@ -70,13 +70,11 @@ en:
     78: "Other"
   price_category:
     full: "full"
-    support: "support"
     escort: "escort"
     discount: "discount"
   price_method:
-    course: "at the course"
-    bank: "bank transfer"
-    cash: "cash in advance"
+    after: "from 20th June"
+    before: "until 19th June"
   first_day_meal_type:
     1: "Lunch"
     3: "Three Meals"
