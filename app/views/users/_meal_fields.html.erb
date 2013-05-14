@@ -11,7 +11,7 @@
     <%= f.hidden_field :first_day, :value => @meal_dates[0] %>
   </td>
   <td class="field">
-    <%= f.select(:first_day_meal_type, [['Lunch', 1], ['Three Meals', 3], ['None', 0]]) %>
+    <%= f.select :first_day_meal_type, first_day_meal_type_list %>
   </td>
   </tr>
   <tr>
