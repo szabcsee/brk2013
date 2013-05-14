@@ -95,6 +95,46 @@ class MealsController < ApplicationController
           @lunch[0] += 1
           @dinner[0] += 1
       end
+      case meal.second_day_meal_type 
+        when 1
+          @lunch[1] += 1
+        when 3
+          @breakfast[1] += 1
+          @lunch[1] += 1
+          @dinner[1] += 1
+      end
+      case meal.third_day_meal_type
+        when 1
+          @lunch[2] += 1
+        when 3
+          @breakfast[2] += 1
+          @lunch[2] += 1
+          @dinner[2] += 1
+      end
+      case meal.fourth_day_meal_type
+        when 1
+          @lunch[3] += 1
+        when 3
+          @breakfast[3] += 1
+          @lunch[3] += 1
+          @dinner[3] += 1
+      end
+      case meal.fifth_day_meal_type
+        when 1
+          @lunch[4] += 1
+        when 3
+          @breakfast[4] += 1
+          @lunch[4] += 1
+          @dinner[4] += 1
+      end
+      case meal.sixth_day_meal_type
+        when 1
+          @lunch[5] += 1
+        when 3
+          @breakfast[5] += 1
+          @lunch[5] += 1
+          @dinner[5] += 1
+      end
     end
   end
 end
