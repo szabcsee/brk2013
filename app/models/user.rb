@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   has_many :children
   has_many :travels
 
-  attr_accessible :email_address, :first_name, :home_country, :payment, :phone_number, :price_category, :price_method, :reference_number, :second_name, :meals_attributes, :registrations_attributes, :children_attributes, :travels_attributes
+  attr_accessible :email_address, :first_name, :home_country, :payment, :phone_number, :price_category, :price_method, :reference_number, :second_name, :meals_attributes, :registrations_attributes, :children_attributes, :travels_attributes, :full_course
   
   validate :first_name, :second_name, :home_country, :email_address, :payment, :price_method, :presence => true
   
@@ -24,6 +24,39 @@ class User < ActiveRecord::Base
   		(0...size).collect { chars[Kernel.rand(chars.length)] }.join
   	end
 	  self.reference_number += random_alphanumeric(6)
+  end
+
+  def calculate_price
+    case :price_method
+
+      when 'course'
+
+        case :price_category
+
+          when 'full'
+
+          when 'support'
+
+          when 'escort'
+
+          when 'discount'
+          
+        end
+
+      when 'bank' || 'cash'
+
+        case :price_category
+
+          when 'full'
+
+          when 'support'
+
+          when 'escort'
+
+          when 'discount'
+          
+        end
+    end    
   end
 
   before_save :reference_it
