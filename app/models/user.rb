@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   has_many :children
   has_many :travels
 
-  attr_accessible :email_address, :first_name, :home_country, :payment, :phone_number, :price_category, :price_method, :reference_number, :second_name, :meals_attributes, :registrations_attributes, :children_attributes, :travels_attributes, :full_course
+  attr_accessible :email_address, :first_name, :home_country, :payment, :phone_number, :price_category, :price_method, :reference_number, :second_name, :meals_attributes, :registrations_attributes, :children_attributes, :travels_attributes
   
   validate :first_name, :second_name, :home_country, :email_address, :payment, :price_method, :presence => true
   
@@ -26,38 +26,53 @@ class User < ActiveRecord::Base
 	  self.reference_number += random_alphanumeric(6)
   end
 
-  def calculate_price
-    case :price_method
 
-      when 'course'
 
-        case :price_category
+        
+        
 
-          when 'full'
-
-          when 'support'
-
-          when 'escort'
-
-          when 'discount'
-          
-        end
-
-      when 'bank' || 'cash'
-
-        case :price_category
-
-          when 'full'
-
-          when 'support'
-
-          when 'escort'
-
-          when 'discount'
-          
-        end
-    end    
+def calculate_price    
+  case @user.programs.size    
+    when 9
+      case :price_method
+        when 'course'
+          case :price_category
+           when 'full'
+            :payment => 35000
+           when 'support'
+            :payment => 30000
+           when 'escort'
+            :payment => 5000
+           when 'discount'
+            :payment => 17500
+          end
+        when 'bank' || 'cash'
+          case :price_category
+           when 'full'
+            :payment => 30000
+           when 'support'
+            :payment => 30000
+           when 'escort'
+            :payment => 5000
+           when 'discount'
+            :payment => 17500
+          end
+      end        
+    when 0 .. 8
+      case :price_category
+        when 'full'
+          @user.programs.each do |program|
+            :payment += program.price_full.to_i
+          end
+        when 'support' || 'escort' || 'discount'
+          @user.programs.each do |program|
+             :payment += program.price_member.to_i
+          end
+      end
   end
+  :payment = :payment.to_s   
+end
 
   before_save :reference_it
+  before_save :calculate_price
 end
