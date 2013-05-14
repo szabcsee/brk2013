@@ -1,10 +1,11 @@
-<%= f.fields_for :meals do |f2| %>
+<%= f.fields_for :meals, :wrapper => false do |f2| %>
+  <fieldset>
   <div class="field">
     <%= f.label :food_type %><br />
     <%= f.select(:food_type, [['Vegetarian', 'vegetarian'], ['Meat', 'meat']]) %>
   </div>
   <table>
-  <tr>
+  <tr class = "fields">
   <td class="field">
     <%= @meal_dates[0] %><br />
     <%= f.hidden_field :first_day, :value => @meal_dates[0] %>
@@ -70,3 +71,4 @@
   </table>
   <%= f.link_to_remove "Remove Meal", class: "remove_fields" %>
 <% end %>
+</fieldset>
