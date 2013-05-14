@@ -81,8 +81,35 @@ en:
     1: "Lunch"
     3: "Three Meals"
     0: "None"
+  second_day_meal_type:
+    1: "Lunch"
+    3: "Three Meals"
+    0: "None"
+  third_day_meal_type:
+    1: "Lunch"
+    3: "Three Meals"
+    0: "None"
+  fourth_day_meal_type:
+    1: "Lunch"
+    3: "Three Meals"
+    0: "None"
+  fifth_day_meal_type:
+    1: "Lunch"
+    3: "Three Meals"
+    0: "None"
+  sixth_day_meal_type:
+    1: "Lunch"
+    3: "Three Meals"
+    0: "None"
+  seventh_day_meal_type:
+    1: "Lunch"
+    3: "Three Meals"
+    0: "None"
   sitename: "Becske Guru Yoga Course Registration 2013"
   meals: "Meals"
+  food_type:
+    vegetarian: "Vegetarian" 
+    meat: "Meat"
   add_more_meals: "Add more meals"
   children: "Children"
   add_children: "Add Children"

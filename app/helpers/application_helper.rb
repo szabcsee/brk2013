@@ -11,4 +11,25 @@ module ApplicationHelper
   def first_day_meal_type_list
     I18n.t(:first_day_meal_type).map { |key, value| [ value, key ] }
   end
+  def second_day_meal_type_list
+    I18n.t(:second_day_meal_type).map { |key, value| [ value, key ] }
+  end
+  def third_day_meal_type_list
+    I18n.t(:third_day_meal_type).map { |key, value| [ value, key ] }
+  end
+  def fourth_day_meal_type_list
+    I18n.t(:fourth_day_meal_type).map { |key, value| [ value, key ] }
+  end
+  def fifth_day_meal_type_list
+    I18n.t(:fifth_day_meal_type).map { |key, value| [ value, key ] }
+  end
+  def sixth_day_meal_type_list
+    I18n.t(:sixth_day_meal_type).map { |key, value| [ value, key ] }
+  end
+  def seventh_day_meal_type_list
+    I18n.t(:seventh_day_meal_type).map { |key, value| [ value, key ] }
+  end
+  def food_type_list
+    I18n.t(:food_type).map { |key, value| [ value, key ] }
+  end
 end
