@@ -32,45 +32,11 @@ class User < ActiveRecord::Base
         
 
 def calculate_price 
-  case self.programs.size   
-    when 9
-      case self.price_method
-        when 'course'
-          case self.price_category
-           when 'full'
-            self.payment = '35000'
-           when 'support'
-            self.payment = '30000'
-           when 'escort'
-            self.payment = '5000'
-           when 'discount'
-            self.payment = '17500'
-          end
-        else
-          case self.price_category
-           when 'full'
-            self.payment = '30000'
-           when 'support'
-            self.payment = '30000'
-           when 'escort'
-            self.payment = '5000'
-           when 'discount'
-            self.payment = '17500'
-          end
-      end        
-    else
-      case self.price_category
-        when 'full'
-          self.programs.each do |program|
-            self.payment.to_i += program.price_full.to_i
-          end
-        else
-          self.programs.each do |program|
-             self.payment.to_i += program.price_member.to_i
-          end
-      end
-  end
-  self.payment = self.payment.to_s   
+  if self.programs.size == Program.all.size
+    puts 'ok'
+  else
+    puts 'no'
+  end     
 end
 
   before_save :reference_it
