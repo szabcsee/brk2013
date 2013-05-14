@@ -32,12 +32,17 @@
     <%= f.text_field :email_address %>
   </div>
   <div class="field">
+    <%= f.label :price_method %><br />
+    <%= f.select :price_method, price_method_list %>
+  </div>
+  <div class="field">
     <%= f.label :price_category %><br />
     <%= f.select :price_category, price_category_list %>
   </div>
   <div class="field">
-    <%= f.label :price_method %><br />
-    <%= f.select :price_method, price_method_list %>
+    <%= f.label :full_course %><br/>
+    <%= t 'fullcourse-text' %>
+    <%= f.check_box :full_course, :id => 'full_course' %>
   </div>
   <div class="field">
     <%= f.label :payment %><br />
