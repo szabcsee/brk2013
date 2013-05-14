@@ -1,15 +1,72 @@
-  <table id="mealgroup">
+<%= f.fields_for :meals do |f2| %>
+  <div class="field">
+    <%= f.label :food_type %><br />
+    <%= f.select(:food_type, [['Vegetarian', 'vegetarian'], ['Meat', 'meat']]) %>
+  </div>
+  <table>
   <tr>
-  <th><%= f.label :meal_date %></th>
-  <th><%= f.label :food_type %></th>
-  <th><%= f.label :meal_type %></th>
+  <td class="field">
+    <%= @meal_dates[0] %><br />
+    <%= f.hidden_field :first_day, :value => @meal_dates[0] %>
+  </td>
+  <td class="field">
+    <%= f.select(:first_day_meal_type, [['Lunch', 1], ['Three Meals', 3], ['None', 0]]) %>
+  </td>
   </tr>
-  <% @meal_dates.each do |meal_date| %>
-    <%= f.fields_for :meals do |f2| %>
-    <tr>
-    <td><%= f2.text_field :meal_date, :value => meal_date %></td>
-    <td><%= f2.hidden_field :food_type, :class => 'FoodType', :value => 'vegetarian'%></td>
-    <td><%= f2.select(:meal_type, [['Lunch', 1], ['Three Meals', 3], ['None', nil]]) %></td>
-    </tr>
-    <% end %>
-  <% end %>
+  <tr>
+  <td class="field">
+    <%= @meal_dates[1] %><br />
+    <%= f.hidden_field :second_day, :value => @meal_dates[1] %>
+  </td>
+  <td class="field">
+    <%= f.select(:second_day_meal_type, [['Lunch', 1], ['Three Meals', 3], ['None', 0]]) %>
+  </td>
+  </tr>
+  <tr>
+  <td class="field">
+    <%= @meal_dates[2] %><br />
+    <%= f.hidden_field :third_day, :value => @meal_dates[2] %>
+  </td>
+  <td class="field">
+    <%= f.select(:third_day_meal_type, [['Lunch', 1], ['Three Meals', 3], ['None', 0]]) %>
+  </td>
+  </tr>
+  <tr>
+  <td class="field">
+    <%= @meal_dates[3] %><br />
+    <%= f.hidden_field :fourth_day, :value => @meal_dates[3] %>
+  </td>
+  <td class="field">
+    <%= f.select(:fourth_day_meal_type, [['Lunch', 1], ['Three Meals', 3], ['None', 0]]) %>
+  </td>
+  </tr>
+  <tr>
+  <td class="field">
+    <%= @meal_dates[4] %><br />
+    <%= f.hidden_field :fifth_day, :value => @meal_dates[4] %>
+  </td>
+  <td class="field">
+    <%= f.select(:fifth_day_meal_type, [['Lunch', 1], ['Three Meals', 3], ['None', 0]]) %>
+  </td>
+  </tr>
+  <tr>
+  <td class="field">
+    <%= @meal_dates[5] %><br />
+    <%= f.hidden_field :sixth_day, :value => @meal_dates[5] %>
+  </td>
+  <td class="field">
+    <%= f.select(:sixth_day_meal_type, [['Lunch', 1], ['Three Meals', 3], ['None', 0]]) %>
+  </td>
+  </tr>
+  <tr>
+  <td class="field">
+    <%= @meal_dates[6] %><br />
+    <%= f.hidden_field :seventh_day, :value => @meal_dates[7] %>
+  </td>
+  <td class="field">
+    <%= f.select(:seventh_day_meal_type, [['Lunch', 1], ['Three Meals', 3], ['None', 0]]) %>
+  </td>
+  </tr>
+  </table>
+  <%= f.link_to_remove "Remove Meal", class: "remove_fields" %>
+<% end %>

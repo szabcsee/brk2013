@@ -1,11 +1,37 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  meal_date: 2013-04-19
   food_type: MyString
-  meal_type: 1
+  first_day: 2013-05-14
+  first_day_meal_type: 1
+  second_day: 2013-05-14
+  second_day_meal_type: 1
+  third_day: 2013-05-14
+  third_day_meal_type: 1
+  fourth_day: 2013-05-14
+  fourth_day_meal_type: 1
+  fifth_day: 2013-05-14
+  fifth_day_meal_type: 1
+  sixth_day: 2013-05-14
+  sixth_day_meal_type: 1
+  seventh_day: 2013-05-14
+  seventh_day_meal_type: 1
+  user: 
 
 two:
-  meal_date: 2013-04-19
   food_type: MyString
-  meal_type: 1
+  first_day: 2013-05-14
+  first_day_meal_type: 1
+  second_day: 2013-05-14
+  second_day_meal_type: 1
+  third_day: 2013-05-14
+  third_day_meal_type: 1
+  fourth_day: 2013-05-14
+  fourth_day_meal_type: 1
+  fifth_day: 2013-05-14
+  fifth_day_meal_type: 1
+  sixth_day: 2013-05-14
+  sixth_day_meal_type: 1
+  seventh_day: 2013-05-14
+  seventh_day_meal_type: 1
+  user: 

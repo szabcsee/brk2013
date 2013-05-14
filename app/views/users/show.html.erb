@@ -57,9 +57,21 @@
 
 <% @meals.each do |meal| %>
   <tr>
-    <td><%= meal.meal_date %></td>
     <td><%= meal.food_type %></td>
-    <td><%= meal.meal_type %></td>
+    <td><%= meal.first_day %></td>
+    <td><%= meal.first_day_meal_type %></td>
+    <td><%= meal.second_day %></td>
+    <td><%= meal.second_day_meal_type %></td>
+    <td><%= meal.third_day %></td>
+    <td><%= meal.third_day_meal_type %></td>
+    <td><%= meal.fourth_day %></td>
+    <td><%= meal.fourth_day_meal_type %></td>
+    <td><%= meal.fifth_day %></td>
+    <td><%= meal.fifth_day_meal_type %></td>
+    <td><%= meal.sixth_day %></td>
+    <td><%= meal.sixth_day_meal_type %></td>
+    <td><%= meal.seventh_day %></td>
+    <td><%= meal.seventh_day_meal_type %></td>
     <td><%= link_to 'Show', meal %></td>
     <td><%= link_to 'Edit', edit_meal_path(meal) %></td>
     <td><%= link_to 'Destroy', meal, method: :delete, data: { confirm: 'Are you sure?' } %></td>

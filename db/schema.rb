@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130509111227) do
+ActiveRecord::Schema.define(:version => 20130514102102) do
 
   create_table "children", :force => true do |t|
     t.string   "name"
@@ -26,13 +26,27 @@ ActiveRecord::Schema.define(:version => 20130509111227) do
   add_index "children", ["user_id"], :name => "index_children_on_user_id"
 
   create_table "meals", :force => true do |t|
-    t.date     "meal_date"
     t.string   "food_type"
-    t.integer  "meal_type"
-    t.integer  "user_id",    :null => false
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.date     "first_day"
+    t.integer  "first_day_meal_type"
+    t.date     "second_day"
+    t.integer  "second_day_meal_type"
+    t.date     "third_day"
+    t.integer  "third_day_meal_type"
+    t.date     "fourth_day"
+    t.integer  "fourth_day_meal_type"
+    t.date     "fifth_day"
+    t.integer  "fifth_day_meal_type"
+    t.date     "sixth_day"
+    t.integer  "sixth_day_meal_type"
+    t.date     "seventh_day"
+    t.integer  "seventh_day_meal_type"
+    t.integer  "user_id"
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
   end
+
+  add_index "meals", ["user_id"], :name => "index_meals_on_user_id"
 
   create_table "programs", :force => true do |t|
     t.string   "program_name_hu"

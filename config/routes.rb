@@ -1,4 +1,7 @@
 Brk2013::Application.routes.draw do
+  resources :meals
+
+
   scope ":locale" do
     resources :users
     resources :children

@@ -13,9 +13,6 @@
         <%= link_to_unless_current "English", locale: "en" %>
         <%= link_to_unless_current "Magyar", locale: "hu" %>
       </div>
-      <% flash.each do |name, msg| %>
-        <%= content_tag :div, msg, id: "flash_#{name}" %>
-      <% end %>
       <%= yield %>
     </div>
   </body>

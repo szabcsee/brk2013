@@ -1,10 +1,9 @@
 class MealsController < ApplicationController
   # GET /meals
   # GET /meals.json
-  before_filter :load_eater
-
   def index
-    @meals = @eater.meals
+    @meals = Meal.all
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @meals }
@@ -25,12 +24,7 @@ class MealsController < ApplicationController
   # GET /meals/new
   # GET /meals/new.json
   def new
-    @meal = @eater.meals.new(params[:meal])
-    if @meal.save
-      redirect_to @eater, notice: "Meal created."
-    else
-      render :new
-    end
+    @meal = Meal.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -86,12 +80,4 @@ class MealsController < ApplicationController
       format.json { head :no_content }
     end
   end
-
-private
-
-  def load_eater
-    resource, id = request.path.split('/')[1,2]
-    @eater = resource.singularize.classify.constantize.find(id)  
-  end
-
 end

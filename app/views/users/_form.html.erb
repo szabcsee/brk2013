@@ -44,23 +44,11 @@
     <%= f.text_field :payment %>
   </div>
   <h2><%= t 'meals' %></h2>
-  <table>
-  <tr>
-  <th><%= f.label :meal_date %></th>
-  <th><%= f.label :food_type %></th>
-  <th><%= f.label :meal_type %></th>
-  </tr>
-  <% @meal_dates.each do |meal_date| %>
-    <%= f.fields_for :meals do |f2| %>
-    <tr>
-    <td><%= f2.text_field :meal_date, :value => meal_date %></td>
-    <td><%= f2.hidden_field :food_type, :class => 'FoodType', :value => 'vegetarian'%></td>
-    <td><%= f2.select(:meal_type, [['Lunch', 1], ['Three Meals', 3], ['None', nil]]) %></td>
-    </tr>
-    <% end %>
+  <%= f.fields_for :meals, :wrapper => false do |f2| %>
+    <%= render 'meal_fields', f: f2 %>
   <% end %>
+  <%= f.link_to_add 'Add More meals', :meals %>
   </table>
-  <%= f.link_to_add 'Add another Meal', :meals %>
   <h2><%= t 'children' %></h2>
   <%= f.fields_for :children do |builder| %>
     <%= render 'child_fields', f: builder %>

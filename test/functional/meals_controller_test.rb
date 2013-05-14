@@ -18,7 +18,7 @@ class MealsControllerTest < ActionController::TestCase
 
   test "should create meal" do
     assert_difference('Meal.count') do
-      post :create, meal: { food_type: @meal.food_type, meal_date: @meal.meal_date, meal_type: @meal.meal_type }
+      post :create, meal: { fifth_day: @meal.fifth_day, fifth_day_meal_type: @meal.fifth_day_meal_type, first_day: @meal.first_day, first_day_meal_type: @meal.first_day_meal_type, food_type: @meal.food_type, fourth_day: @meal.fourth_day, fourth_day_meal_type: @meal.fourth_day_meal_type, second_day: @meal.second_day, second_day_meal_type: @meal.second_day_meal_type, seventh_day: @meal.seventh_day, seventh_day_meal_type: @meal.seventh_day_meal_type, sixth_day: @meal.sixth_day, sixth_day_meal_type: @meal.sixth_day_meal_type, third_day: @meal.third_day, third_day_meal_type: @meal.third_day_meal_type }
     end
 
     assert_redirected_to meal_path(assigns(:meal))
@@ -35,7 +35,7 @@ class MealsControllerTest < ActionController::TestCase
   end
 
   test "should update meal" do
-    put :update, id: @meal, meal: { food_type: @meal.food_type, meal_date: @meal.meal_date, meal_type: @meal.meal_type }
+    put :update, id: @meal, meal: { fifth_day: @meal.fifth_day, fifth_day_meal_type: @meal.fifth_day_meal_type, first_day: @meal.first_day, first_day_meal_type: @meal.first_day_meal_type, food_type: @meal.food_type, fourth_day: @meal.fourth_day, fourth_day_meal_type: @meal.fourth_day_meal_type, second_day: @meal.second_day, second_day_meal_type: @meal.second_day_meal_type, seventh_day: @meal.seventh_day, seventh_day_meal_type: @meal.seventh_day_meal_type, sixth_day: @meal.sixth_day, sixth_day_meal_type: @meal.sixth_day_meal_type, third_day: @meal.third_day, third_day_meal_type: @meal.third_day_meal_type }
     assert_redirected_to meal_path(assigns(:meal))
   end
 

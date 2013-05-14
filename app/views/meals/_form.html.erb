@@ -11,18 +11,83 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :meal_date %><br />
-    <%= f.date_select :meal_date %>
-  </div>
-  <div class="field">
+    <div class="field">
     <%= f.label :food_type %><br />
-    <%= f.text_field :food_type %>
+    <%= f2.select(:food_type, [['Vegetarian', 'vegetarian'], ['Meat', 'meat']]) %>
   </div>
-  <div class="field">
-    <%= f.label :meal_type %><br />
-    <%= f.number_field :meal_type %>
-  </div>
+  <table>
+  <tr>
+  <td class="field">
+    <%= @meal_dates[0] %><br />
+    <%= f.hidden_field :first_day, :value => @meal_dates[0] %>
+  </td>
+  <td class="field">
+    <%= f.label :first_day_meal_type %><br />
+    <%= f2.select(:first_day_meal_type, [['Lunch', 1], ['Three Meals', 3], ['None', 0]]) %>
+  </td>
+  </tr>
+  <tr>
+  <td class="field">
+    <%= @meal_dates[1] %><br />
+    <%= f.hidden_field :second_day, :value => @meal_dates[1] %>
+  </td>
+  <td class="field">
+    <%= f.label :second_day_meal_type %><br />
+    <%= f2.select(:second_day_meal_type, [['Lunch', 1], ['Three Meals', 3], ['None', 0]]) %>
+  </td>
+  </tr>
+  <tr>
+  <td class="field">
+    <%= @meal_dates[2] %><br />
+    <%= f.hidden_field :third_day, :value => @meal_dates[2] %>
+  </td>
+  <td class="field">
+    <%= f.label :third_day_meal_type %><br />
+    <%= f2.select(:third_day_meal_type, [['Lunch', 1], ['Three Meals', 3], ['None', 0]]) %>
+  </td>
+  </tr>
+  <tr>
+  <td class="field">
+    <%= @meal_dates[3] %><br />
+    <%= f.hidden_field :fourth_day, :value => @meal_dates[3] %>
+  </td>
+  <td class="field">
+    <%= f.label :fourth_day_meal_type %><br />
+    <%= f2.select(:fourth_day_meal_type, [['Lunch', 1], ['Three Meals', 3], ['None', 0]]) %>
+  </td>
+  </tr>
+  <tr>
+  <td class="field">
+    <%= @meal_dates[4] %><br />
+    <%= f.hidden_field :fifth_day, :value => @meal_dates[4] %>
+  </td>
+  <td class="field">
+    <%= f.label :fifth_day_meal_type %><br />
+    <%= f2.select(:fifth_day_meal_type, [['Lunch', 1], ['Three Meals', 3], ['None', 0]]) %>
+  </td>
+  </tr>
+  <tr>
+  <td class="field">
+    <%= @meal_dates[5] %><br />
+    <%= f.hidden_field :sixth_day, :value => @meal_dates[5] %>
+  </td>
+  <td class="field">
+    <%= f.label :sixth_day_meal_type %><br />
+    <%= f2.select(:sixth_day_meal_type, [['Lunch', 1], ['Three Meals', 3], ['None', 0]]) %>
+  </td>
+  </tr>
+  <tr>
+  <td class="field">
+    <%= @meal_dates[6] %><br />
+    <%= f.hidden_field :seventh_day, :value => @meal_dates[7] %>
+  </td>
+  <td class="field">
+    <%= f.label :seventh_day_meal_type %><br />
+    <%= f2.select(:seventh_day_meal_type, [['Lunch', 1], ['Three Meals', 3], ['None', 0]]) %>
+  </td>
+  </tr>
+  </table>
+<% end %>
   <div class="actions">
     <%= f.submit %>
   </div>
