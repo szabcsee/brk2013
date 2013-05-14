@@ -33,11 +33,11 @@
   </div>
   <div class="field">
     <%= f.label :price_category %><br />
-    <%= f.select(:price_category, [['full', 'full'], ['support', 'support'], ['escort', 'escort'], ['discount', 'discount']]) %>
+    <%= f.select :price_category, price_category_list %>
   </div>
   <div class="field">
     <%= f.label :price_method %><br />
-    <%= f.select(:price_method, [['helyszínen', 'course'], ['előre utal', 'bank'],['előre készpénz', 'cash']]) %> 
+    <%= f.select :price_method, price_method_list %>
   </div>
   <div class="field">
     <%= f.label :payment %><br />
@@ -53,7 +53,7 @@
   <%= f.fields_for :children do |builder| %>
     <%= render 'child_fields', f: builder %>
   <% end %>
-  <%= f.link_to_add t('add_chlidren'), :children %>
+  <%= f.link_to_add t('add_children'), :children %>
   <h2><%= t 'registrations' %></h2>
   <table>
   <tr>
