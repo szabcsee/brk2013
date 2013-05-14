@@ -80,4 +80,21 @@ class MealsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def report
+    @meals = Meal.all
+    @breakfast = []
+    @lunch = []
+    @dinner = []
+    @meals.each do |meal|
+      case meal.first_day_meal_type 
+        when 1
+          @lunch[0] += 1
+        when 3
+          @breakfast[0] += 1
+          @lunch[0] += 1
+          @dinner[0] += 1
+      end
+    end
+  end
 end
