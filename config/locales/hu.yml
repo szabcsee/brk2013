@@ -147,8 +147,8 @@ hu:
         meal_type: "Étkezés típusa"
         meal_id: "Étkezés id"
       program:
-        program_name_hu: 'Program magyar neve'
-        program_name_en: 'Program angol neve'
+        program_name_hu: 'Program'
+        program_name_en: 'Program'
         price_full: 'Teljes ár'
         price_member: 'Pártolói ár'
         price_discount: 'Kedvezményes ár'

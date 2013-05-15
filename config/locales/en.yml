@@ -147,8 +147,8 @@ en:
         meal_type: "Meal type"
         meal_id: "Meal id"
       program:
-        program_name_hu: "Program name HU"
-        program_name_en: "Program name EN"
+        program_name_hu: "Program"
+        program_name_en: "Program"
         price_full: "Full price"
         price_member: "Supporter price"
         price_discount: "Discount price"
