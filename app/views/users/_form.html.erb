@@ -46,8 +46,8 @@
     <%= f.radio_button :price_category, 'discount', :class => 'price_category'  %>
   </div>
   <div class="field">
-    <%= f.label :payment %><br />
-    <%= f.text_field :payment %>
+    <span id="total_price"></span>
+    <%= f.hidden_field :payment %>
   </div>
   <h2><%= t 'meals' %></h2>
   <%= f.fields_for :meals, :wrapper => false do |f2| %>
@@ -60,7 +60,15 @@
     <%= render 'child_fields', f: builder %>
   <% end %>
   <%= f.link_to_add t('add_children'), :children %>
+  <div id="escort_fields">
+    <h2>Kísérő</h2>
+  <% (1...7).each do |i| %>
+      <%= @meal_dates[i] %> <input type="checkbox" name="escort" class="escort_day" value="1000"><br/>
+  <% end %>
+  </div>
+  <div id="program_fields">
   <h2><%= t 'registrations' %></h2>
+  <input type="button" id="full_course" value="Részt veszek a teljes kurzuson"/>
   <table>
   <tr>
     <th><%= Program.human_attribute_name(:event_date) %></th>
@@ -81,13 +89,14 @@
     <td><%= program.price_discount %></td>
     <td>
     <%= f.fields_for :registrations do |reg| %>
-      <%= reg.check_box :participate  %>
+      <%= reg.check_box :participate,  :class => "program_participation"  %>
       <%= reg.hidden_field :program_id, :value => program.id %>
     <% end %>
     </td>
   </tr>
 <% end %>
-</table> 
+</table>
+</div>
 <h2><%= t 'travel' %></h2>
 <p><%= t 'travel_description' %></p>
   <%= f.fields_for :travels do |travel| %>
