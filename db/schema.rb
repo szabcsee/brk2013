@@ -66,7 +66,7 @@ ActiveRecord::Schema.define(:version => 20130514102102) do
     t.integer  "program_id",  :null => false
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
-   end 
+  end
 
   create_table "travels", :force => true do |t|
     t.string   "arrival"
