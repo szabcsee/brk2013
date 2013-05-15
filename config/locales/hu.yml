@@ -112,6 +112,7 @@ hu:
   remove_meal: "Étkezés eltávolítása"
   children: "Gyerekek"
   add_children: "Gyerek hozzáadása"
+  remove_child: "Gyerek eltávolítása"
   child: "Gyerek"
   registrations: "Program regisztráció"
   travel: "Utazás"

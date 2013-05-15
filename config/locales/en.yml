@@ -112,6 +112,7 @@ en:
   remove_meal: "Remove Meal"
   children: "Children"
   add_children: "Add Children"
+  remove_child: "Remove child"
   child: "Child"
   registrations: "Program registration"
   travel: "Travel, shuttle registration"
