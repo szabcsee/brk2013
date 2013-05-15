@@ -72,8 +72,11 @@
   <table>
   <tr>
     <th><%= Program.human_attribute_name(:event_date) %></th>
-    <th><%= Program.human_attribute_name(:program_name_hu) %></th>
-    <th><%= Program.human_attribute_name(:program_name_en) %></th>
+    <% if I18n.locale.to_s == "hu"%>
+    	<th><%= Program.human_attribute_name(:program_name_hu) %></th>
+    <% elsif I18n.locale.to_s == "en" %>
+    	<th><%= Program.human_attribute_name(:program_name_en) %></th>
+    <% end %>
     <th><%= Program.human_attribute_name(:price_full) %></th>
     <th><%= Program.human_attribute_name(:price_member) %></th>
     <th><%= Program.human_attribute_name(:price_discount) %></th>
@@ -82,8 +85,11 @@
 <% @programs.each do |program| %>
   <tr>
     <td><%= l program.event_date, :format => :short %></td>
-    <td><%= program.program_name_hu %></td>
-    <td><%= program.program_name_en %></td>
+    <% if I18n.locale.to_s == "hu"%>
+    	<td><%= program.program_name_hu %></td>
+    <% elsif I18n.locale.to_s == "en" %>	
+    	<td><%= program.program_name_en %></td>
+    <% end %>
     <td><%= program.price_full %></td>
     <td><%= program.price_member %></td>
     <td><%= program.price_discount %></td>
