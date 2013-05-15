@@ -73,7 +73,7 @@
   </tr>
 <% @programs.each do |program| %>
   <tr>
-    <td><%= program.event_date %></td>
+    <td><%= l program.event_date, :format => :short %></td>
     <td><%= program.program_name_hu %></td>
     <td><%= program.program_name_en %></td>
     <td><%= program.price_full %></td>
