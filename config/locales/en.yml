@@ -118,40 +118,49 @@ en:
   travel_description: "If you require assistance with travel, please fill in the fields below. We try to assist you with airport pick-up and will provide shuttle service between the Budapest centre and Becske and return after the course."
   activerecord:
     models:
-      user: 'Participant'
-      child: 'Child'
-      meal: 'Meal'
-      program: 'Program'
-      registration: 'Registration'
+      user: "Participant"
+      child: "Child"
+      meal: "Meal"
+      program: "Program"
+      registration: "Registration"
+      travel: "Travel"
     attributes:
       user:
-        email_address: 'Email address'
-        first_name: 'Firstname'
-        second_name: 'Surname'
-        home_country: 'Country'
-        payment: 'Payment'
-        price_category: 'Payment category'
-        phone_number: 'Telephone number'
-        price_method: 'Payment method'
-        reference_number: 'Registration number'
+        email_address: "Email address"
+        first_name: "Firstname"
+        second_name: "Surname"
+        home_country: "Country"
+        payment: "Payment"
+        price_category: "Payment category"
+        phone_number: "Telephone number"
+        price_method: "Payment method"
+        reference_number: "Registration number"
       child:
-        age: 'Age'
-        child_care: 'Child care'
-        language: 'Spoken language'
-        name: 'Name'
+        age: "Age"
+        child_care: "Child care"
+        language: "Spoken language"
+        name: "Name"
       meal:
-        food_type: 'Food type'
-        meal_date: 'Meal date'
-        meal_type: 'Meal type'
-        meal_id: 'Meal id'
+        food_type: "Food type"
+        meal_date: "Meal date"
+        meal_type: "Meal type"
+        meal_id: "Meal id"
       program:
-        program_name_hu: 'Program name HU'
-        program_name_en: 'Program name EN'
-        price_full: 'Full price'
-        price_member: 'Supporter price'
-        price_discount: 'Discount price'
-        event_date: 'Event date'
+        program_name_hu: "Program name HU"
+        program_name_en: "Program name EN"
+        price_full: "Full price"
+        price_member: "Supporter price"
+        price_discount: "Discount price"
+        event_date: "Event date"
       registration:
+      travel:
+        arrival: "Bus trip to Becske (course)"
+        arrival_seats: "Seats"
+        bus_trip: "Travel with Bus"
+        departure: "Bus trip to Budapest"
+        departure_seats: "Seats"
+        flight_date: "Your flight arrives"
+        flight_number: "Flight number"
   date:
     abbr_day_names:
     - Sun
@@ -296,7 +305,7 @@ en:
         delimiter: ! ','
         format: ! '%u%n'
         precision: 2
-        separator: .
+        separator: '.'
         significant: false
         strip_insignificant_zeros: false
         unit: £
@@ -349,10 +358,3 @@ en:
       long: ! '%d %B, %Y %H:%M'
       short: ! '%d %b %H:%M'
     pm: pm
-  # remove these aliases after 'activemodel' and 'activerecord' namespaces are removed from Rails repository
-  activemodel:
-    errors:
-      <<: *errors
-  activerecord:
-    errors:
-      <<: *errors

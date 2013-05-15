@@ -49,25 +49,25 @@ hu:
     57: "Paraguay"
     58: "Peru"
     59: "Lengyelország"
-    61: "Portugália"
-    62: "Puerto Rico"
-    63: "Románia"
-    64: "Oroszország"
-    65: "San Marino"
-    66: "Szerbia"
-    67: "Szlovákia"
-    68: "Szlovénia"
-    69: "Dél Afrika"
-    71: "Spanyolország"
-    72: "Svédország"
-    73: "Svájc"
-    74: "Thailand"
-    75: "Ukrajna"
-    76: "Egyesült Királyság"
-    77: "Egyesült Államok"
-    78: "Uruguay"
-    79: "Venezuela"
-    80: "Egyéb"
+    60: "Portugália"
+    61: "Puerto Rico"
+    62: "Románia"
+    63: "Oroszország"
+    64: "San Marino"
+    65: "Szerbia"
+    66: "Szlovákia"
+    67: "Szlovénia"
+    68: "Dél Afrika"
+    69: "Spanyolország"
+    70: "Svédország"
+    71: "Svájc"
+    72: "Thailand"
+    73: "Ukrajna"
+    74: "Egyesült Királyság"
+    75: "Egyesült Államok"
+    76: "Uruguay"
+    77: "Venezuela"
+    78: "Egyéb"
   price_category:
     full: "teljes"
     escort: "kísérő"
@@ -123,6 +123,7 @@ hu:
       meal: "Étkezés"
       program: "Program"
       registration: "Regisztráció"
+      travel: "Utazás"
     attributes:
       user:
         email_address: "Email cím"
@@ -152,6 +153,14 @@ hu:
         price_discount: 'Kedvezményes ár'
         event_date: 'Esemény dátuma'
       registration:
+      travel:
+        arrival: 'Busz Becskére'
+        arrival_seats: 'Ülőhelyek száma'
+        bus_trip: 'Busszal utazok'
+        departure: 'Busszal Budapestre'
+        departure_seats: 'Ülőhelyek száma'
+        flight_date: 'Repülő érkezési idelye'
+        flight_number: 'Járatszám'
   date:
     abbr_day_names:
     - v.
