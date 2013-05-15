@@ -46,8 +46,8 @@
     <%= f.radio_button :price_category, 'discount', :class => 'price_category'  %>
   </div>
   <div class="field">
-    <%= f.label :payment %><br />
-    <%= f.text_field :payment %>
+    <span id="total_price"></span>
+    <%= f.hidden_field :payment %>
   </div>
   <h2><%= t 'meals' %></h2>
   <%= f.fields_for :meals, :wrapper => false do |f2| %>

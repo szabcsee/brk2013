@@ -22,7 +22,7 @@ $(document).ready(function(){
 	$(".escort_day").click(function(){
 		$(".escort_day [type=checkbox]:checked").each(function()
         {
-        	$("#user_payment").prop('value', $(this).val());
+        	$("#total_price").prop('value', $(this).val());
         });        
 	});
 });
