@@ -1,30 +1,117 @@
-# . . .
 Program.delete_all
+# . . .
 Program.create(id: 1,
-  program_name_hu: 'Lama Ole tanitas',
-  program_name_en: 'Lama Ole Nydahl teaching',
+  program_name_hu: 'Utazotanitok - tanitas napkozben',
+  program_name_en: 'Traveling teachers - teaching during the day',
+  price_full: 1200,
+  price_member: 600,
+  price_discount: 600,
+  exchange_rate: 280,
+  event_date: DateTime.strptime("07/09/2013", "%m/%d/%Y")
+  )
+# . . .
+Program.create(id: 2,
+  program_name_hu: 'Lama Ole Nydahl - tanitas este',
+  program_name_en: 'Lama Ole Nydahl - evening lecture',
   price_full: 3500,
   price_member: 3500,
   price_discount: 1800,
-  exchange_rate: 280)
+  exchange_rate: 280,
+  event_date: DateTime.strptime("07/09/2013", "%m/%d/%Y")
+  )
 # . . .
-Program.create(id: 2,
-  program_name_hu: 'Lama Sherab Gyaltsen Rinpoche tanitas',
-  program_name_en: 'Lama Sherab Gyaltsen Rinpoche teaching',
+Program.create(id: 3,
+  program_name_hu: 'Utazotanitok, vagy Lama Ole Nydahl - tanitas napkozben',
+  program_name_en: 'Lama Ole Nydahl or travelling teachers - teaching during the day',
+  price_full: 1200,
+  price_member: 600,
+  price_discount: 600,
+  exchange_rate: 280,
+  event_date: DateTime.strptime("07/10/2013", "%m/%d/%Y")
+  )
+# . . .
+Program.create(id: 4,
+  program_name_hu: 'Lama Ole Nydahl - tanitas este',
+  program_name_en: 'Lama Ole Nydahl - evening lecture',
   price_full: '3500',
   price_member: '3500',
   price_discount: '1800',
-  exchange_rate: '280')
+  exchange_rate: '280',
+  event_date: DateTime.strptime("07/10/2013", "%m/%d/%Y")
+  )
 # . . .
-Program.create(id: 3,
-  program_name_hu: 'Beavatas',
-  program_name_en: 'Empowerment',
+Program.create(id: 5,
+  program_name_hu: 'Sherab Gyaltsen Rinpoche - A kagyu vonal es a Karmapak',
+  program_name_en: 'Lama Sherab Gyaltsen Rinpoche - Teachings about the Kagyu Lineage, especially Karmapas',
+  price_full: '3500',
+  price_member: '3500',
+  price_discount: '1800',
+  exchange_rate: '280',
+  event_date: DateTime.strptime("07/11/2013", "%m/%d/%Y")
+  )
+# . . .
+Program.create(id: 6,
+  program_name_hu: 'Lama Ole Nydahl - tanitas este',
+  program_name_en: 'Lama Ole Nydahl - evening lecture',
+  price_full: '3500',
+  price_member: '3500',
+  price_discount: '1800',
+  exchange_rate: '280',
+  event_date: DateTime.strptime("07/11/2013", "%m/%d/%Y")
+  )
+# . . .
+Program.create(id: 7,
+  program_name_hu: 'Sherab Gyaltsen Rinpoche - A menedekfa tanitoi',
+  program_name_en: 'Lama Sherab Gyaltsen Rinpoche - The Teachers in the Refuge Tree',
+  price_full: '3500',
+  price_member: '3500',
+  price_discount: '1800',
+  exchange_rate: '280',
+  event_date: DateTime.strptime("07/12/2013", "%m/%d/%Y")
+  )
+# . . .
+Program.create(id: 8,
+  program_name_hu: 'Lama Ole Nydahl - tanitas este',
+  program_name_en: 'Lama Ole Nydahl - evening lecture',
+  price_full: '3500',
+  price_member: '3500',
+  price_discount: '1800',
+  exchange_rate: '280',
+  event_date: DateTime.strptime("07/12/2013", "%m/%d/%Y")
+  )
+# . . .
+Program.create(id: 9,
+  program_name_hu: 'Sherab Gyaltsen Rinpoche - Szobeli atadas (lungok)',
+  program_name_en: 'Lama Sherab Gyaltsen Rinpoche - Oral tranmission (lungs)',
+  price_full: '3500',
+  price_member: '3500',
+  price_discount: '1800',
+  exchange_rate: '280',
+  event_date: DateTime.strptime("07/13/2013", "%m/%d/%Y")
+  )
+# . . .
+Program.create(id: 10,
+  program_name_hu: 'Lama Ole Nydahl - tanitas este',
+  program_name_en: 'Lama Ole Nydahl - evening lecture',
+  price_full: '3500',
+  price_member: '3500',
+  price_discount: '1800',
+  exchange_rate: '280',
+  event_date: DateTime.strptime("07/13/2013", "%m/%d/%Y")
+  )
+# . . .
+Program.create(id: 11,
+  program_name_hu: 'Serab Gyalcen rinpocse - Karma Paksi (2. Karmapa)-beavatas',
+  program_name_en: 'Sherab Gyaltsen Rinpoche - Karmapa Pakshi (2nd Karmapa) empowerment in the morning',
   price_full: 7000,
   price_member: 7000,
   price_discount: 3500,
-  exchange_rate: 280)
+  exchange_rate: 280,
+  event_date: DateTime.strptime("09/14/2009", "%m/%d/%Y")
+  )
+# . . .
 
-
+=begin
 Person.delete_all
 # . . . Person_id 1
 Person.create(id: 1,
@@ -149,4 +236,4 @@ Meal.create(food_type: 'non-vega',
   meal_date: '2013-07-14',
   meal_type: 3,
   person_id: 2)
-  
+=end
