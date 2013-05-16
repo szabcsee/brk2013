@@ -1,8 +1,8 @@
 Program.delete_all
 # . . .
 Program.create(id: 1,
-  program_name_hu: 'Utazotanitok - tanitas napkozben',
-  program_name_en: 'Traveling teachers - teaching during the day',
+  program_name_hu: 'Utazotanito (Tommy B.) - tanitas napkozben',
+  program_name_en: 'Traveling teacher (Tommy B.) - teaching during the day',
   price_full: 1200,
   price_member: 600,
   price_discount: 600,
@@ -21,8 +21,8 @@ Program.create(id: 2,
   )
 # . . .
 Program.create(id: 3,
-  program_name_hu: 'Utazotanitok, vagy Lama Ole Nydahl - tanitas napkozben',
-  program_name_en: 'Lama Ole Nydahl or travelling teachers - teaching during the day',
+  program_name_hu: 'Utazotanito (Pedro) - tanitas napkozben',
+  program_name_en: 'Travelling teacher (Pedro) - teaching during the day',
   price_full: 1200,
   price_member: 600,
   price_discount: 600,
