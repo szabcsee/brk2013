@@ -45,8 +45,8 @@
     <%= f.label t 'price_category.discount' %>
     <%= f.radio_button :price_category, 'discount', :class => 'price_category'  %>
   </div>
+  <span id="total_price">0</span>
   <div class="field">
-    <span id="total_price"></span>
     <%= f.hidden_field :payment %>
   </div>
   <h2><%= t 'meals' %></h2>
@@ -95,7 +95,7 @@
     <td><%= program.price_discount %></td>
     <td>
     <%= f.fields_for :registrations do |reg| %>
-      <%= reg.check_box :participate,  :class => "program_participation"  %>
+      <%= reg.check_box :participate,  :class => "program_participation", data: { "full-price" => program.price_full, "member-price" => program.price_member, "discount-price" => program.price_discount  } %>
       <%= reg.hidden_field :program_id, :value => program.id %>
     <% end %>
     </td>
