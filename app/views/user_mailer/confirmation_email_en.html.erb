@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+	</head>
+	<body>
+		<h1>Dear, <%= @user.first_name %></h1>
+		<p>
+			You have successfully registered to the Becske - Guru Yoga course, 2013.
+			Your reference number is: <%= @user.reference_number %>.
+			<br/>
+		</p>
+		<p>
+			Thanks for the registration and have a great day!
+		</p>
+		<p>
+			 <%= @url %>
+		</p>
+	</body>
+</html>
