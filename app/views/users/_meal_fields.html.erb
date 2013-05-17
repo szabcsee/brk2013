@@ -1,4 +1,5 @@
 <%= f.fields_for :meals, :wrapper => false do |f2| %>
+  <div class="meal_fields">
   <fieldset>
   <div class="field">
     <%= f.label :food_type %><br />
@@ -72,4 +73,5 @@
   <%= f.link_to_remove t('remove_meal'), class: "remove_fields" %>
 <% end %>
 </fieldset>
+</div>
 

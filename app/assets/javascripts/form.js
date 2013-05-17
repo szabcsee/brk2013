@@ -1,6 +1,8 @@
 $(document).ready(function(){
 	$("#escort_fields").hide();
+	$("input:checkbox").prop("checked", false);
 	cat = 'after';
+	pricecat = '';
 
 	$("#user_price_method").click(function(){
 		cat = $(this).val();
@@ -8,7 +10,8 @@ $(document).ready(function(){
 	});
 
 	$("input[name$='user[price_category]']").each(function(){
-		$(this).prop('checked', false)
+		$(this).prop('checked', false);
+		calculateTotal();
 	});
 
 	$("input[name$='user[price_category]']").click(function(){
@@ -22,10 +25,16 @@ $(document).ready(function(){
 			$("#escort_fields").hide();
         	$("#program_fields").show();
 		}
+		pricecat = $(this).val();
+		calculateTotal();
 	});
 
 	$("#full_course").click(function(){
-		$(".program_participation").prop('checked', true);
+			if($(this).is(':checked'))
+		        $(".program_participation").prop('checked', true);
+		    else
+		        $(".program_participation").prop('checked', false);
+			calculateTotal();
 	});
 
 	$(".escort_day").click(function(){
@@ -34,6 +43,24 @@ $(document).ready(function(){
 
 	$(".meal_price").click(function(){
        calculateTotal();
+	});
+
+	$(".program_participation").click(function(){
+		if (pricecat == '')
+			alert('Choose price category / Válassz árkategóriát');
+		if ($(".program_participation").not(':checked').length > 0)
+			$("#full_course").prop('checked', false);
+		else
+			$("#full_course").prop('checked', true);
+		calculateTotal();
+	});
+
+	$(document).on('click', '.meal_fields', function(){
+   		calculateTotal();
+	});
+
+	$(".bus_trip").click(function(){
+		calculateTotal();
 	});
 
 	function calculateTotal() {
@@ -109,10 +136,32 @@ $(document).ready(function(){
 	        				price = price + 2100;
 	        			}	
         			}
-        		}	
+        		}
         });
 
-         $("#total_price").text(price);
+		$(".program_participation").each(function(){
+				if($(this).is(':checked'))
+				{
+						if (pricecat == 'full'){
+							price = price + parseFloat($(this).attr('data-full-price'));
+						}
+						else if (pricecat == 'discount')
+						{
+							price = price + parseFloat($(this).attr('data-discount-price'));
+						}
+						else if (pricecat == 'escort')
+						{
+							price = price;
+						}
+				}
+		});
+
+		if($(".bus_trip").is(':checked')){
+			$(".seats").each(function(){
+				price = price + parseFloat($(this).val()) * 1000;
+			});
+		}
+        $("#total_price").text(price);
 	}
 });
 
