@@ -4,7 +4,6 @@ $(document).ready(function(){
 
 	$("#user_price_method").click(function(){
 		cat = $(this).val();
-		alert(cat);
 		calculateTotal();
 	});
 
@@ -48,7 +47,7 @@ $(document).ready(function(){
 
         $(".meal_price").each(function()
         {	
-        		if ($(this).attr("class") == ".first_day")
+        		if ($(this).hasClass("first_day"))
         		{
         			if (cat == "after")
         			{
@@ -69,7 +68,7 @@ $(document).ready(function(){
 	        			}	
         			}
         		}
-        		if ($(this).attr("class") == ".seventh_day")
+        		else if ($(this).hasClass("seventh_day"))
         		{
         			if (cat == "after")
         			{
