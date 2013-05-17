@@ -76,6 +76,9 @@ $(document).ready(function(){
 	$(".bus_trip").click(function(){
 		calculateTotal();
 	});
+	$(".seats").click(function(){
+		calculateTotal();
+	});
 
 	function calculateTotal() {
 		price = 0;
