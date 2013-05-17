@@ -2,15 +2,17 @@
 
 <table>
   <tr>
+    <th>Program event date</th>
     <th>Program name hu</th>
     <th>Program name en</th>
     <th>Price full</th>
-    <th>Price member</th>
+    <th>Price full EURO</th>
+    <th>Price discount EURO</th>
     <th>Price discount</th>
     <th>Exchange rate</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Show</th>
+    <th>Edit</th>
+    <th>Destroy</th>
   </tr>
 
 <% @programs.each do |program| %>
@@ -19,7 +21,8 @@
     <td><%= program.program_name_hu %></td>
     <td><%= program.program_name_en %></td>
     <td><%= program.price_full %></td>
-    <td><%= program.price_member %></td>
+    <td><%= program.price_full_eur %></td>
+    <td><%= program.price_discount_eur %></td>
     <td><%= program.price_discount %></td>
     <td><%= program.exchange_rate %></td>
     <td><%= link_to 'Show', program %></td>

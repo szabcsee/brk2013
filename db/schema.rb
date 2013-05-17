@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130514102102) do
+ActiveRecord::Schema.define(:version => 20130517154252) do
 
   create_table "children", :force => true do |t|
     t.string   "name"
@@ -52,12 +52,13 @@ ActiveRecord::Schema.define(:version => 20130514102102) do
     t.string   "program_name_hu"
     t.string   "program_name_en"
     t.integer  "price_full"
-    t.integer  "price_member"
     t.integer  "price_discount"
     t.integer  "exchange_rate"
     t.datetime "event_date"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at",                                       :null => false
+    t.datetime "updated_at",                                       :null => false
+    t.decimal  "price_full_eur",     :precision => 8, :scale => 2
+    t.decimal  "price_discount_eur", :precision => 8, :scale => 2
   end
 
   create_table "registrations", :force => true do |t|

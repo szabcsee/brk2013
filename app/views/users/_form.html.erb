@@ -8,13 +8,16 @@
         <li><%= msg %></li>
       <% end %>
       </ul>
-      <%= t 'currency_selector' %>
+      
+    </div>
+  <% end %>
+  <div class="currency">
+  <%= t 'currency_selector' %>
       <select id="currency_selector">
         <option value="en">Euro</option>
         <option value="hu">Forint</option>
       </select>
-    </div>
-  <% end %>
+  </div>
   <input type="hidden" value="<%= I18n.locale.to_s %>" id="form_language"/>
   <div class="field">
     <%= f.label :first_name %><br />
