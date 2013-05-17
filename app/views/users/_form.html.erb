@@ -8,9 +8,14 @@
         <li><%= msg %></li>
       <% end %>
       </ul>
+      <%= t 'currency_selector' %>
+      <select id="currency_selector">
+        <option value="en">Euro</option>
+        <option value="hu">Forint</option>
+      </select>
     </div>
   <% end %>
-
+  <input type="hidden" value="<%= I18n.locale.to_s %>" id="form_language"/>
   <div class="field">
     <%= f.label :first_name %><br />
     <%= f.text_field :first_name %>
@@ -47,7 +52,7 @@
   </div>
   <span id="total_price">0</span>
   <div class="field">
-    <%= f.hidden_field :payment %>
+    <%= f.hidden_field :payment, :class => 'price_container' %>
   </div>
   <h2><%= t 'meals' %></h2>
   <%= f.fields_for :meals do |f2| %>
