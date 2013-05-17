@@ -8,9 +8,14 @@
         <li><%= msg %></li>
       <% end %>
       </ul>
+      <%= t 'currency_selector' %>
+      <select id="currency_selector">
+        <option value="en">Euro</option>
+        <option value="hu">Forint</option>
+      </select>
     </div>
   <% end %>
-
+  <input type="hidden" value="<%= I18n.locale.to_s %>" id="form_language"/>
   <div class="field">
     <%= f.label :first_name %><br />
     <%= f.text_field :first_name %>
@@ -47,10 +52,10 @@
   </div>
   <span id="total_price">0</span>
   <div class="field">
-    <%= f.hidden_field :payment %>
+    <%= f.hidden_field :payment, :class => 'price_container' %>
   </div>
   <h2><%= t 'meals' %></h2>
-  <%= f.fields_for :meals, :wrapper => false do |f2| %>
+  <%= f.fields_for :meals do |f2| %>
     <%= render 'meal_fields', f: f2 %>
   <% end %>
   <%= f.link_to_add t('add_more_meals'), :meals %>
@@ -68,7 +73,7 @@
   </div>
   <div id="program_fields">
   <h2><%= t 'registrations' %></h2>
-  <input type="button" id="full_course" value="Részt veszek a teljes kurzuson"/>
+  <input type="checkbox" id="full_course" value="Részt veszek a teljes kurzuson"/>
   <table>
   <tr>
     <th><%= Program.human_attribute_name(:event_date) %></th>
@@ -78,7 +83,6 @@
     	<th><%= Program.human_attribute_name(:program_name_en) %></th>
     <% end %>
     <th><%= Program.human_attribute_name(:price_full) %></th>
-    <th><%= Program.human_attribute_name(:price_member) %></th>
     <th><%= Program.human_attribute_name(:price_discount) %></th>
     <th></th>
   </tr>
@@ -91,11 +95,10 @@
     	<td><%= program.program_name_en %></td>
     <% end %>
     <td><%= program.price_full %></td>
-    <td><%= program.price_member %></td>
     <td><%= program.price_discount %></td>
     <td>
     <%= f.fields_for :registrations do |reg| %>
-      <%= reg.check_box :participate,  :class => "program_participation", data: { "full-price" => program.price_full, "member-price" => program.price_member, "discount-price" => program.price_discount  } %>
+      <%= reg.check_box :participate,  :class => "program_participation", data: { "full-price" => program.price_full, "discount-price" => program.price_discount  } %>
       <%= reg.hidden_field :program_id, :value => program.id %>
     <% end %>
     </td>
@@ -109,7 +112,7 @@
   <fieldset>
   <div class="field">
     <%= travel.label :bus_trip %><br />
-    <%= travel.check_box :bus_trip %>
+    <%= travel.check_box :bus_trip, :class => 'bus_trip' %>
   </div>
   <div class="field">
     <%= travel.label :arrival %><br />
@@ -117,7 +120,7 @@
   </div>
   <div class="field">
     <%= travel.label :arrival_seats %><br />
-    <%= travel.select(:arrival_seats, (0...6)) %>
+    <%= travel.select(:arrival_seats, (0...6), {}, :class => 'seats') %>
   </div>
   <div class="field">
     <%= travel.label :departure %><br />
@@ -125,7 +128,7 @@
   </div>
   <div class="field">
     <%= travel.label :departure_seats %><br />
-    <%= travel.select(:departure_seats, (0...6)) %>
+    <%= travel.select(:departure_seats, (0...6), {}, :class => 'seats') %>
   </div>
   <div class="field">
     <%= travel.label :flight_date %><br />
