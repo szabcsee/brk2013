@@ -68,6 +68,7 @@ hu:
     76: "Uruguay"
     77: "Venezuela"
     78: "Egyéb"
+  currency_selector: "Pénznem választó"
   price_category:
     full: "teljes"
     escort: "kísérő"

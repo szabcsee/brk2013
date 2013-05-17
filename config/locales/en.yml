@@ -68,6 +68,7 @@ en:
     76: "Uruguay"
     77: "Venezuela"
     78: "Other"
+  currency_selector: "Currency selector"
   price_category:
     full: "full"
     escort: "escort"
