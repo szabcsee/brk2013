@@ -4,17 +4,69 @@
 		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
 	</head>
 	<body>
-		<h1>Dear, <%= @user.first_name %></h1>
+		<p>
+			Dear, <%= @user.first_name %>
+		</p>
 		<p>
 			You have successfully registered to the Becske - Guru Yoga course, 2013.
 			Your reference number is: <%= @user.reference_number %>.
 			<br/>
 		</p>
 		<p>
+			Your registration details:
+		</p>
+		<h3>Meals</h3>
+<table border="1em">
+	<tr>
+		<th>Meal date</th>
+		<th>Food type</th>
+		<th>Meal type</th>
+	</tr>
+
+	<% @meals.each do |meal| %>
+	<tr>
+		<td><%= meal.food_type %></td>
+		<td><%= meal.first_day %></td>
+		<td> <%= show_meal_type(meal.first_day_meal_type) %> </td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= meal.second_day %></td>
+		<td> <%= show_meal_type(meal.second_day_meal_type) %> </td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= meal.third_day %></td>
+		<td> <%= show_meal_type(meal.third_day_meal_type) %> </td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= meal.fourth_day %></td>
+		<td> <%= show_meal_type(meal.fourth_day_meal_type) %> </td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= meal.fifth_day %></td>
+		<td> <%= show_meal_type(meal.fifth_day_meal_type) %> </td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= meal.sixth_day %></td>
+		<td> <%= show_meal_type(meal.sixth_day_meal_type) %> </td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= meal.seventh_day %></td>
+		<td> <%= show_meal_type(meal.seventh_day_meal_type) %> </td>
+	</tr>
+	<% end %>
+</table>
+		<p>
 			Thanks for the registration and have a great day!
 		</p>
 		<p>
-			 <%= @url %>
+			<%= @url %>
 		</p>
+
 	</body>
 </html>

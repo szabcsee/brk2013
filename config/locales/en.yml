@@ -103,6 +103,9 @@ en:
     1: "Lunch"
     3: "Three Meals"
     0: "None"
+  lunch: "lunch"
+  three_time: "three times"
+  no_food: "no food"
   sitename: "Becske Guru Yoga Course Registration 2013"
   meals: "Meals"
   food_type:

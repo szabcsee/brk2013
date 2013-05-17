@@ -103,6 +103,9 @@ hu:
     1: "Csak ebéd"
     3: "Háromszori étkezés"
     0: "Nem kérek"
+  lunch: "ebéd"
+  three_time: "teljes étkezés"
+  no_food: "nincs"
   sitename: "Becskei Guru Jóga Kurzus Regisztráció 2013"
   meals: "Étkezések"
   food_type:
