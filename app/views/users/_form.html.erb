@@ -101,7 +101,7 @@
     <td><%= program.price_discount %></td>
     <td>
     <%= f.fields_for :registrations do |reg| %>
-      <%= reg.check_box :participate,  :class => "program_participation", data: { "full-price" => program.price_full, "discount-price" => program.price_discount  } %>
+      <%= reg.check_box :participate,  :class => "program_participation", data: { "full-price" => program.price_full, "discount-price" => program.price_discount, "full-price-eur" => program.price_full_eur, "discount-price-eur" => program.price_discount_eur,  } %>
       <%= reg.hidden_field :program_id, :value => program.id %>
     <% end %>
     </td>

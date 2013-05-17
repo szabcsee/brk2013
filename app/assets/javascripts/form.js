@@ -246,11 +246,21 @@ $(document).ready(function(){
 				if($(this).is(':checked'))
 				{
 						if (pricecat == 'full'){
-							price = price + parseFloat($(this).attr('data-full-price'));
+							if (lang == "hu"){
+	        				price = price + parseFloat($(this).attr('data-full-price'));
+	        				}
+	        				if (lang == "en"){
+	        				price = price + parseFloat($(this).attr('data-full-price-eur'));	
+	        				}
 						}
 						else if (pricecat == 'discount')
-						{
-							price = price + parseFloat($(this).attr('data-discount-price'));
+						{	
+							if (lang == "hu"){
+	        				price = price + parseFloat($(this).attr('data-discount-price'));
+	        				}
+	        				if (lang == "en"){
+	        				price = price + parseFloat($(this).attr('data-discount-price-eur'));	
+	        				}
 						}
 						else if (pricecat == 'escort')
 						{
