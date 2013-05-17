@@ -54,6 +54,8 @@ class UsersController < ApplicationController
     @programs = Program.all
     respond_to do |format|
       if @user.save
+        UserMailer.confirmation_email_en(@user).deliver
+        
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render json: @user, status: :created, location: @user }
       else
