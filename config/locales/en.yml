@@ -1,4 +1,5 @@
 en:
+  home_country_name: "Country"
   home_country:
     1: "Argentina"
     2: "Australia"
@@ -114,6 +115,7 @@ en:
     meat: "Meat"
   add_more_meals: "Add more meals"
   remove_meal: "Remove Meal"
+  your_food_type: "Your food type:"
   children: "Children"
   add_children: "Add Children"
   remove_child: "Remove child"

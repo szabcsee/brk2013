@@ -41,4 +41,7 @@ module ApplicationHelper
         t 'no_food'
       end
   end
+  def reverse_country(home_country)
+    I18n.t(home_country)
+  end
 end

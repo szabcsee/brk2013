@@ -13,23 +13,18 @@
 </p>
 
 <p>
-	<b>Home country:</b>
+	<b><%= t('home_country_name') %></b>
 	<%= @user.home_country %>
 </p>
 
 <p>
-	<b>Phone number:</b>
+	<b><%= t('phone_number') %></b>
 	<%= @user.phone_number %>
 </p>
 
 <p>
-	<b>Email address:</b>
+	<b><%= t('email_address') %></b>
 	<%= @user.email_address %>
-</p>
-
-<p>
-	<b>Price method:</b>
-	<%= @user.price_method %>
 </p>
 
 <p>
@@ -38,7 +33,7 @@
 </p>
 
 <p>
-	<b>Payment:</b>
+	<b><%= t 'payment' %></b>
 	<%= @user.payment %>
 </p>
 <p>
@@ -46,57 +41,48 @@
 	<%= @user.reference_number %>
 </p>
 
-<h3>Meals</h3>
-<table border="1em">
-	<tr>
-		<th>Meal date</th>
-		<th>Food type</th>
-		<th>Meal type</th>
-	</tr>
-
+<h3><%= t("meals") %></h3>
+<table border="1px"  cellpadding="3">
 	<% @meals.each do |meal| %>
 	<tr>
-		<td><%= meal.food_type %></td>
-		<td><%= meal.first_day %></td>
+		<th>Meal date</th>
+		<th>Meal type</th>
+	</tr>
+	<tr>
+		<td> <%= meal.first_day %> </td>
 		<td> <%= show_meal_type(meal.first_day_meal_type) %> </td>
 	</tr>
 	<tr>
-		<td></td>
-		<td><%= meal.second_day %></td>
+		<td> <%= meal.second_day %> </td>
 		<td> <%= show_meal_type(meal.second_day_meal_type) %> </td>
 	</tr>
 	<tr>
-		<td></td>
-		<td><%= meal.third_day %></td>
+		<td> <%= meal.third_day %> </td>
 		<td> <%= show_meal_type(meal.third_day_meal_type) %> </td>
 	</tr>
 	<tr>
-		<td></td>
-		<td><%= meal.fourth_day %></td>
+		<td> <%= meal.fourth_day %> </td>
 		<td> <%= show_meal_type(meal.fourth_day_meal_type) %> </td>
 	</tr>
 	<tr>
-		<td></td>
-		<td><%= meal.fifth_day %></td>
+		<td> <%= meal.fifth_day %> </td>
 		<td> <%= show_meal_type(meal.fifth_day_meal_type) %> </td>
 	</tr>
 	<tr>
-		<td></td>
-		<td><%= meal.sixth_day %></td>
+		<td> <%= meal.sixth_day %> </td>
 		<td> <%= show_meal_type(meal.sixth_day_meal_type) %> </td>
 	</tr>
 	<tr>
-		<td></td>
-		<td><%= meal.seventh_day %></td>
+		<td> 2013-07-14 </td>
 		<td> <%= show_meal_type(meal.seventh_day_meal_type) %> </td>
 	</tr>
 	<tr>
-		<td><%= link_to 'Show', meal %></td>
-		<td><%= link_to 'Edit', edit_meal_path(meal) %></td>
-		<td><%= link_to 'Destroy', meal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		<td> <%= t('your_food_type') %> </td>
+		<td> <%= meal.food_type %> </td>
 	</tr>
 	<% end %>
 </table>
+
 <h3>Children</h3>
 <table>
 	<tr>
