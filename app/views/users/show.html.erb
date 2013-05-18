@@ -96,18 +96,24 @@
 	<% end %>
 </table>
 
-<h2>Program Registration</h2>
-<table>
+<h2><%=t 'registrations'%></h2>
+<table border="1px" cellspacing="0" cellpadding="1">
 	<tr>
-		<th>Program id</th>
+		<th><%= User.human_attribute_name(:program) %></th>
 	</tr>
-
-	<% @registrations.each do |registration| %>
-	
+	<% @user.programs.each do |program| %>
+	<tr>
+		<% if I18n.locale.to_s == "hu"%>
+    		<td><%= program.program_name_hu %></td>
+    	<% elsif I18n.locale.to_s == "en" %>	
+    		<td><%= program.program_name_en %></td>
+    	<% end %>
+	</tr>
 	<% end %>
 </table>
+
 <h3><%= t 'travel' %></h3>
-<table>
+<table border="1px" cellspacing="0" cellpadding="1">
 	<tr>
 		<th>Arrival</th>
 		<th>Bus trip</th>
@@ -116,9 +122,6 @@
 		<th>Departure</th>
 		<th>Flight number</th>
 		<th>Flight date</th>
-		<th></th>
-		<th></th>
-		<th></th>
 	</tr>
 
 	<% @travels.each do |travel| %>
@@ -130,14 +133,8 @@
 		<td><%= travel.departure %></td>
 		<td><%= travel.flight_number %></td>
 		<td><%= travel.flight_date %></td>
-		<td><%= link_to 'Show', travel %></td>
-		<td><%= link_to 'Edit', edit_travel_path(travel) %></td>
-		<td><%= link_to 'Destroy', travel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 	</tr>
 	<% end %>
 </table>
 
 <br />
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
