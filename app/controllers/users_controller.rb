@@ -1,6 +1,9 @@
 class UsersController < ApplicationController
   # GET /users
   # GET /users.json
+
+  before_filter :authorize, only: [:edit, :update, :show, :destroy]
+
   def index
     @users = User.all
     respond_to do |format|
@@ -12,7 +15,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    @user = User.find(params[:id])
+    @user = User.find_by_reference_number(params[:reference_number])
     @registrations = Registration.where(:user_id => @user.id)
     @travels = @user.travels.all
     @meals = @user.meals.all
@@ -54,6 +57,7 @@ class UsersController < ApplicationController
     @programs = Program.all
     respond_to do |format|
       if @user.save
+        session[:user_id] = @user.id
         UserMailer.confirmation_email_en(@user).deliver
         
         format.html { redirect_to @user, notice: 'User was successfully created.' }

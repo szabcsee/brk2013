@@ -1,14 +1,18 @@
 class User < ActiveRecord::Base
 
+  has_secure_password
+
   has_many :meals
   has_many :registrations, :dependent => :destroy
   has_many :programs, :through => :registrations
   has_many :children
   has_many :travels
 
-  attr_accessible :email_address, :first_name, :home_country, :payment, :phone_number, :price_category, :price_method, :reference_number, :second_name, :meals_attributes, :registrations_attributes, :children_attributes, :travels_attributes
+  attr_accessible :email_address, :password, :password_confirmation, :first_name, :home_country, :payment, :phone_number, :price_category, :price_method, :reference_number, :second_name, :meals_attributes, :registrations_attributes, :children_attributes, :travels_attributes
   
   validate :first_name, :second_name, :home_country, :email_address, :payment, :price_method, :presence => true
+  
+  validates_uniqueness_of :reference_number
   
   accepts_nested_attributes_for :meals, :allow_destroy => true
   accepts_nested_attributes_for :registrations, :reject_if => proc { |attributes| attributes[:participate] == '0' }, :allow_destroy => true
@@ -25,19 +29,15 @@ class User < ActiveRecord::Base
   	end
 	  self.reference_number += random_alphanumeric(6)
   end
-
-
-
         
         
-
-def calculate_price 
-  if self.programs.size == Program.all.size
-    puts 'ok'
-  else
-    puts 'no'
-  end     
-end
+  def calculate_price 
+    if self.programs.size == Program.all.size
+      puts 'ok'
+    else
+      puts 'no'
+    end     
+  end
 
   before_save :reference_it
   before_save :calculate_price

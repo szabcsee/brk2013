@@ -1,0 +1,12 @@
+
+
+<h1>Log In</h1>
+
+<%= form_tag sessions_path do %>
+  <div class="field">
+    <%= label_tag :reference_number %><br />
+    <%= password_field_tag :reference_number %>
+  </div>
+  <div class="actions"><%= submit_tag "Log In" %></div>
+<% end %>
+
