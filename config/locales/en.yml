@@ -1,5 +1,4 @@
 en:
-  home_country_name: "Country"
   home_country:
     1: "Argentina"
     2: "Australia"
@@ -69,6 +68,7 @@ en:
     76: "Uruguay"
     77: "Venezuela"
     78: "Other"
+  name: "Name"
   currency_selector: "Currency selector"
   price_category:
     full: "full"
@@ -110,6 +110,10 @@ en:
   no_food: "no food"
   sitename: "Becske Guru Yoga Course Registration 2013"
   meals: "Meals"
+  vegetarian: "vegetarian"
+  meat: "meat"
+  true: "yes"
+  false: "no"
   food_type:
     vegetarian: "Vegetarian" 
     meat: "Meat"
@@ -139,8 +143,9 @@ en:
         home_country: "Country"
         payment: "Payment"
         price_category: "Payment category"
-        phone_number: "Telephone number"
+        phone_number: "Phone number"
         price_method: "Payment method"
+        password_digest: "password"
         reference_number: "Registration number"
       child:
         age: "Age"

@@ -1,5 +1,4 @@
 hu:
-  home_country_name: "Ország" 
   home_country:
     1: "Argentína"
     2: "Austrália"
@@ -69,6 +68,7 @@ hu:
     76: "Uruguay"
     77: "Venezuela"
     78: "Egyéb"
+  name: "Név"
   currency_selector: "Pénznem választó"
   price_category:
     full: "teljes"
@@ -110,12 +110,15 @@ hu:
   no_food: "nincs"
   sitename: "Becskei Guru Jóga Kurzus Regisztráció 2013"
   meals: "Étkezések"
+  vegetarian: "vegetáriánus"
+  meat: "húsos"
+  true: "igen"
+  false: "nem"
   food_type:
     vegetarian: "Vegetáriánus" 
     meat: "Húsos"
   add_more_meals: "További étkezés hozzáadása"
   remove_meal: "Étkezés eltávolítása"
-  your_food_type: "Húsos/vegetáriánus"
   children: "Gyerekek"
   add_children: "Gyerek hozzáadása"
   remove_child: "Gyerek eltávolítása"
@@ -133,18 +136,19 @@ hu:
       travel: "Utazás"
     attributes:
       user:
-        email_address: "E-mail cím"
+        email_address: "E-mail"
         first_name: "Keresztnév"
         second_name: "Vezetéknév"
         home_country: "Ország"
         payment: "Fizetés"
         price_category: "Fizetési kategória"
+        password_digest: "password"
         phone_number: "Telefonszám"
         price_method: "Fizetés módja"
         reference_number: "Regisztrációs szám"
       child:
-        age: "Kor"
-        child_care: "Gyermek Gondozás"
+        age: "Életkor"
+        child_care: "Gyermekfelügyelet"
         language: "Beszélt nyelv"
         name: "Név"
       meal:
