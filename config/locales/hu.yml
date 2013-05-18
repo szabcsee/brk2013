@@ -112,8 +112,8 @@ hu:
   meals: "Étkezések"
   vegetarian: "vegetáriánus"
   meat: "húsos"
-  true: "igen"
-  false: "nem"
+  child_care_true: "igen"
+  child_care_false: "nem"
   food_type:
     vegetarian: "Vegetáriánus" 
     meat: "Húsos"

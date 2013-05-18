@@ -2,9 +2,11 @@ module ApplicationHelper
   def countries_list 
     I18n.t(:home_country).map { |key, value| [ value, key ] } 
   end
+  
   def price_category_list
     I18n.t(:price_category).map { |key, value| [ value, key ] }
   end
+  
   def price_method_list
     I18n.t(:price_method).map { |key, value| [ value, key ] }
   end
@@ -49,10 +51,10 @@ module ApplicationHelper
       end
   end
   def show_child_care(child_care)
-      if child_care.to_s == "true"
-        t 'true'
+      if child_care == true
+        t 'child_care_true'
       else
-        t 'false'
+        t 'child_care_false'
       end
   end
 end
