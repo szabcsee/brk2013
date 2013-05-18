@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   # GET /users
   # GET /users.json
+  before_filter :authorize, only: [:edit, :update, :index]
 
   def index
     @users = User.all
@@ -27,6 +28,7 @@ class UsersController < ApplicationController
   # GET /users/new
   # GET /users/new.json
   def new
+    reset_session
     @user = User.new
     @meal_dates = ["2013-07-08","2013-07-09","2013-07-10","2013-07-11","2013-07-12","2013-07-13","2013-07-14"]
     @child = @user.children.build
@@ -42,7 +44,11 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+    @meal_dates = ["2013-07-08","2013-07-09","2013-07-10","2013-07-11","2013-07-12","2013-07-13","2013-07-14"]
     @user = User.find(params[:id])
+    @user.meals
+    @user.programs
+    @user.travels
     @programs = Program.all
   end
 
