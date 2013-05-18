@@ -3,46 +3,40 @@
 </p>
 
 <p>
-	<b>First name:</b>
-	<%= @user.first_name %>
+	<b><%= t('name') %>: </b><%= @user.first_name %> <%= @user.second_name %>
 </p>
 
 <p>
-	<b>Second name:</b>
-	<%= @user.second_name %>
-</p>
-
-<p>
-	<b><%= t('home_country_name') %></b>
+	<b><%= User.human_attribute_name(:home_country) %></b>
 	<%= @user.home_country %>
 </p>
 
 <p>
-	<b><%= t('phone_number') %></b>
+	<b><%= User.human_attribute_name(:phone_number) %></b>
 	<%= @user.phone_number %>
 </p>
 
 <p>
-	<b><%= t('email_address') %></b>
+	<b><%= User.human_attribute_name(:email_address) %></b>
 	<%= @user.email_address %>
 </p>
 
 <p>
-	<b>Price category:</b>
+	<b><%= User.human_attribute_name(:price_category) %></b>
 	<%= @user.price_category %>
 </p>
 
 <p>
-	<b><%= t 'payment' %></b>
+	<b><%= User.human_attribute_name(:payment) %></b>
 	<%= @user.payment %>
 </p>
 <p>
-	<b>Reference number:</b>
+	<b><%= User.human_attribute_name(:reference_number) %></b>
 	<%= @user.reference_number %>
 </p>
 
 <h3><%= t("meals") %></h3>
-<table border="1px"  cellpadding="3">
+<table border="1px" cellspacing="0" cellpadding="1">
 	<% @meals.each do |meal| %>
 	<tr>
 		<th>Meal date</th>
@@ -76,34 +70,28 @@
 		<td> 2013-07-14 </td>
 		<td> <%= show_meal_type(meal.seventh_day_meal_type) %> </td>
 	</tr>
+	
 	<tr>
-		<td> <%= t('your_food_type') %> </td>
-		<td> <%= meal.food_type %> </td>
+		<td> <%= Meal.human_attribute_name(:food_type) %> </td>
+		<td> <%= show_food_type(meal.food_type) %> </td>
 	</tr>
 	<% end %>
 </table>
 
-<h3>Children</h3>
-<table>
+<h3><%= t('children')%></h3>
+<table border="1px" cellspacing="0" cellpadding="1">
 	<tr>
-		<th>Name</th>
-		<th>Age</th>
-		<th>Language</th>
-		<th>Child care</th>
-		<th></th>
-		<th></th>
-		<th></th>
+		<th><%= Child.human_attribute_name(:name)%></th>
+		<th><%= Child.human_attribute_name(:age)%></th>
+		<th><%= Child.human_attribute_name(:language)%></th>
+		<th><%= Child.human_attribute_name(:child_care)%></th>
 	</tr>
-
 	<% @children.each do |child| %>
 	<tr>
 		<td><%= child.name %></td>
 		<td><%= child.age %></td>
 		<td><%= child.language %></td>
-		<td><%= child.child_care %></td>
-		<td><%= link_to 'Show', child %></td>
-		<td><%= link_to 'Edit', edit_child_path(child) %></td>
-		<td><%= link_to 'Destroy', child, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		<td><%= show_child_care(child.child_care) %></td>
 	</tr>
 	<% end %>
 </table>
@@ -112,18 +100,10 @@
 <table>
 	<tr>
 		<th>Program id</th>
-		<th></th>
-		<th></th>
-		<th></th>
 	</tr>
 
 	<% @registrations.each do |registration| %>
-	<tr>
-		<td><%= registration.program_id %></td>
-		<td><%= link_to 'Show', registration %></td>
-		<td><%= link_to 'Edit', edit_registration_path(registration) %></td>
-		<td><%= link_to 'Destroy', registration, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-	</tr>
+	
 	<% end %>
 </table>
 <h3><%= t 'travel' %></h3>

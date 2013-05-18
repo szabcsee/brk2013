@@ -32,16 +32,27 @@ module ApplicationHelper
   def food_type_list
     I18n.t(:food_type).map { |key, value| [ value, key ] }
   end
-  def show_meal_type(food_type)
-      if food_type.to_i == 1
+  def show_meal_type(meal_type)
+      if meal_type.to_i == 1
         t 'lunch'
-      elsif food_type.to_i == 3
+      elsif meal_type.to_i == 3
         t 'three_time'
       else
         t 'no_food'
       end
   end
-  def reverse_country(home_country)
-    I18n.t(home_country)
+  def show_food_type(food_type)
+      if food_type == "vegetarian"
+        t 'vegetarian'
+      else
+        t 'meat'
+      end
+  end
+  def show_child_care(child_care)
+      if child_care.to_s == "true"
+        t 'true'
+      else
+        t 'false'
+      end
   end
 end
