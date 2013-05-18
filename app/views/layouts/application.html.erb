@@ -12,6 +12,15 @@
       <div id="nav">
         <%= link_to_unless_current "English", locale: "en" %>
         <%= link_to_unless_current "Magyar", locale: "hu" %>
+        <div id="user_management">
+          <% if current_user %>
+            Logged in as <%= current_user.reference_number %>.
+            <%= link_to "Log Out", logout_path %>
+          <% else %>
+            <%= link_to "Register", signup_path %> or
+            <%= link_to "Log In", login_path %>
+          <% end %>
+        </div>
       </div>
       <%= yield %>
     </div>

@@ -1,4 +1,6 @@
 Brk2013::Application.routes.draw do
+  get "sessions/new"
+
   resources :meals
 
 
@@ -9,7 +11,14 @@ Brk2013::Application.routes.draw do
     resources :meals
     resources :programs
     resources :travels
+    resources :sessions
   end
+
+  
+
+  get 'signup', to: 'users#new', as: 'signup'
+  get 'login', to: 'sessions#new', as: 'login'
+  get 'logout', to: 'sessions#destroy', as: 'logout'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
