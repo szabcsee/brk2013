@@ -51,11 +51,10 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     @meal_dates = ["2013-07-09","2013-07-10","2013-07-11","2013-07-12","2013-07-13","2013-07-14"]
-    @meals = @user.meals
     @programs = Program.all
     respond_to do |format|
       if @user.save
-        UserMailer.confirmation_email_en(@user, @meals).deliver
+        UserMailer.confirmation_email_en(@user).deliver
         
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render json: @user, status: :created, location: @user }

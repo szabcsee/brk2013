@@ -16,14 +16,12 @@
 			Your registration details:
 		</p>
 		<h3>Meals</h3>
-		<p><%= @meals[0].food_type %> food</p>
 		<table border="1px">
 		<tr>
 			<th>Meal date</th>
 			<th>Meal type</th>
 		</tr>
 	
-		<% @meals.each do |meal| %>
 		<tr>
 			<td> <%= meal.first_day %> </td>
 			<td> <%= show_meal_type(meal.first_day_meal_type) %> </td>
@@ -52,14 +50,18 @@
 			<td> <%= meal.seventh_day %> </td>
 			<td> <%= show_meal_type(meal.seventh_day_meal_type) %> </td>
 		</tr>
+		<tr>
+			<td> Kaja tipus </td>
+			<td> <%= meal.food_type %> </td>
+		</tr>
 		<% end %>
 	</table>
-		<p>
-			Thanks for the registration and have a great day!
-		</p>
-		<p>
-			<%= @url %>
-		</p>
+	<p>
+		Thanks for the registration and have a great day!
+	</p>
+	<p>
+		<%= @url %>
+	</p>
 
 	</body>
 </html>
