@@ -2,8 +2,6 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
 
-  before_filter :authorize, only: [:edit, :update, :show, :destroy]
-
   def index
     @users = User.all
     respond_to do |format|
@@ -15,7 +13,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    @user = User.find_by_reference_number(params[:reference_number])
+    @user = User.find(current_user.id)
     @registrations = Registration.where(:user_id => @user.id)
     @travels = @user.travels.all
     @meals = @user.meals.all
@@ -46,7 +44,6 @@ class UsersController < ApplicationController
   def edit
     @user = User.find(params[:id])
     @programs = Program.all
-
   end
 
   # POST /users
@@ -95,5 +92,6 @@ class UsersController < ApplicationController
       format.html { redirect_to Users_url }
       format.json { head :no_content }
     end
-  end  
+  end
+
 end
