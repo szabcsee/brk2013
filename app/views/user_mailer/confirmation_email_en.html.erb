@@ -5,91 +5,127 @@
 	</head>
 	<body>
 		<p>
-			Dear, <%= @user.first_name %>
+			<%= t('email_dear') %>, <%= @user.first_name %>
 		</p>
 		<p>
-			You have successfully registered to the Becske - Guru Yoga course, 2013.
-			Your reference number is: <%= @user.reference_number %>.
+			<%= t('email_body_1') %>
+			<%= t('email_body_2') %> <%= @user.reference_number %>.
 			<br/>
 		</p>
 		<p>
-			Your registration details:
+			<%= t('email_body_3') %>
 		</p>
-		<h3><%= t("meals") %></h3>
-		<table border="1px">
-			<% @meals.each do |meal| %>
-			<tr>
-				<th>Meal date</th>
-				<th>Meal type</th>
-			</tr>
-			<tr>
-				<td> <%= meal.first_day %> </td>
-				<td> <%= show_meal_type(meal.first_day_meal_type) %> </td>
-			</tr>
-			<tr>
-				<td> <%= meal.second_day %> </td>
-				<td> <%= show_meal_type(meal.second_day_meal_type) %> </td>
-			</tr>
-			<tr>
-				<td> <%= meal.third_day %> </td>
-				<td> <%= show_meal_type(meal.third_day_meal_type) %> </td>
-			</tr>
-			<tr>
-				<td> <%= meal.fourth_day %> </td>
-				<td> <%= show_meal_type(meal.fourth_day_meal_type) %> </td>
-			</tr>
-			<tr>
-				<td> <%= meal.fifth_day %> </td>
-				<td> <%= show_meal_type(meal.fifth_day_meal_type) %> </td>
-			</tr>
-			<tr>
-				<td> <%= meal.sixth_day %> </td>
-				<td> <%= show_meal_type(meal.sixth_day_meal_type) %> </td>
-			</tr>
-			<tr>
-				<td> 2013-07-14 </td>
-				<td> <%= show_meal_type(meal.seventh_day_meal_type) %> </td>
-			</tr>
-			<tr>
-				<td> <%= t('your_food_type') %> </td>
-				<td> <%= meal.food_type %> </td>
-			</tr>
-			<% end %>
-		</table>
+		<p>
+			<b><%= t('name') %>: </b><%= @user.first_name %> <%= @user.second_name %>
+		</p>
+		<p>
+			<b><%= User.human_attribute_name(:home_country) %></b>
+			<%= @user.home_country %>
+		</p>
+		<p>
+			<b><%= User.human_attribute_name(:phone_number) %></b>
+			<%= @user.phone_number %>
+		</p>
+		<p>
+			<b><%= User.human_attribute_name(:email_address) %></b>
+			<%= @user.email_address %>
+		</p>
+		<p>
+			<b><%= User.human_attribute_name(:price_category) %></b>
+			<%= @user.price_category %>
+		</p>
+		<p>
+			<b><%= User.human_attribute_name(:payment) %></b>
+			<%= @user.payment %>
+		</p>
+		<p>
+			<b><%= User.human_attribute_name(:reference_number) %></b>
+			<%= @user.reference_number %>
+		</p>
 
-		<% if @children[0] != nil %>
-		<h3>Children</h3>
-		<table border="1px">
-			<% @children.each do |child| %>
-			<tr>
-				<th> Child name </th>
-				<td> <%= child.name %> </td>
-			</tr>
-			<tr>
-				<td> Age </td>
-				<td> <%= child.age %> </td>
-			</tr>
-			<tr>
-				<td> Language </td>
-				<td> <%= child.language %> </td>
-			</tr>
-			<tr>
-				<td> Childcare </td>
-				<% if child.child_care%>
-				<td> yes </td>
-				<% else %>
-				<td> no </td>
-				<% end %>
-			</tr>
-			<% end %>
-		</table>
-		<% end %>		
-		<p>
-			Thanks for the registration and have a great day!
-		</p>
-		<p>
-			<%= @url %>
-		</p>
+		<h3><%= t("meals") %></h3>
+		<table border="1px" cellspacing="0" cellpadding="1">
+		<% @meals.each do |meal| %>
+		<tr>
+			<th>Meal date</th>
+			<th>Meal type</th>
+		</tr>
+		<tr>
+			<td> <%= meal.first_day %> </td>
+			<td> <%= show_meal_type(meal.first_day_meal_type) %> </td>
+		</tr>
+		<tr>
+			<td> <%= meal.second_day %> </td>
+			<td> <%= show_meal_type(meal.second_day_meal_type) %> </td>
+		</tr>
+		<tr>
+			<td> <%= meal.third_day %> </td>
+			<td> <%= show_meal_type(meal.third_day_meal_type) %> </td>
+		</tr>
+		<tr>
+			<td> <%= meal.fourth_day %> </td>
+			<td> <%= show_meal_type(meal.fourth_day_meal_type) %> </td>
+		</tr>
+		<tr>
+			<td> <%= meal.fifth_day %> </td>
+			<td> <%= show_meal_type(meal.fifth_day_meal_type) %> </td>
+		</tr>
+		<tr>
+			<td> <%= meal.sixth_day %> </td>
+			<td> <%= show_meal_type(meal.sixth_day_meal_type) %> </td>
+		</tr>
+		<tr>
+			<td> 2013-07-14 </td>
+			<td> <%= show_meal_type(meal.seventh_day_meal_type) %> </td>
+		</tr>
+		
+		<tr>
+			<td> <%= Meal.human_attribute_name(:food_type) %> </td>
+			<td> <%= show_food_type(meal.food_type) %> </td>
+		</tr>
+		<% end %>
+	</table>
+	
+	<h3><%= t('children')%></h3>
+	<table border="1px" cellspacing="0" cellpadding="1">
+		<tr>
+			<th><%= Child.human_attribute_name(:name)%></th>
+			<th><%= Child.human_attribute_name(:age)%></th>
+			<th><%= Child.human_attribute_name(:language)%></th>
+			<th><%= Child.human_attribute_name(:child_care)%></th>
+		</tr>
+		<% @children.each do |child| %>
+		<tr>
+			<td><%= child.name %></td>
+			<td><%= child.age %></td>
+			<td><%= child.language %></td>
+			<td><%= show_child_care(child.child_care) %></td>
+		</tr>
+		<% end %>
+	</table>
+
+	<h2><%=t 'registrations'%></h2>
+	<table border="1px" cellspacing="0" cellpadding="1">
+		<tr>
+			<th><%= User.human_attribute_name(:program) %></th>
+		</tr>
+		<% @user.programs.each do |program| %>
+		<tr>
+			<% if I18n.locale.to_s == "hu"%>
+    		<td><%= program.program_name_hu %></td>
+ 		   	<% elsif I18n.locale.to_s == "en" %>	
+    		<td><%= program.program_name_en %></td>
+    		<% end %>
+		</tr>
+		<% end %>
+	</table>
+				
+	<p>
+		<%= t('email_body_4') %>
+	</p>
+	<p>
+		<a href=<%= @url %>> www.buddhizmusma.hu - <%= t('email_body_5') %> </a>
+	</p>
 
 	</body>
 </html>
