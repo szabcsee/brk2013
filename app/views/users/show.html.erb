@@ -8,7 +8,7 @@
 
 <p>
 	<b><%= User.human_attribute_name(:home_country) %></b>
-	<%= @user.home_country %>
+	<%= t @user.home_country, :scope => 'home_country' %>
 </p>
 
 <p>
