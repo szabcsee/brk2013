@@ -1,4 +1,10 @@
 Brk2013::Application.routes.draw do
+  
+  root :to => 'users#new'
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+
   get "sessions/new"
 
   resources :meals
@@ -68,7 +74,7 @@ Brk2013::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'users#new'
+  
 
   # See how all your routes lay out with "rake routes"
 
