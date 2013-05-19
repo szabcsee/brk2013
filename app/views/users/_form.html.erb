@@ -143,6 +143,8 @@
   </div>
   </fieldset>
   <% end %>
+  <%= f.hidden_field :password, :value => 'Dummy' %>
+  <%= f.hidden_field :password_confirmation, :value => 'Dummy' %>
     <%= f.hidden_field :reference_number %>
   <div class="actions">
     <%= f.submit :class => 'RegistrationButton' =%>

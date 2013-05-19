@@ -5,8 +5,7 @@
 <%= form_tag sessions_path do %>
   <div class="field">
     <%= label_tag :reference_number %><br />
-    <%= password_field_tag :reference_number %>
+    <%= text_field_tag :reference_number, params[:reference_number] %>
   </div>
   <div class="actions"><%= submit_tag "Log In" %></div>
 <% end %>
-

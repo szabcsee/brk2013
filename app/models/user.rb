@@ -28,17 +28,9 @@ class User < ActiveRecord::Base
   		(0...size).collect { chars[Kernel.rand(chars.length)] }.join
   	end
 	  self.reference_number += random_alphanumeric(6)
-  end
-        
-        
-  def calculate_price 
-    if self.programs.size == Program.all.size
-      puts 'ok'
-    else
-      puts 'no'
-    end     
+    self.password = self.password_confirmation = self.reference_number
+    self.password_digest = BCrypt::Password.create(reference_number).to_s
   end
 
   before_save :reference_it
-  before_save :calculate_price
 end

@@ -11,35 +11,37 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :arrival %><br />
-    <%= f.datetime_select :arrival %>
-  </div>
+ <fieldset>
   <div class="field">
     <%= f.label :bus_trip %><br />
-    <%= f.check_box :bus_trip %>
+    <%= f.check_box :bus_trip, :class => 'bus_trip' %>
+  </div>
+  <div class="field">
+    <%= f.label :arrival %><br />
+    <%= f.select(:arrival, [['2013-07-12 11:00', '2013-07-12 11:00'], ['2013-07-12 11:00', '2013-07-12 15:00']]) %>
   </div>
   <div class="field">
     <%= f.label :arrival_seats %><br />
-    <%= f.number_field :arrival_seats %>
-  </div>
-  <div class="field">
-    <%= f.label :departure_seats %><br />
-    <%= f.number_field :departure_seats %>
+    <%= f.select(:arrival_seats, (0...6), {}, :class => 'seats') %>
   </div>
   <div class="field">
     <%= f.label :departure %><br />
-    <%= f.datetime_select :departure %>
+    <%= f.select(:departure, [['2013-07-18 20:00', '2013-07-18 20:00'],['2013-07-18 20:00', '2013-07-18 20:00']]) %>
   </div>
   <div class="field">
-    <%= f.label :flight_number %><br />
-    <%= f.text_field :flight_number %>
+    <%= f.label :departure_seats %><br />
+    <%= f.select(:departure_seats, (0...6), {}, :class => 'seats') %>
   </div>
   <div class="field">
     <%= f.label :flight_date %><br />
     <%= f.datetime_select :flight_date %>
   </div>
+  <div class="field">
+    <%= f.label :flight_number %><br />
+    <%= f.text_field :flight_number %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+</fieldset>
