@@ -127,6 +127,12 @@ en:
   registrations: "Program registration"
   travel: "Travel, shuttle registration"
   travel_description: "If you require assistance with travel, please fill in the fields below. We try to assist you with airport pick-up and will provide shuttle service between the Budapest centre and Becske and return after the course."
+  email_dear: "Dear"
+  email_body_1: "You have successfully registered to the Becske - Guru Yoga course, 2013."
+  email_body_2: "Your reference number is:"
+  email_body_3: "Your registration details:"
+  email_body_4: "Thanks for the registration and have a great day!"
+  email_body_5: "programs"
   activerecord:
     models:
       user: "Participant"

@@ -8,7 +8,7 @@
 
 <p>
 	<b><%= User.human_attribute_name(:home_country) %></b>
-	<%= @user.home_country %>
+	<%= t "home_country.#{'elso'}" %>
 </p>
 
 <p>
@@ -23,7 +23,7 @@
 
 <p>
 	<b><%= User.human_attribute_name(:price_category) %></b>
-	<%= @user.price_category %>
+	<%= t "price_category.#{@user.price_category}" %>
 </p>
 
 <p>

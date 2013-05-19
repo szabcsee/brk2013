@@ -126,6 +126,12 @@ hu:
   registrations: "Program regisztráció"
   travel: "Utazás"
   travel_description: "Amennyiben szeretnél regisztrálni a busz útra Budapest Becske között és a kurzus után vissza, töltsd ki a releváns mezőket lentebb."
+  email_dear: "Kedves"
+  email_body_1: "Sikeresen regisztrált a 2013-as becskei guru jóga kurzusra."
+  email_body_2: "A regisztráció referenciaszáma:"
+  email_body_3: "A regisztráció részletei:"
+  email_body_4: "Köszönjük a regisztrációt!"
+  email_body_5: "programok"
   activerecord:
     models:
       user: "Résztvevő"
