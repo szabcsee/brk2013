@@ -6,7 +6,7 @@
     <th>Age</th>
     <th>Language</th>
     <th>Child care</th>
-    <th>Person</th>
+    <th>User</th>
     <th></th>
     <th></th>
     <th></th>
@@ -18,7 +18,7 @@
     <td><%= child.age %></td>
     <td><%= child.language %></td>
     <td><%= child.child_care %></td>
-    <td><%= child.person %></td>
+    <td><%= child.user.first_name %></td>
     <td><%= link_to 'Show', child %></td>
     <td><%= link_to 'Edit', edit_child_path(child) %></td>
     <td><%= link_to 'Destroy', child, method: :delete, data: { confirm: 'Are you sure?' } %></td>

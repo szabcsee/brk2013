@@ -1,0 +1,91 @@
+/*
+  =require twitter-bootstrap-static/bootstrap
+
+  Use Font Awesome icons (default)
+  To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
+  =require twitter-bootstrap-static/fontawesome
+  */
+body {
+	padding-top: 15px;
+}
+
+ h1 {
+ 	color: #D11C36;
+ 	font-size: 32px;
+ 	margin: 25px;
+ }
+ h2,h3,h4,h5 {
+ 	font-size: 24px;
+ }
+#container {
+	width: 960px;
+	margin: 0px auto;
+}
+.red-line {
+    border-bottom: 2px solid #D11C36;
+    height: 55px;
+    padding-left: 70px;
+}
+.red-line a {
+	border: none;
+	display: inline-block;
+	margin: 5px 10px;
+}
+.red-line a:hover {
+	border: none;
+}
+.red-line a img {
+	width: 40px;
+}
+#user_management {
+	display: inline-block;
+	margin: 0px auto;
+	width: 300px;
+}
+.logo {
+    position: absolute;
+    right: 9.5em;
+    top: 0em;
+}
+.logo img {
+    height: 5em;
+}
+.currency {
+    background: none repeat scroll 0 0 #EFEFEF;
+    border-radius: 5px 5px 5px 5px;
+    display: block;
+    float: right;
+    padding: 10px 5px;
+}
+.currency label, .currency input {
+	display: inline-block;
+	height: 20px;
+	vertical-align: middle;
+	width: 130px;
+}
+form#new_user label, input {
+	display: inline-block;
+	width: 200px;
+	height: 20px;
+	vertical-align: middle;
+}
+form#new_user .meal_fields {
+    background: none repeat scroll 0 0 #EFEFEF;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px 5px 5px 5px;
+    display: block;
+    padding: 5px;
+    width: 320px;
+}
+#total_price {
+    background: none repeat scroll 0 0 #EBEBEB;
+    border: 1px solid #EFEFEF;
+    border-radius: 5px 5px 5px 5px;
+    color: #006DCC;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 5px 15px;
+    position: absolute;
+    right: 25%;
+    top: 50%;
+}

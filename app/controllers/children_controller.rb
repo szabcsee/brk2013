@@ -13,7 +13,7 @@ class ChildrenController < ApplicationController
   # GET /children/1.json
   def show
     @child = Child.find(params[:id])
-    @user = Person.find(person_id => Person.id)
+    @user = Person.find(user_id => User.id)
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @child }
