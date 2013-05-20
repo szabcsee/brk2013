@@ -118,7 +118,7 @@ Program.create(id: 11,
   price_discount_eur: 12.5,
   price_discount: 3500,
   exchange_rate: 280,
-  event_date: DateTime.strptime("09/14/2009", "%m/%d/%Y")
+  event_date: DateTime.strptime("07/14/2013", "%m/%d/%Y")
   )
 # . . .
 

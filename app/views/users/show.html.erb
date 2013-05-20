@@ -67,10 +67,10 @@
 		<td> <%= show_meal_type(meal.sixth_day_meal_type) %> </td>
 	</tr>
 	<tr>
-		<td> 2013-07-14 </td>
+		<td> <%= meal.sixth_day %> </td>
 		<td> <%= show_meal_type(meal.seventh_day_meal_type) %> </td>
 	</tr>
-	
+
 	<tr>
 		<td> <%= Meal.human_attribute_name(:food_type) %> </td>
 		<td> <%= show_food_type(meal.food_type) %> </td>
@@ -96,18 +96,20 @@
 	<% end %>
 </table>
 
-<h2><%=t 'registrations'%></h2>
+<h3><%= t 'registrations'%></h3>
 <table border="1px" cellspacing="0" cellpadding="1">
 	<tr>
+		<th><%= Program.human_attribute_name(:event_date) %></th>
 		<th><%= User.human_attribute_name(:program) %></th>
 	</tr>
 	<% @user.programs.each do |program| %>
 	<tr>
+		<td><%= l program.event_date, :format => :short %></td>
 		<% if I18n.locale.to_s == "hu"%>
-    		<td><%= program.program_name_hu %></td>
-    	<% elsif I18n.locale.to_s == "en" %>	
-    		<td><%= program.program_name_en %></td>
-    	<% end %>
+		<td><%= program.program_name_hu %></td>
+		<% elsif I18n.locale.to_s == "en" %>
+		<td><%= program.program_name_en %></td>
+		<% end %>
 	</tr>
 	<% end %>
 </table>
@@ -115,26 +117,32 @@
 <h3><%= t 'travel' %></h3>
 <table border="1px" cellspacing="0" cellpadding="1">
 	<tr>
-		<th>Arrival</th>
-		<th>Bus trip</th>
-		<th>Arrival seats</th>
-		<th>Departure seats</th>
-		<th>Departure</th>
-		<th>Flight number</th>
-		<th>Flight date</th>
+		<th><%= Travel.human_attribute_name(:arrival)%></th>
+		<th><%= Travel.human_attribute_name(:bus_trip)%></th>
+		<th><%= Travel.human_attribute_name(:arrival_seats)%></th>
+		<th><%= Travel.human_attribute_name(:departure_seats)%></th>
+		<th><%= Travel.human_attribute_name(:departure)%></th>
 	</tr>
 
-	<% @travels.each do |travel| %>
+	<% @user.travels.each do |travel| %>
 	<tr>
 		<td><%= travel.arrival %></td>
 		<td><%= travel.bus_trip %></td>
 		<td><%= travel.arrival_seats %></td>
 		<td><%= travel.departure_seats %></td>
 		<td><%= travel.departure %></td>
-		<td><%= travel.flight_number %></td>
-		<td><%= travel.flight_date %></td>
 	</tr>
-	<% end %>
 </table>
-
-<br />
+</br>
+<table border="1px" cellspacing="0" cellpadding="1">
+	<tr>
+		<th><%= Travel.human_attribute_name(:flight_number)%></th>
+		<th><%= Travel.human_attribute_name(:flight_date)%></th>
+	</tr>
+	<tr>
+		<td><%= travel.flight_number %></td>
+		<td><%= l travel.flight_date, :format => :short %></td>
+	</tr>
+</table>
+<% end %>
+<br/>
