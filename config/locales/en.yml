@@ -115,8 +115,8 @@ en:
   meals: "Meals"
   vegetarian: "vegetarian"
   meat: "meat"
-  child_care_true: "igen"
-  child_care_false: "nem"
+  child_care_true: "Yes"
+  child_care_false: "No"
   food_type:
     vegetarian: "Vegetarian" 
     meat: "Meat"

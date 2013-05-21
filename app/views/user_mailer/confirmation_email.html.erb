@@ -4,162 +4,170 @@
 		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
 	</head>
 	<body>
-		<p>
-			<%= t('email_dear') %> <%= @user.first_name %>,
-		</p>
-		<p>
-			<%= t('email_body_1') %>
-			<%= t('email_body_2') %> <%= @user.reference_number %>.
-			<br/>
-		</p>
-		<p>
-			<%= t('email_body_3') %>
-		</p>
-		<p>
-			<b><%= t('name') %>: </b><%= @user.first_name %> <%= @user.second_name %>
-		</p>
-		<p>
-			<b><%= User.human_attribute_name(:home_country) %></b>
-			<%= @user.home_country %>
-		</p>
-		<p>
-			<b><%= User.human_attribute_name(:phone_number) %></b>
-			<%= @user.phone_number %>
-		</p>
-		<p>
-			<b><%= User.human_attribute_name(:email_address) %></b>
-			<%= @user.email_address %>
-		</p>
-		<p>
-			<b><%= User.human_attribute_name(:price_category) %></b>
-			<%= @user.price_category %>
-		</p>
-		<p>
-			<b><%= User.human_attribute_name(:payment) %></b>
-			<%= @user.payment %>
-		</p>
-		<p>
-			<b><%= User.human_attribute_name(:reference_number) %></b>
-			<%= @user.reference_number %>
-		</p>
+		<table style="width:100%;height:100;margin:0;padding:0;border:0; border-collapse:collapse;border-spacing:0;" cellpadding="0" cellspacing="0">
+			<tr>
+				<td style="width:25%;"></td>
+				<td style="width:50%; text-align:center;">
+				<table width="700" style="border: none;"align="center" cellpadding="0" cellspacing="0">
+					<p>
+						<%= t('email_dear') %> <%= @user.first_name %>,
+					</p>
+					<p>
+						<%= t('email_body_1') %>
+						<%= t('email_body_2') %> <%= @user.reference_number %>.
+						<br/>
+					</p>
+					<p>
+						<%= t('email_body_3') %>
+					</p>
+					<p>
+						<b><%= t('name') %>: </b><%= @user.first_name %> <%= @user.second_name %>
+					</p>
+					<p>
+						<b><%= User.human_attribute_name(:home_country) %></b>
+						<%= @user.home_country %>
+					</p>
+					<p>
+						<b><%= User.human_attribute_name(:phone_number) %></b>
+						<%= @user.phone_number %>
+					</p>
+					<p>
+						<b><%= User.human_attribute_name(:email_address) %></b>
+						<%= @user.email_address %>
+					</p>
+					<p>
+						<b><%= User.human_attribute_name(:price_category) %></b>
+						<%= @user.price_category %>
+					</p>
+					<p>
+						<b><%= User.human_attribute_name(:payment) %></b>
+						<%= @user.payment %>
+					</p>
+					<p>
+						<b><%= User.human_attribute_name(:reference_number) %></b>
+						<%= @user.reference_number %>
+					</p>
 
-		<h3><%= t("meals") %></h3>
-		<table border="1px" cellspacing="0" cellpadding="1">
-			<% @meals.each do |meal| %>
-			<tr>
-				<th>Meal date</th>
-				<th>Meal type</th>
-			</tr>
-			<tr>
-				<td> <%= meal.first_day %> </td>
-				<td> <%= show_meal_type(meal.first_day_meal_type) %> </td>
-			</tr>
-			<tr>
-				<td> <%= meal.second_day %> </td>
-				<td> <%= show_meal_type(meal.second_day_meal_type) %> </td>
-			</tr>
-			<tr>
-				<td> <%= meal.third_day %> </td>
-				<td> <%= show_meal_type(meal.third_day_meal_type) %> </td>
-			</tr>
-			<tr>
-				<td> <%= meal.fourth_day %> </td>
-				<td> <%= show_meal_type(meal.fourth_day_meal_type) %> </td>
-			</tr>
-			<tr>
-				<td> <%= meal.fifth_day %> </td>
-				<td> <%= show_meal_type(meal.fifth_day_meal_type) %> </td>
-			</tr>
-			<tr>
-				<td> <%= meal.sixth_day %> </td>
-				<td> <%= show_meal_type(meal.sixth_day_meal_type) %> </td>
-			</tr>
-			<tr>
-				<td> <%= meal.seventh_day %> </td>
-				<td> <%= show_meal_type(meal.seventh_day_meal_type) %> </td>
-			</tr>
+					<h3><%= t("meals") %></h3>
+					<table border="1px" cellspacing="0" cellpadding="1">
+						<% @meals.each do |meal| %>
+						<tr>
+							<th>Meal date</th>
+							<th>Meal type</th>
+						</tr>
+						<tr>
+							<td> <%= meal.first_day %> </td>
+							<td> <%= show_meal_type(meal.first_day_meal_type) %> </td>
+						</tr>
+						<tr>
+							<td> <%= meal.second_day %> </td>
+							<td> <%= show_meal_type(meal.second_day_meal_type) %> </td>
+						</tr>
+						<tr>
+							<td> <%= meal.third_day %> </td>
+							<td> <%= show_meal_type(meal.third_day_meal_type) %> </td>
+						</tr>
+						<tr>
+							<td> <%= meal.fourth_day %> </td>
+							<td> <%= show_meal_type(meal.fourth_day_meal_type) %> </td>
+						</tr>
+						<tr>
+							<td> <%= meal.fifth_day %> </td>
+							<td> <%= show_meal_type(meal.fifth_day_meal_type) %> </td>
+						</tr>
+						<tr>
+							<td> <%= meal.sixth_day %> </td>
+							<td> <%= show_meal_type(meal.sixth_day_meal_type) %> </td>
+						</tr>
+						<tr>
+							<td> <%= meal.seventh_day %> </td>
+							<td> <%= show_meal_type(meal.seventh_day_meal_type) %> </td>
+						</tr>
 
-			<tr>
-				<td> <%= Meal.human_attribute_name(:food_type) %> </td>
-				<td> <%= show_food_type(meal.food_type) %> </td>
+						<tr>
+							<td> <%= Meal.human_attribute_name(:food_type) %> </td>
+							<td> <%= show_food_type(meal.food_type) %> </td>
+						</tr>
+						<% end %>
+					</table>
+
+					<h3><%= t('children')%></h3>
+					<table border="1px" cellspacing="0" cellpadding="1">
+						<tr>
+							<th><%= Child.human_attribute_name(:name)%></th>
+							<th><%= Child.human_attribute_name(:age)%></th>
+							<th><%= Child.human_attribute_name(:language)%></th>
+							<th><%= Child.human_attribute_name(:child_care)%></th>
+						</tr>
+						<% @children.each do |child| %>
+						<tr>
+							<td><%= child.name %></td>
+							<td><%= child.age %></td>
+							<td><%= child.language %></td>
+							<td><%= show_child_care(child.child_care) %></td>
+						</tr>
+						<% end %>
+					</table>
+
+					<h3><%= t 'registrations'%></h3>
+					<table border="1px" cellspacing="0" cellpadding="1">
+						<tr>
+							<th><%= Program.human_attribute_name(:event_date) %></th>
+							<th><%= User.human_attribute_name(:program) %></th>
+						</tr>
+						<% @user.programs.each do |program| %>
+						<tr>
+							<td><%= l program.event_date, :format => :short %></td>
+							<% if I18n.locale.to_s == "hu"%>
+							<td><%= program.program_name_hu %></td>
+							<% elsif I18n.locale.to_s == "en" %>
+							<td><%= program.program_name_en %></td>
+							<% end %>
+						</tr>
+						<% end %>
+					</table>
+
+					<h3><%= t 'travel' %></h3>
+					<table border="1px" cellspacing="0" cellpadding="1">
+						<tr>
+							<th><%= Travel.human_attribute_name(:arrival)%></th>
+							<th><%= Travel.human_attribute_name(:bus_trip)%></th>
+							<th><%= Travel.human_attribute_name(:arrival_seats)%></th>
+							<th><%= Travel.human_attribute_name(:departure_seats)%></th>
+							<th><%= Travel.human_attribute_name(:departure)%></th>
+						</tr>
+
+						<% @user.travels.each do |travel| %>
+						<tr>
+							<td><%= travel.arrival %></td>
+							<td><%= travel.bus_trip %></td>
+							<td><%= travel.arrival_seats %></td>
+							<td><%= travel.departure_seats %></td>
+							<td><%= travel.departure %></td>
+						</tr>
+					</table>
+					</br>
+					<table border="1px" cellspacing="0" cellpadding="1">
+						<tr>
+							<th><%= Travel.human_attribute_name(:flight_number)%></th>
+							<th><%= Travel.human_attribute_name(:flight_date)%></th>
+						</tr>
+						<tr>
+							<td><%= travel.flight_number %></td>
+							<td><%= l travel.flight_date, :format => :short %></td>
+						</tr>
+					</table>
+					<% end %>
+
+					<p>
+						<%= t('email_body_4') %>
+					</p>
+					<p>
+						<a href=<%= @url %>> www.buddhizmusma.hu - <%= t('email_body_5') %> </a>
+					</p>
+				</table></td>
+				<td style="width:25%"></td>
 			</tr>
-			<% end %>
 		</table>
-
-		<h3><%= t('children')%></h3>
-		<table border="1px" cellspacing="0" cellpadding="1">
-			<tr>
-				<th><%= Child.human_attribute_name(:name)%></th>
-				<th><%= Child.human_attribute_name(:age)%></th>
-				<th><%= Child.human_attribute_name(:language)%></th>
-				<th><%= Child.human_attribute_name(:child_care)%></th>
-			</tr>
-			<% @children.each do |child| %>
-			<tr>
-				<td><%= child.name %></td>
-				<td><%= child.age %></td>
-				<td><%= child.language %></td>
-				<td><%= show_child_care(child.child_care) %></td>
-			</tr>
-			<% end %>
-		</table>
-
-		<h3><%= t 'registrations'%></h3>
-		<table border="1px" cellspacing="0" cellpadding="1">
-			<tr>
-				<th><%= Program.human_attribute_name(:event_date) %></th>
-				<th><%= User.human_attribute_name(:program) %></th>
-			</tr>
-			<% @user.programs.each do |program| %>
-			<tr>
-				<td><%= l program.event_date, :format => :short %></td>
-				<% if I18n.locale.to_s == "hu"%>
-				<td><%= program.program_name_hu %></td>
-				<% elsif I18n.locale.to_s == "en" %>
-				<td><%= program.program_name_en %></td>
-				<% end %>
-			</tr>
-			<% end %>
-		</table>
-
-		<h3><%= t 'travel' %></h3>
-		<table border="1px" cellspacing="0" cellpadding="1">
-			<tr>
-				<th><%= Travel.human_attribute_name(:arrival)%></th>
-				<th><%= Travel.human_attribute_name(:bus_trip)%></th>
-				<th><%= Travel.human_attribute_name(:arrival_seats)%></th>
-				<th><%= Travel.human_attribute_name(:departure_seats)%></th>
-				<th><%= Travel.human_attribute_name(:departure)%></th>
-			</tr>
-
-			<% @user.travels.each do |travel| %>
-			<tr>
-				<td><%= travel.arrival %></td>
-				<td><%= travel.bus_trip %></td>
-				<td><%= travel.arrival_seats %></td>
-				<td><%= travel.departure_seats %></td>
-				<td><%= travel.departure %></td>
-			</tr>
-		</table>
-		</br>
-		<table border="1px" cellspacing="0" cellpadding="1">
-			<tr>
-				<th><%= Travel.human_attribute_name(:flight_number)%></th>
-				<th><%= Travel.human_attribute_name(:flight_date)%></th>
-			</tr>
-			<tr>
-				<td><%= travel.flight_number %></td>
-				<td><%= l travel.flight_date, :format => :short %></td>
-			</tr>
-		</table>
-		<% end %>
-
-		<p>
-			<%= t('email_body_4') %>
-		</p>
-		<p>
-			<a href=<%= @url %>> www.buddhizmusma.hu - <%= t('email_body_5') %> </a>
-		</p>
-
 	</body>
 </html>
