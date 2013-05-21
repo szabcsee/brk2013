@@ -24,32 +24,36 @@
 						<b><%= t('name') %>: </b><%= @user.first_name %> <%= @user.second_name %>
 					</p>
 					<p>
-						<b><%= User.human_attribute_name(:home_country) %></b>
-						<%= @user.home_country %>
-					</p>
-					<p>
-						<b><%= User.human_attribute_name(:phone_number) %></b>
-						<%= @user.phone_number %>
-					</p>
-					<p>
-						<b><%= User.human_attribute_name(:email_address) %></b>
-						<%= @user.email_address %>
-					</p>
-					<p>
-						<b><%= User.human_attribute_name(:price_category) %></b>
-						<%= @user.price_category %>
-					</p>
-					<p>
-						<b><%= User.human_attribute_name(:payment) %></b>
-						<%= @user.payment %>
-					</p>
-					<p>
-						<b><%= User.human_attribute_name(:reference_number) %></b>
-						<%= @user.reference_number %>
+						<b><%= User.human_attribute_name(:home_country) %>:</b>
+						<%= t @user.home_country, :scope => 'home_country' %>
 					</p>
 
+					<p>
+						<b><%= User.human_attribute_name(:phone_number) %>:</b>
+						<%= @user.phone_number %>
+					</p>
+
+					<p>
+						<b><%= User.human_attribute_name(:email_address) %>:</b>
+						<%= @user.email_address %>
+					</p>
+
+					<p>
+						<b><%= User.human_attribute_name(:price_category) %>:</b>
+						<%= t "price_category.#{@user.price_category}" %>
+					</p>
+
+					<p>
+						<b><%= User.human_attribute_name(:payment) %>:</b>
+						<%= @user.payment %>
+						<%= t 'currency' %>
+					</p>
+					<p>
+						<b><%= User.human_attribute_name(:reference_number) %>:</b>
+						<%= @user.reference_number %>
+					</p>
 					<h3><%= t("meals") %></h3>
-					<table border="1px" cellspacing="0" cellpadding="1">
+					<table align="center" border="1px" cellspacing="0" cellpadding="1">
 						<% @meals.each do |meal| %>
 						<tr>
 							<th>Meal date</th>
@@ -92,7 +96,7 @@
 					</table>
 
 					<h3><%= t('children')%></h3>
-					<table border="1px" cellspacing="0" cellpadding="1">
+					<table align="center" border="1px" cellspacing="0" cellpadding="1">
 						<tr>
 							<th><%= Child.human_attribute_name(:name)%></th>
 							<th><%= Child.human_attribute_name(:age)%></th>
@@ -110,7 +114,7 @@
 					</table>
 
 					<h3><%= t 'registrations'%></h3>
-					<table border="1px" cellspacing="0" cellpadding="1">
+					<table align="center" border="1px" cellspacing="0" cellpadding="1">
 						<tr>
 							<th><%= Program.human_attribute_name(:event_date) %></th>
 							<th><%= User.human_attribute_name(:program) %></th>
@@ -128,7 +132,7 @@
 					</table>
 
 					<h3><%= t 'travel' %></h3>
-					<table border="1px" cellspacing="0" cellpadding="1">
+					<table align="center" border="1px" cellspacing="0" cellpadding="1">
 						<tr>
 							<th><%= Travel.human_attribute_name(:arrival)%></th>
 							<th><%= Travel.human_attribute_name(:bus_trip)%></th>
@@ -147,7 +151,7 @@
 						</tr>
 					</table>
 					</br>
-					<table border="1px" cellspacing="0" cellpadding="1">
+					<table align="center" border="1px" cellspacing="0" cellpadding="1">
 						<tr>
 							<th><%= Travel.human_attribute_name(:flight_number)%></th>
 							<th><%= Travel.human_attribute_name(:flight_date)%></th>
