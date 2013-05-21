@@ -34,9 +34,6 @@ body {
 .red-line a:hover {
 	border: none;
 }
-.red-line a img {
-	width: 40px;
-}
 #user_management {
 	display: inline-block;
 	margin: 0px auto;
@@ -77,15 +74,23 @@ form#new_user .meal_fields {
     padding: 5px;
     width: 320px;
 }
-#total_price {
+#price_field {
     background: none repeat scroll 0 0 #EBEBEB;
     border: 1px solid #EFEFEF;
     border-radius: 5px 5px 5px 5px;
+    padding: 5px 15px;
+    position: fixed;
+    right: 25%;
+    top: 50%;
+}
+#price_field h6 {
+    color: #242424;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0 10px 6px;
+}
+#price_field span, #price_field span #total_price {
     color: #006DCC;
     font-size: 22px;
     font-weight: bold;
-    padding: 5px 15px;
-    position: absolute;
-    right: 25%;
-    top: 50%;
 }

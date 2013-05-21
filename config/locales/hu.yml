@@ -114,6 +114,8 @@ hu:
   meat: "húsos"
   child_care_true: "igen"
   child_care_false: "nem"
+  currency: "Ft"
+  total_price: "Végösszeg:"
   food_type:
     vegetarian: "Vegetáriánus" 
     meat: "Húsos"

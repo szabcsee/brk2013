@@ -53,9 +53,16 @@
     <%= f.label t 'price_category.discount' %>
     <%= f.radio_button :price_category, 'discount', :class => 'price_category'  %>
   </div>
-  <span id="total_price">0</span>
-  <div class="field">
-    <%= f.hidden_field :payment, :class => 'price_container' %>
+  <div id="price_field">
+    <h6><%= t 'total_price' %></h6>
+    <% if I18n.locale.to_s == "hu"%>
+      <span id="total_price">0</span><span><%= t 'currency' %>
+    <% elsif I18n.locale.to_s == "en"%>
+      <span><%= t 'currency' %><span id="total_price">0</span>
+    <% end %>
+    <div class="field">
+      <%= f.hidden_field :payment, :class => 'price_container' %>
+    </div>
   </div>
   <h2><%= t 'meals' %></h2>
   <%= f.fields_for :meals do |f2| %>

@@ -114,6 +114,8 @@ en:
   meat: "meat"
   child_care_true: "igen"
   child_care_false: "nem"
+  currency: "€"
+  total_price: "Total price:"
   food_type:
     vegetarian: "Vegetarian" 
     meat: "Meat"
