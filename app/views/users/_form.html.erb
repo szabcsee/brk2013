@@ -2,113 +2,115 @@
 <% if @user.errors.any? %>
 <div id="error_explanation">
 	<h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
-	<ul>
-		<% @user.errors.full_messages.each do |msg| %>
-		<li>
-			<%= msg %>
-		</li>
-		<% end %>
-	</ul>
-
-</div>
-<% end %>
-<div class="currency">
-	<label><%= t 'currency_selector' %></label>
-	<select id="currency_selector">
-		<option value="en">Euro</option>
-		<option value="hu">Forint</option>
-	</select>
-</div>
-<input type="hidden" value="<%= I18n.locale.to_s %>" id="form_language"/>
-<div class="field">
-	<%= f.label :first_name %>
-	<%= f.text_field :first_name %>
-</div>
-<div class="field">
-	<%= f.label :second_name %>
-	<%= f.text_field :second_name %>
-</div>
-<div class="field">
-	<%= f.label :home_country %>
-	<%= f.select :home_country, countries_list %>
-</div>
-<div class="field">
-	<%= f.label :phone_number %>
-	<%= f.text_field :phone_number %>
-</div>
-<div class="field">
-	<%= f.label :email_address %>
-	<%= f.text_field :email_address %>
-</div>
-<div class="field">
-	<%= f.label :price_method %>
-	<%= f.select :price_method, price_method_list %>
-</div>
-<div class="field">
-	<%= f.label t 'price_category.full' %>
-	<%= f.radio_button :price_category, 'full', :class => 'price_category' %>
-	<br />
-	<%= f.label t 'price_category.escort' %>
-	<%= f.radio_button :price_category, 'escort', :class => 'price_category'  %>
-	<br />
-	<%= f.label t 'price_category.discount' %>
-	<%= f.radio_button :price_category, 'discount', :class => 'price_category'  %>
-</div>
-<span id="total_price">0</span>
-<div class="field">
-	<%= f.hidden_field :payment, :class => 'price_container' %>
-</div>
-<h2><%= t 'meals' %></h2>
-<%= f.fields_for :meals do |f2| %>
-<%= render 'meal_fields', f: f2 %>
-<% end %>
-<%= f.link_to_add t('add_more_meals'), :meals %>
-</table>
-<h2><%= t 'children' %></h2>
-<%= f.fields_for :children do |builder| %>
-<%= render 'child_fields', f: builder %>
-<% end %>
-<%= f.link_to_add t('add_children'), :children %>
-<div id="escort_fields">
-	<h2>Kísérő</h2>
-	<% (0...6).each do |i| %>
-	<%= @meal_dates[i] %>
-	<input type="checkbox" name="escort" class="escort_day" value="1000">
-	<br/>
-	<% end %>
-</div>
-<div id="program_fields">
-	<h2><%= t 'registrations' %></h2>
-	<input type="checkbox" id="full_course" value="Részt veszek a teljes kurzuson"/>
-	<div class="clear"></div>
-	<table class="table">
-		<tr>
-			<th><%= Program.human_attribute_name(:event_date) %></th>
-			<% if I18n.locale.to_s == "hu"%>
-			<th><%= Program.human_attribute_name(:program_name_hu) %></th>
-			<% elsif I18n.locale.to_s == "en" %>
-			<th><%= Program.human_attribute_name(:program_name_en) %></th>
-			<% end %>
-			<th><%= Program.human_attribute_name(:price_full) %></th>
-			<th><%= Program.human_attribute_name(:price_discount) %></th>
-			<th></th>
-		</tr>
-		<% @programs.each do |program| %>
-		<tr>
-			<td><%= l program.event_date, :format => :short %></td>
-			<% if I18n.locale.to_s == "hu"%>
-			<td><%= program.program_name_hu %></td>
-			<% elsif I18n.locale.to_s == "en" %>
-			<td><%= program.program_name_en %></td>
-			<% end %>
-			<td><%= program.price_full %></td>
-			<td><%= program.price_discount %></td>
-			<td> <%= f.fields_for :registrations do |reg| %>
-			<%= reg.check_box :participate,  :class => "program_participation", data: { "full-price" => program.price_full, "discount-price" => program.price_discount, "full-price-eur" => program.price_full_eur, "discount-price-eur" => program.price_discount_eur,  } %>
-			<%= reg.hidden_field :program_id, :value => program.id %>
-			<% end %> </td>
-		</tr>
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+      
+    </div>
+  <% end %>
+  <div class="currency">
+  <label><%= t 'currency_selector' %></label>
+      <select id="currency_selector">
+        <option value="en">Euro</option>
+        <option value="hu">Forint</option>
+      </select>
+  </div>
+  <input type="hidden" value="<%= I18n.locale.to_s %>" id="form_language"/>
+  <div class="field">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :second_name %>
+    <%= f.text_field :second_name %>
+  </div>
+  <div class="field">
+    <%= f.label :home_country %>
+    <%= f.select :home_country, countries_list %>
+  </div>
+  <div class="field">
+    <%= f.label :phone_number %>
+    <%= f.text_field :phone_number %>
+  </div>
+  <div class="field">
+    <%= f.label :email_address %>
+    <%= f.text_field :email_address %>
+  </div>
+  <div class="field">
+    <%= f.label :price_method %>
+    <%= f.select :price_method, price_method_list %>
+  </div>
+  <h2><%= f.label t 'price_category_title' %>
+  <div class="field">
+    <%= f.label t 'price_category.full' %>
+    <%= f.radio_button :price_category, 'full', :class => 'price_category' %>
+    <br />
+    <%= f.label t 'price_category.escort' %>
+    <%= f.radio_button :price_category, 'escort', :class => 'price_category'  %>
+    <br />
+    <%= f.label t 'price_category.discount' %>
+    <%= f.radio_button :price_category, 'discount', :class => 'price_category'  %>
+  </div>
+  <div id="price_field">
+    <h6><%= t 'total_price' %></h6>
+      <span id="eur">€</span><span id="total_price">0</span><span id="forint">Ft</span>
+    <div class="field">
+      <%= f.hidden_field :payment, :class => 'price_container' %>
+    </div>
+  </div>
+  <h2><%= t 'meals' %></h2>
+  <%= f.fields_for :meals do |f2| %>
+    <%= render 'meal_fields', f: f2 %>
+  <% end %>
+  <%= f.link_to_add t('add_more_meals'), :meals, :class => 'btn btn-small btn-success' %>
+  </table>
+  <h2><%= t 'children' %></h2>
+  <%= f.fields_for :children do |builder| %>
+    <%= render 'child_fields', f: builder %>
+  <% end %>
+  <%= f.link_to_add t('add_children'), :children, :class => 'btn btn-small btn-success' %>
+  <div id="escort_fields">
+    <h2>Kísérő</h2>
+  <% (1...7).each do |i| %>
+      <%= @meal_dates[i] %> <input type="checkbox" name="escort" class="escort_day" value="1000"><br/>
+  <% end %>
+  </div>
+  <div id="program_fields">
+  <h2><%= t 'registrations' %></h2>
+  <p><input type="checkbox" id="full_course" value="Részt veszek a teljes kurzuson"/>
+  <%= t 'full_course_participation' %></p>
+  <div class="clear"></div>
+  <table class="table">
+  <tr>
+    <th><%= Program.human_attribute_name(:event_date) %></th>
+    <% if I18n.locale.to_s == "hu"%>
+    	<th><%= Program.human_attribute_name(:program_name_hu) %></th>
+    <% elsif I18n.locale.to_s == "en" %>
+    	<th><%= Program.human_attribute_name(:program_name_en) %></th>
+    <% end %>
+    <th><%= Program.human_attribute_name(:price_full) %></th>
+    <th><%= Program.human_attribute_name(:price_discount) %></th>
+    <th><%= t 'i_participate' %></th>
+  </tr>
+<% @programs.each do |program| %>
+  <tr>
+    <td><%= l program.event_date, :format => :short %></td>
+    <% if I18n.locale.to_s == "hu"%>
+    	<td><%= program.program_name_hu %></td>
+    <% elsif I18n.locale.to_s == "en" %>	
+    	<td><%= program.program_name_en %></td>
+    <% end %>
+    <td><%= program.price_full %></td>
+    <td><%= program.price_discount %></td>
+    <td>
+    <%= f.fields_for :registrations do |reg| %>
+      <%= reg.check_box :participate,  :class => "program_participation", data: { "full-price" => program.price_full, "discount-price" => program.price_discount, "full-price-eur" => program.price_full_eur, "discount-price-eur" => program.price_discount_eur,  } %>
+      <%= reg.hidden_field :program_id, :value => program.id %>
+    <% end %>
+    </td>
+  </tr>
 		<% end %>
 	</table>
 </div>
@@ -138,7 +140,7 @@
 		<%= travel.label :departure_seats %>
 		<%= travel.select(:departure_seats, (0...6), {}, :class => 'seats') %>
 	</div>
-	<div class="field">
+	<div class="field" id="flight_dates">
 		<%= travel.label :flight_date %>
 		<%= travel.datetime_select :flight_date %>
 	</div>
@@ -152,6 +154,6 @@
 <%= f.hidden_field :password_confirmation, :value => 'Dummy' %>
 <%= f.hidden_field :reference_number %>
 <div class="actions">
-	<%= f.submit :class => 'RegistrationButton' =%>
+	<%= f.submit :class => 'RegistrationButton btn btn-primary btn-large btn-action' =%>
 </div>
 <% end %>

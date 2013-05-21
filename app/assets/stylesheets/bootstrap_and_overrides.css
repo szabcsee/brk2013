@@ -34,9 +34,6 @@ body {
 .red-line a:hover {
 	border: none;
 }
-.red-line a img {
-	width: 40px;
-}
 #user_management {
 	display: inline-block;
 	margin: 0px auto;
@@ -45,10 +42,7 @@ body {
 .logo {
     position: absolute;
     right: 9.5em;
-    top: 0em;
-}
-.logo img {
-    height: 5em;
+    top: 22px;
 }
 .currency {
     background: none repeat scroll 0 0 #EFEFEF;
@@ -69,23 +63,64 @@ form#new_user label, input {
 	height: 20px;
 	vertical-align: middle;
 }
+form#new_user .currency label {
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    width: 155px;
+}
 form#new_user .meal_fields {
     background: none repeat scroll 0 0 #EFEFEF;
     border: 1px solid #CCCCCC;
     border-radius: 5px 5px 5px 5px;
     display: block;
+    margin-bottom: 10px;
     padding: 5px;
     width: 320px;
 }
-#total_price {
+form#new_user .child_fields {
+    background: none repeat scroll 0 0 #EFEFEF;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px 5px 5px 5px;
+    display: block;
+    padding: 5px 15px;
+    margin-bottom: 10px;
+    width: 320px;
+}
+.child_fields h2 {
+    font-size: 20px;
+    line-height: 20px;
+}
+#price_field {
     background: none repeat scroll 0 0 #EBEBEB;
     border: 1px solid #EFEFEF;
     border-radius: 5px 5px 5px 5px;
+    padding: 5px 15px;
+    position: fixed;
+    right: 25%;
+    top: 50%;
+}
+#price_field h6 {
+    color: #242424;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0 10px 6px;
+}
+#price_field span, #price_field span #total_price {
     color: #006DCC;
     font-size: 22px;
     font-weight: bold;
-    padding: 5px 15px;
-    position: absolute;
-    right: 25%;
-    top: 50%;
+}
+#flight_dates select {
+    display: inline-block;
+    width: 75px;
+}
+form#new_user .btn-success {
+    margin: 0px 5px;
+}
+input.btn-primary.btn-action {
+    display: block;
+    height: 40px;
+    width: 125px;
+    padding: 5px 10px;
 }

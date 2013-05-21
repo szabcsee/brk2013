@@ -1,11 +1,11 @@
 
 
-<h1>Log In</h1>
+<h1><%= t 'log_in' %></h1>
 
 <%= form_tag sessions_path do %>
   <div class="field">
-    <%= label_tag :reference_number %><br />
+    <%= label_tag t('activerecord.attributes.user.reference_number') %><br />
     <%= text_field_tag :reference_number, params[:reference_number] %>
   </div>
-  <div class="actions"><%= submit_tag "Log In" %></div>
+  <div class="actions"><%= submit_tag t("log_in"), :class => "btn btn-large btn-action btn-primary" %></div>
 <% end %>

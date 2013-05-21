@@ -4,6 +4,8 @@ $(document).ready(function(){
 	cat = 'after';
 	pricecat = '';
 	lang = $("#form_language").val();
+	$("#forint").hide();
+	$("#eur").hide();
 
 	$("#currency_selector").click(function(){
 		lang = $(this).val();
@@ -282,5 +284,13 @@ $(document).ready(function(){
 		}
         $("#total_price").text(price);
         $(".price_container").val(price);
+        if (lang == "hu"){
+        	$("#eur").hide();
+        	$("#forint").show();
+        }
+        if (lang == "en"){
+        	$("#forint").hide();
+        	$("#eur").show();
+        }
 	}
 });

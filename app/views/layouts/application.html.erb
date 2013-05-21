@@ -11,15 +11,6 @@
     <div class="red-line">
       <%= link_to_unless_current image_tag("english_flag.png"), locale: "en" %>
       <%= link_to_unless_current image_tag("hungarian_flag.png"), locale: "hu" %>
-      <div id="user_management">
-          <% if current_user %>
-            <%= t 'logged_in_as' %> <%= current_user.reference_number %>.
-            <%= link_to t("log_out"), logout_path %>
-          <% else %>
-            <%= link_to "Register", signup_path %> or
-            <%= link_to "Log In", login_path %>
-          <% end %>
-      </div>
     </div>
     <div class="logo"><%= image_tag("diamond-way-logo.png")%></div>
     <div id="container">

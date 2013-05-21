@@ -73,6 +73,10 @@ hu:
   currency: "Forint"
   logged_in_as: "Bejelentkezve, mint"
   log_out: "Kijelentkezés"
+  log_in: "Belépés"
+  i_participate: "Résztveszek"
+  full_course_participation: "Ha az egész kurzuson részt szeretnél venni, csak jelöld be ezt."
+  price_category_title: "Ár kategória"
   price_category:
     full: "teljes"
     escort: "kísérő"
@@ -117,6 +121,7 @@ hu:
   meat: "húsos"
   child_care_true: "igen"
   child_care_false: "nem"
+  total_price: "Végösszeg:"
   food_type:
     vegetarian: "Vegetáriánus" 
     meat: "Húsos"

@@ -1,3 +1,4 @@
+<div class="child_fields">
   <fieldset>
   <%= f.fields_for :children do |builder| %>
   <h2><%= t 'child' %></h2>
@@ -17,7 +18,8 @@
     <%= f.label :child_care %><br />
     <%= f.check_box :child_care %>
     </div>
-    <%= f.link_to_remove t('remove_child'), class: "remove_fields" %>
+    <%= f.link_to_remove t('remove_child'), class: "remove_fields btn btn-small btn-danger" %>
     <% end %>
   </fieldset>
+</div>
   
