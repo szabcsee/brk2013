@@ -70,6 +70,13 @@ en:
     other: "Other"
   name: "Name"
   currency_selector: "Currency selector"
+  currency: "Euro"
+  logged_in_as: "Logged in as"
+  log_out: "Log Out"
+  log_in: "Log in"
+  i_participate: "I participate"
+  full_course_participation: "If you want to participate on the whole course, just click on the checkbox here"
+  price_category_title: "Price category"
   price_category:
     full: "full"
     escort: "escort"
@@ -114,7 +121,6 @@ en:
   meat: "meat"
   child_care_true: "igen"
   child_care_false: "nem"
-  currency: "€"
   total_price: "Total price:"
   food_type:
     vegetarian: "Vegetarian" 
@@ -135,6 +141,7 @@ en:
   email_body_3: "Your registration details:"
   email_body_4: "Thanks for the registration and have a great day!"
   email_body_5: "programs"
+  user_created: "User was successfully created."
   activerecord:
     models:
       user: "Participant"
@@ -316,7 +323,7 @@ en:
     select:
       prompt: Please select
     submit:
-      create: Create %{model}
+      create: Create
       submit: Save %{model}
       update: Update %{model}
   number:

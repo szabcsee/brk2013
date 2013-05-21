@@ -42,10 +42,7 @@ body {
 .logo {
     position: absolute;
     right: 9.5em;
-    top: 0em;
-}
-.logo img {
-    height: 5em;
+    top: 22px;
 }
 .currency {
     background: none repeat scroll 0 0 #EFEFEF;
@@ -66,13 +63,33 @@ form#new_user label, input {
 	height: 20px;
 	vertical-align: middle;
 }
+form#new_user .currency label {
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    width: 155px;
+}
 form#new_user .meal_fields {
     background: none repeat scroll 0 0 #EFEFEF;
     border: 1px solid #CCCCCC;
     border-radius: 5px 5px 5px 5px;
     display: block;
+    margin-bottom: 10px;
     padding: 5px;
     width: 320px;
+}
+form#new_user .child_fields {
+    background: none repeat scroll 0 0 #EFEFEF;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px 5px 5px 5px;
+    display: block;
+    padding: 5px 15px;
+    margin-bottom: 10px;
+    width: 320px;
+}
+.child_fields h2 {
+    font-size: 20px;
+    line-height: 20px;
 }
 #price_field {
     background: none repeat scroll 0 0 #EBEBEB;
@@ -93,4 +110,17 @@ form#new_user .meal_fields {
     color: #006DCC;
     font-size: 22px;
     font-weight: bold;
+}
+#flight_dates select {
+    display: inline-block;
+    width: 75px;
+}
+form#new_user .btn-success {
+    margin: 0px 5px;
+}
+input.btn-primary.btn-action {
+    display: block;
+    height: 40px;
+    width: 125px;
+    padding: 5px 10px;
 }

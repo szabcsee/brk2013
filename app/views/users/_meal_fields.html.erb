@@ -1,77 +1,57 @@
 <%= f.fields_for :meals, :wrapper => false do |f2| %>
-  <div class="meal_fields">
-  <fieldset>
-  <div class="field">
-    <%= f.label :food_type %><br />
-    <%= f.select :food_type, food_type_list %>
-  </div>
-  <table>
-  <tr class = "fields">
-  <td class="field">
-    <%= @meal_dates[0] %><br />
-    <%= f.hidden_field :first_day, :value => @meal_dates[0] %>
-  </td>
-  <td class="field">
-    <%= f.select :first_day_meal_type, first_day_meal_type_list, {}, {:class => "meal_price first_day"}%>
-  </td>
-  </tr>
-  <tr>
-  <td class="field">
-    <%= @meal_dates[1] %><br />
-    <%= f.hidden_field :second_day, :value => @meal_dates[1] %>
-  </td>
-  <td class="field">
-    <%= f.select :second_day_meal_type, second_day_meal_type_list, {}, {:class => "meal_price"}%>
-  </td>
-  </tr>
-  <tr>
-  <td class="field">
-    <%= @meal_dates[2] %><br />
-    <%= f.hidden_field :third_day, :value => @meal_dates[2] %>
-  </td>
-  <td class="field">
-    <%= f.select :third_day_meal_type, third_day_meal_type_list, {}, {:class => "meal_price"}%>
-  </td>
-  </tr>
-  <tr>
-  <td class="field">
-    <%= @meal_dates[3] %><br />
-    <%= f.hidden_field :fourth_day, :value => @meal_dates[3] %>
-  </td>
-  <td class="field">
-    <%= f.select :fourth_day_meal_type, fourth_day_meal_type_list, {}, {:class => "meal_price"}%>
-  </td>
-  </tr>
-  <tr>
-  <td class="field">
-    <%= @meal_dates[4] %><br />
-    <%= f.hidden_field :fifth_day, :value => @meal_dates[4] %>
-  </td>
-  <td class="field">
-    <%= f.select :fifth_day_meal_type, fifth_day_meal_type_list, {}, {:class => "meal_price"}%>
-  </td>
-  </tr>
-  <tr>
-  <td class="field">
-    <%= @meal_dates[5] %><br />
-    <%= f.hidden_field :sixth_day, :value => @meal_dates[5] %>
-  </td>
-  <td class="field">
-    <%= f.select :sixth_day_meal_type, sixth_day_meal_type_list, {}, {:class => "meal_price"}%>
-  </td>
-  </tr>
-  <tr>
-  <td class="field">
-    <%= @meal_dates[6] %><br />
-    <%= f.hidden_field :seventh_day, :value => @meal_dates[7] %>
-  </td>
-  <td class="field">
-    <%= f.select :seventh_day_meal_type, seventh_day_meal_type_list, {}, { :class => "meal_price seventh_day" }%>
-  </td>
-  </tr>
-  </table>
-  <%= f.link_to_remove t('remove_meal'), class: "remove_fields" %>
-<% end %>
-</fieldset>
+<div class="meal_fields">
+	<fieldset>
+		<div class="field">
+			<%= f.label :food_type %>
+			<br />
+			<%= f.select :food_type, food_type_list %>
+		</div>
+		<table>
+			<tr class = "fields">
+				<td class="field"> <%= @meal_dates[0] %>
+				<br />
+				<%= f.hidden_field :first_day, :value => @meal_dates[0] %> </td>
+				<td class="field"> <%= f.select :first_day_meal_type, first_day_meal_type_list, {}, {:class => "meal_price first_day"}%> </td>
+			</tr>
+			<tr>
+				<td class="field"> <%= @meal_dates[1] %>
+				<br />
+				<%= f.hidden_field :second_day, :value => @meal_dates[1] %> </td>
+				<td class="field"> <%= f.select :second_day_meal_type, second_day_meal_type_list, {}, {:class => "meal_price"}%> </td>
+			</tr>
+			<tr>
+				<td class="field"> <%= @meal_dates[2] %>
+				<br />
+				<%= f.hidden_field :third_day, :value => @meal_dates[2] %> </td>
+				<td class="field"> <%= f.select :third_day_meal_type, third_day_meal_type_list, {}, {:class => "meal_price"}%> </td>
+			</tr>
+			<tr>
+				<td class="field"> <%= @meal_dates[3] %>
+				<br />
+				<%= f.hidden_field :fourth_day, :value => @meal_dates[3] %> </td>
+				<td class="field"> <%= f.select :fourth_day_meal_type, fourth_day_meal_type_list, {}, {:class => "meal_price"}%> </td>
+			</tr>
+			<tr>
+				<td class="field"> <%= @meal_dates[4] %>
+				<br />
+				<%= f.hidden_field :fifth_day, :value => @meal_dates[4] %> </td>
+				<td class="field"> <%= f.select :fifth_day_meal_type, fifth_day_meal_type_list, {}, {:class => "meal_price"}%> </td>
+			</tr>
+			<tr>
+				<td class="field"> <%= @meal_dates[5] %>
+				<br />
+				<%= f.hidden_field :sixth_day, :value => @meal_dates[5] %> </td>
+				<td class="field"> <%= f.select :sixth_day_meal_type, sixth_day_meal_type_list, {}, {:class => "meal_price"}%> </td>
+			</tr>
+			<tr>
+				<td class="field"> <%= @meal_dates[6] %>
+				<br />
+				<%= f.hidden_field :seventh_day, :value => @meal_dates[6] %> </td>
+				<td class="field"> <%= f.select :seventh_day_meal_type, seventh_day_meal_type_list, {}, { :class => "meal_price" }%> </td>
+			</tr>
+		</table>
+		<%= f.link_to_remove t('remove_meal'), class: "remove_fields btn btn-small btn-danger" %>
+		<% end %>
+	</fieldset>
 </div>
 

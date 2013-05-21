@@ -1,8 +1,7 @@
 <%= nested_form_for @user do |f| %>
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
+<% if @user.errors.any? %>
+<div id="error_explanation">
+	<h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
       <ul>
       <% @user.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
@@ -43,6 +42,7 @@
     <%= f.label :price_method %>
     <%= f.select :price_method, price_method_list %>
   </div>
+  <h2><%= f.label t 'price_category_title' %>
   <div class="field">
     <%= f.label t 'price_category.full' %>
     <%= f.radio_button :price_category, 'full', :class => 'price_category' %>
@@ -55,11 +55,7 @@
   </div>
   <div id="price_field">
     <h6><%= t 'total_price' %></h6>
-    <% if I18n.locale.to_s == "hu"%>
-      <span id="total_price">0</span><span><%= t 'currency' %>
-    <% elsif I18n.locale.to_s == "en"%>
-      <span><%= t 'currency' %><span id="total_price">0</span>
-    <% end %>
+      <span id="eur">€</span><span id="total_price">0</span><span id="forint">Ft</span>
     <div class="field">
       <%= f.hidden_field :payment, :class => 'price_container' %>
     </div>
@@ -68,13 +64,13 @@
   <%= f.fields_for :meals do |f2| %>
     <%= render 'meal_fields', f: f2 %>
   <% end %>
-  <%= f.link_to_add t('add_more_meals'), :meals %>
+  <%= f.link_to_add t('add_more_meals'), :meals, :class => 'btn btn-small btn-success' %>
   </table>
   <h2><%= t 'children' %></h2>
   <%= f.fields_for :children do |builder| %>
     <%= render 'child_fields', f: builder %>
   <% end %>
-  <%= f.link_to_add t('add_children'), :children %>
+  <%= f.link_to_add t('add_children'), :children, :class => 'btn btn-small btn-success' %>
   <div id="escort_fields">
     <h2>Kísérő</h2>
   <% (1...7).each do |i| %>
@@ -83,7 +79,8 @@
   </div>
   <div id="program_fields">
   <h2><%= t 'registrations' %></h2>
-  <input type="checkbox" id="full_course" value="Részt veszek a teljes kurzuson"/>
+  <p><input type="checkbox" id="full_course" value="Részt veszek a teljes kurzuson"/>
+  <%= t 'full_course_participation' %></p>
   <div class="clear"></div>
   <table class="table">
   <tr>
@@ -95,7 +92,7 @@
     <% end %>
     <th><%= Program.human_attribute_name(:price_full) %></th>
     <th><%= Program.human_attribute_name(:price_discount) %></th>
-    <th></th>
+    <th><%= t 'i_participate' %></th>
   </tr>
 <% @programs.each do |program| %>
   <tr>
@@ -114,47 +111,49 @@
     <% end %>
     </td>
   </tr>
-<% end %>
-</table>
+		<% end %>
+	</table>
 </div>
 <h2><%= t 'travel' %></h2>
-<p><%= t 'travel_description' %></p>
-  <%= f.fields_for :travels do |travel| %>
-  <fieldset>
-  <div class="field">
-    <%= travel.label :bus_trip %>
-    <%= travel.check_box :bus_trip, :class => 'bus_trip' %>
-  </div>
-  <div class="field">
-    <%= travel.label :arrival %>
-    <%= travel.select(:arrival, [['2013-07-09 11:00', '2013-07-09 11:00'], ['2013-07-09 17:00', '2013-07-09 17:00']]) %>
-  </div>
-  <div class="field">
-    <%= travel.label :arrival_seats %>
-    <%= travel.select(:arrival_seats, (0...6), {}, :class => 'seats') %>
-  </div>
-  <div class="field">
-    <%= travel.label :departure %>
-    <%= travel.select(:departure, [['2013-07-18 20:00', '2013-07-18 20:00']]) %>
-  </div>
-  <div class="field">
-    <%= travel.label :departure_seats %>
-    <%= travel.select(:departure_seats, (0...6), {}, :class => 'seats') %>
-  </div>
-  <div class="field">
-    <%= travel.label :flight_date %>
-    <%= travel.datetime_select :flight_date %>
-  </div>
-  <div class="field">
-    <%= travel.label :flight_number %>
-    <%= travel.text_field :flight_number %>
-  </div>
-  </fieldset>
-  <% end %>
-  <%= f.hidden_field :password, :value => 'Dummy' %>
-  <%= f.hidden_field :password_confirmation, :value => 'Dummy' %>
-    <%= f.hidden_field :reference_number %>
-  <div class="actions">
-    <%= f.submit :class => 'RegistrationButton' =%>
-  </div>
+<p>
+	<%= t 'travel_description' %>
+</p>
+<%= f.fields_for :travels do |travel| %>
+<fieldset>
+	<div class="field">
+		<%= travel.label :bus_trip %>
+		<%= travel.check_box :bus_trip, :class => 'bus_trip' %>
+	</div>
+	<div class="field">
+		<%= travel.label :arrival %>
+		<%= travel.select(:arrival, [['2013-07-09 11:00', '2013-07-09 11:00'], ['2013-07-09 17:00', '2013-07-09 17:00']]) %>
+	</div>
+	<div class="field">
+		<%= travel.label :arrival_seats %>
+		<%= travel.select(:arrival_seats, (0...6), {}, :class => 'seats') %>
+	</div>
+	<div class="field">
+		<%= travel.label :departure %>
+		<%= travel.select(:departure, [['2013-07-18 20:00', '2013-07-18 20:00']]) %>
+	</div>
+	<div class="field">
+		<%= travel.label :departure_seats %>
+		<%= travel.select(:departure_seats, (0...6), {}, :class => 'seats') %>
+	</div>
+	<div class="field" id="flight_dates">
+		<%= travel.label :flight_date %>
+		<%= travel.datetime_select :flight_date %>
+	</div>
+	<div class="field">
+		<%= travel.label :flight_number %>
+		<%= travel.text_field :flight_number %>
+	</div>
+</fieldset>
+<% end %>
+<%= f.hidden_field :password, :value => 'Dummy' %>
+<%= f.hidden_field :password_confirmation, :value => 'Dummy' %>
+<%= f.hidden_field :reference_number %>
+<div class="actions">
+	<%= f.submit :class => 'RegistrationButton btn btn-primary btn-large btn-action' =%>
+</div>
 <% end %>

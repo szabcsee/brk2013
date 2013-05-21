@@ -16,8 +16,8 @@ class User < ActiveRecord::Base
   
   accepts_nested_attributes_for :meals, :allow_destroy => true
   accepts_nested_attributes_for :registrations, :reject_if => proc { |attributes| attributes[:participate] == '0' }, :allow_destroy => true
-  accepts_nested_attributes_for :travels, :allow_destroy => true
-  accepts_nested_attributes_for :children, :reject_if => proc { |attributes| attributes['name'].blank? }, :allow_destroy => true
+  accepts_nested_attributes_for :travels, :reject_if => proc { |attributes| attributes['name'].blank? }, :allow_destroy => true
+  accepts_nested_attributes_for :children, :reject_if => proc { |attributes| attributes['bus_trip'] == false && attributes['flight_number'].blank? }, :allow_destroy => true
   
 
   def reference_it
