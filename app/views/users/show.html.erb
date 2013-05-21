@@ -7,31 +7,32 @@
 </p>
 
 <p>
-	<b><%= User.human_attribute_name(:home_country) %></b>
+	<b><%= User.human_attribute_name(:home_country) %>:</b>
 	<%= t @user.home_country, :scope => 'home_country' %>
 </p>
 
 <p>
-	<b><%= User.human_attribute_name(:phone_number) %></b>
+	<b><%= User.human_attribute_name(:phone_number) %>:</b>
 	<%= @user.phone_number %>
 </p>
 
 <p>
-	<b><%= User.human_attribute_name(:email_address) %></b>
+	<b><%= User.human_attribute_name(:email_address) %>:</b>
 	<%= @user.email_address %>
 </p>
 
 <p>
-	<b><%= User.human_attribute_name(:price_category) %></b>
+	<b><%= User.human_attribute_name(:price_category) %>:</b>
 	<%= t "price_category.#{@user.price_category}" %>
 </p>
 
 <p>
-	<b><%= User.human_attribute_name(:payment) %></b>
+	<b><%= User.human_attribute_name(:payment) %>:</b>
 	<%= @user.payment %>
+	<%= t 'currency' %>
 </p>
 <p>
-	<b><%= User.human_attribute_name(:reference_number) %></b>
+	<b><%= User.human_attribute_name(:reference_number) %>:</b>
 	<%= @user.reference_number %>
 </p>
 
@@ -39,35 +40,35 @@
 <table border="1px" cellspacing="0" cellpadding="1">
 	<% @meals.each do |meal| %>
 	<tr>
-		<th>Meal date</th>
-		<th>Meal type</th>
+		<th><%= Meal.human_attribute_name(:meal_date) %></th>
+		<th><%= Meal.human_attribute_name(:meal_type) %></th>
 	</tr>
 	<tr>
-		<td> <%= meal.first_day %> </td>
+		<td> <%= l meal.first_day, :format => :long %> </td>
 		<td> <%= show_meal_type(meal.first_day_meal_type) %> </td>
 	</tr>
 	<tr>
-		<td> <%= meal.second_day %> </td>
+		<td> <%= l meal.second_day, :format => :long %> </td>
 		<td> <%= show_meal_type(meal.second_day_meal_type) %> </td>
 	</tr>
 	<tr>
-		<td> <%= meal.third_day %> </td>
+		<td> <%= l meal.third_day, :format => :long %> </td>
 		<td> <%= show_meal_type(meal.third_day_meal_type) %> </td>
 	</tr>
 	<tr>
-		<td> <%= meal.fourth_day %> </td>
+		<td> <%= l meal.fourth_day, :format => :long %> </td>
 		<td> <%= show_meal_type(meal.fourth_day_meal_type) %> </td>
 	</tr>
 	<tr>
-		<td> <%= meal.fifth_day %> </td>
+		<td> <%= l meal.fifth_day, :format => :long %> </td>
 		<td> <%= show_meal_type(meal.fifth_day_meal_type) %> </td>
 	</tr>
 	<tr>
-		<td> <%= meal.sixth_day %> </td>
+		<td> <%= l meal.sixth_day, :format => :long %> </td>
 		<td> <%= show_meal_type(meal.sixth_day_meal_type) %> </td>
 	</tr>
 	<tr>
-		<td> <%= meal.sixth_day %> </td>
+		<td> <%= l meal.seventh_day, :format => :long %> </td>
 		<td> <%= show_meal_type(meal.seventh_day_meal_type) %> </td>
 	</tr>
 

@@ -70,6 +70,9 @@ hu:
     other: "Egyéb"
   name: "Név"
   currency_selector: "Pénznem választó"
+  currency: "Forint"
+  logged_in_as: "Bejelentkezve, mint"
+  log_out: "Kijelentkezés"
   price_category:
     full: "teljes"
     escort: "kísérő"
@@ -132,6 +135,7 @@ hu:
   email_body_3: "A regisztráció részletei:"
   email_body_4: "Köszönjük a regisztrációt!"
   email_body_5: "programok"
+  user_created: "A regisztrálás sikeresen megtörtént."
   activerecord:
     models:
       user: "Résztvevő"
@@ -158,7 +162,7 @@ hu:
         language: "Beszélt nyelv"
         name: "Név"
       meal:
-        food_type: "Diéta típusa"
+        food_type: "Húsos/vegetáriánus"
         meal_date: "Étkezés ideje"
         meal_type: "Étkezés típusa"
         meal_id: "Étkezés id"
@@ -211,7 +215,7 @@ hu:
     - szombat
     formats:
       default: ! '%Y.%m.%d.'
-      long: ! '%Y. %B %e.'
+      long: ! '%Y. %b %e. (%A)'
       short: ! '%b %e.'
     month_names:
     -
@@ -307,7 +311,7 @@ hu:
     select:
       prompt: Válasszon
     submit:
-      create: Új %{model}
+      create: Regisztrál
       submit: ! '%{model} Mentése'
       update: ! '%{model} Módosítása'
   number:

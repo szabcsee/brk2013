@@ -2,7 +2,7 @@ class UserMailer < ActionMailer::Base
   default :from => "becske2013course@gmail.com"
   helper ApplicationHelper
  
-  def confirmation_email_en(user)
+  def confirmation_email(user)
     @user = user
     @meals = user.meals.all
     @children = user.children.all
