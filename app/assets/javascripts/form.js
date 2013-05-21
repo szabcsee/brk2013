@@ -1,9 +1,11 @@
 $(document).ready(function(){
 	$("#escort_fields").hide();
 	$("input:checkbox").prop("checked", false);
-	cat = 'after';
+	$("#user_price_method").val("");
+	cat = '';
 	pricecat = '';
 	lang = $("#form_language").val();
+	$("#currency_selector").val(lang);
 	$("#forint").hide();
 	$("#eur").hide();
 
@@ -37,11 +39,35 @@ $(document).ready(function(){
 	});
 
 	$("#full_course").click(function(){
-			if($(this).is(':checked'))
-		        $(".program_participation").prop('checked', true);
-		    else
+		if ($(".price_category").is(':checked')){
+			if($(this).is(':checked')){
+				if (cat == ""){
+					if (lang == "hu"){
+						alert('Válaszd ki a fizetés módját.');
+					}
+					if (lang == "en"){
+						alert('Choose price method.');	
+					}
+					$(this).prop('checked', false);
+				}
+				else {
+		        	$(".program_participation").prop('checked', true);
+		        }
+		    }
+		    else {
 		        $(".program_participation").prop('checked', false);
+		    }
 			calculateTotal();
+		}
+		else {
+			if (lang == "hu"){
+				alert('Válaszd ki az árkategóriát.');
+			}
+			if (lang == "en"){
+				alert('Choose price category.');	
+			}
+			$(this).prop('checked', false);
+		}
 	});
 
 	$(".escort_day").click(function(){
@@ -53,7 +79,7 @@ $(document).ready(function(){
 	});
 
 	$(".program_participation").click(function(){
-		if (pricecat == ''){
+		if (pricecat == '' || cat == ''){
 			if (lang == "hu"){
 	        	alert('Válassz árkategóriát');
 	        	}
@@ -241,7 +267,7 @@ $(document).ready(function(){
 	        			if (lang == "en"){
 	        				price = price + 63;	
 	        			}
-				}
+	        	}
 		}
 		else {
 		$(".program_participation").each(function(){

@@ -84,6 +84,7 @@ hu:
   price_method:
     after: "Június 20-tól"
     before: "Június 19-ig"
+    null: " -- válassz --"
   first_day_meal_type:
     1: "Csak ebéd"
     3: "Háromszori étkezés"

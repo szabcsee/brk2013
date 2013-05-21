@@ -10,14 +10,14 @@ class User < ActiveRecord::Base
 
   attr_accessible :email_address, :password, :password_confirmation, :first_name, :home_country, :payment, :phone_number, :price_category, :price_method, :reference_number, :second_name, :meals_attributes, :registrations_attributes, :children_attributes, :travels_attributes
   
-  validate :first_name, :second_name, :home_country, :email_address, :payment, :price_method, :presence => true
+  validates_presence_of :first_name, :second_name, :home_country, :email_address, :payment, :price_method, :price_category
   
   validates_uniqueness_of :reference_number
   
   accepts_nested_attributes_for :meals, :allow_destroy => true
   accepts_nested_attributes_for :registrations, :reject_if => proc { |attributes| attributes[:participate] == '0' }, :allow_destroy => true
-  accepts_nested_attributes_for :travels, :reject_if => proc { |attributes| attributes['name'].blank? }, :allow_destroy => true
-  accepts_nested_attributes_for :children, :reject_if => proc { |attributes| attributes['bus_trip'] == false && attributes['flight_number'].blank? }, :allow_destroy => true
+  accepts_nested_attributes_for :children, :reject_if => proc { |attributes| attributes[:name] == '' }, :allow_destroy => true
+  accepts_nested_attributes_for :travels, :reject_if => proc { |attributes| attributes[:bus_trip] == "0" && attributes[:flight_number] == "" }, :allow_destroy => true
   
 
   def reference_it
