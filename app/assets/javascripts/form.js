@@ -6,6 +6,7 @@ $(document).ready(function(){
 	pricecat = '';
 	lang = $("#form_language").val();
 	$("#currency_selector").val(lang);
+	$(".meal_price").val('0');
 	$("#forint").hide();
 	$("#eur").hide();
 
@@ -121,7 +122,12 @@ $(document).ready(function(){
 
 		$(".escort_day").each(function()
         {	if($(this).is(':checked')){
-        	price = price + parseFloat($(this).val());
+	        	if (lang == "hu"){
+		        	price = price + parseFloat($(this).val());
+		        }
+		        if (lang == "en"){
+		        	price = price + 3.5;	
+		        }
         	}
         });
 
