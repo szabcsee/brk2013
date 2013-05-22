@@ -5,7 +5,7 @@
 	</head>
 	<body>
 		<p>
-			<%= t('email_dear') %> <%= @user.first_name %>,
+			<%= t('email_dear') %> <%= @user.first_name.capitalize %>,
 		</p>
 		<p>
 			<%= t('email_body_1') %>
@@ -16,7 +16,7 @@
 			<%= t('email_body_3') %>
 		</p>
 		<p>
-			<b><%= t('name') %>: </b><%= @user.first_name %> <%= @user.second_name %>
+			<b><%= t('name') %>: </b><%= @user.first_name.capitalize %> <%= @user.second_name.capitalize %>
 		</p>
 		<p>
 			<b><%= User.human_attribute_name(:home_country) %></b>
