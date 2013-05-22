@@ -94,24 +94,25 @@
 						</tr>
 						<% end %>
 					</table>
-
-					<h3><%= t('children')%></h3>
-					<table align="center" border="1px" cellspacing="0" cellpadding="1">
-						<tr>
-							<th><%= Child.human_attribute_name(:name)%></th>
-							<th><%= Child.human_attribute_name(:age)%></th>
-							<th><%= Child.human_attribute_name(:language)%></th>
-							<th><%= Child.human_attribute_name(:child_care)%></th>
-						</tr>
-						<% @children.each do |child| %>
-						<tr>
-							<td><%= child.name %></td>
-							<td><%= child.age %></td>
-							<td><%= child.language %></td>
-							<td><%= show_child_care(child.child_care) %></td>
-						</tr>
-						<% end %>
-					</table>
+					<% unless @children.empty? %>
+						<h3><%= t('children')%></h3>
+						<table align="center" border="1px" cellspacing="0" cellpadding="1">
+							<tr>
+								<th><%= Child.human_attribute_name(:name)%></th>
+								<th><%= Child.human_attribute_name(:age)%></th>
+								<th><%= Child.human_attribute_name(:language)%></th>
+								<th><%= Child.human_attribute_name(:child_care)%></th>
+							</tr>
+							<% @children.each do |child| %>
+							<tr>
+								<td><%= child.name %></td>
+								<td><%= child.age %></td>
+								<td><%= child.language %></td>
+								<td><%= show_child_care(child.child_care) %></td>
+							</tr>
+							<% end %>
+						</table>
+					<% end %>
 
 					<h3><%= t 'registrations'%></h3>
 					<table align="center" border="1px" cellspacing="0" cellpadding="1">
@@ -131,38 +132,39 @@
 						<% end %>
 					</table>
 
-					<h3><%= t 'travel' %></h3>
-					<table align="center" border="1px" cellspacing="0" cellpadding="1">
-						<tr>
-							<th><%= Travel.human_attribute_name(:arrival)%></th>
-							<th><%= Travel.human_attribute_name(:bus_trip)%></th>
-							<th><%= Travel.human_attribute_name(:arrival_seats)%></th>
-							<th><%= Travel.human_attribute_name(:departure_seats)%></th>
-							<th><%= Travel.human_attribute_name(:departure)%></th>
-						</tr>
+					<% unless @user.travels.empty? %>
+						<h3><%= t 'travel' %></h3>
+						<table align="center" border="1px" cellspacing="0" cellpadding="1">
+							<tr>
+								<th><%= Travel.human_attribute_name(:arrival)%></th>
+								<th><%= Travel.human_attribute_name(:bus_trip)%></th>
+								<th><%= Travel.human_attribute_name(:arrival_seats)%></th>
+								<th><%= Travel.human_attribute_name(:departure_seats)%></th>
+								<th><%= Travel.human_attribute_name(:departure)%></th>
+							</tr>
 
-						<% @user.travels.each do |travel| %>
-						<tr>
-							<td><%= travel.arrival %></td>
-							<td><%= travel.bus_trip %></td>
-							<td><%= travel.arrival_seats %></td>
-							<td><%= travel.departure_seats %></td>
-							<td><%= travel.departure %></td>
-						</tr>
-					</table>
-					</br>
-					<table align="center" border="1px" cellspacing="0" cellpadding="1">
-						<tr>
-							<th><%= Travel.human_attribute_name(:flight_number)%></th>
-							<th><%= Travel.human_attribute_name(:flight_date)%></th>
-						</tr>
-						<tr>
-							<td><%= travel.flight_number %></td>
-							<td><%= l travel.flight_date, :format => :short %></td>
-						</tr>
-					</table>
-					<% end %>
-
+							<% @user.travels.each do |travel| %>
+							<tr>
+								<td><%= travel.arrival %></td>
+								<td><%= travel.bus_trip %></td>
+								<td><%= travel.arrival_seats %></td>
+								<td><%= travel.departure_seats %></td>
+								<td><%= travel.departure %></td>
+							</tr>
+						</table>
+						</br>
+						<table align="center" border="1px" cellspacing="0" cellpadding="1">
+							<tr>
+								<th><%= Travel.human_attribute_name(:flight_number)%></th>
+								<th><%= Travel.human_attribute_name(:flight_date)%></th>
+							</tr>
+							<tr>
+								<td><%= travel.flight_number %></td>
+								<td><%= l travel.flight_date, :format => :short %></td>
+							</tr>
+						</table>
+						<% end %>
+					<% end %>		
 					<p>
 						<%= t('email_body_4') %>
 					</p>

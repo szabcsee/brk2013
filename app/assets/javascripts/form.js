@@ -101,6 +101,10 @@ $(document).ready(function(){
    		calculateTotal();
 	});
 
+	$(document).on('click', '.add_nested_fields', function(){
+   		calculateTotal();
+	});
+
 	$(".bus_trip").click(function(){
 		calculateTotal();
 	});
