@@ -105,6 +105,10 @@ $(document).ready(function(){
    		calculateTotal();
 	});
 
+	$(document).on('click', '.remove_fields', function(){
+   		calculateTotal();
+	});
+
 	$(".bus_trip").click(function(){
 		calculateTotal();
 	});
@@ -123,6 +127,7 @@ $(document).ready(function(){
 
         $(".meal_price").each(function()
         {	
+        	if($(this).is(':visible')){
         		if ($(this).hasClass("first_day"))
         		{
         			if (cat == "after")
@@ -246,6 +251,7 @@ $(document).ready(function(){
 	        			}	
         			}
         		}
+        	}
         });
 		if ($("#full_course").is(":checked")){
 				if (cat == 'after' && pricecat == 'full'){
