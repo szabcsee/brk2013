@@ -145,16 +145,18 @@
 		</tr>
 		</table>
 		</br>
-		<table border="1px" cellspacing="0" cellpadding="1">
-			<tr>
-				<th><%= Travel.human_attribute_name(:flight_number)%></th>
-				<th><%= Travel.human_attribute_name(:flight_date)%></th>
-			</tr>
-			<tr>
-				<td><%= travel.flight_number %></td>
-				<td><%= l travel.flight_date, :format => :short %></td>
-			</tr>
-		</table>
+			<% unless travel.flight_number.empty? %>
+			<table border="1px" cellspacing="0" cellpadding="1">
+				<tr>
+					<th><%= Travel.human_attribute_name(:flight_number)%></th>
+					<th><%= Travel.human_attribute_name(:flight_date)%></th>
+				</tr>
+				<tr>
+						<td><%= travel.flight_number %></td>
+						<td><%= l travel.flight_date, :format => :short %></td>							
+				</tr>
+			</table>
+			<% end %>
 		<% end %>
 	<% end %>
 				
