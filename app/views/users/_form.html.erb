@@ -45,13 +45,11 @@
   <h2><%= t 'price_category_title' %></h2>
   <div class="field">
     <%= f.label t 'price_category.full' %>
-    <%= f.radio_button :price_category, 'full', :class => 'price_category' %>
-    <br />
+    <%= f.radio_button :price_category, 'full', :class => 'price_category' %> <p>(<%= t 'price_category_explanation_full' %>)</p>
     <%= f.label t 'price_category.escort' %>
-    <%= f.radio_button :price_category, 'escort', :class => 'price_category'  %>
-    <br />
+    <%= f.radio_button :price_category, 'escort', :class => 'price_category'  %> <p>(<%= t 'price_category_explanation_escort' %>)</p>
     <%= f.label t 'price_category.discount' %>
-    <%= f.radio_button :price_category, 'discount', :class => 'price_category'  %>
+    <%= f.radio_button :price_category, 'discount', :class => 'price_category'  %><p>(<%= t 'price_category_explanation_discount'%>)</p>
   </div>
   <div id="price_field">
     <h6><%= t 'total_price' %></h6>
@@ -64,7 +62,7 @@
   <%= f.fields_for :meals do |f2| %>
     <%= render 'meal_fields', f: f2 %>
   <% end %>
-  <%= f.link_to_add t('add_more_meals'), :meals, :class => 'btn btn-small btn-success' %>
+  <p><%= f.link_to_add t('add_more_meals'), :meals, :class => 'btn btn-small btn-success' %></p>
   </table>
   <h2><%= t 'children' %></h2>
   <%= f.fields_for :children do |builder| %>
@@ -140,6 +138,7 @@
 		<%= travel.label :departure_seats %>
 		<%= travel.select(:departure_seats, (0...6), {}, :class => 'seats') %>
 	</div>
+	<p> <%= t 'flight_description' %> </p>
 	<div class="field" id="flight_dates">
 		<%= travel.label :flight_date %>
 		<%= travel.datetime_select :flight_date %>
