@@ -37,6 +37,6 @@ production:
   reconnect: false
   database: brk2013
   pool: 5
-  username: database_user
-  password: password
+  username: noway
+  password: imtellinguthis
   socket: /tmp/mysql.sock 

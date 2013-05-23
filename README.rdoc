@@ -1,27 +1,9 @@
 - Registration and administration for the Becske 2013 Course
 
-v.0.63 beta
+v.1.0 beta
 -----------
 
-Can be useful, probably will be needed for the Child, Meal, Person problem.
-http://guides.rubyonrails.org/association_basics.html#polymorphic-associations
 
-Useful link for testing:
-https://gist.github.com/jeanres/5523857
-
-Have a look at pry-rails
-____________________
-
-Meals <-> Child <-> Person relation has to be adjusted
-
-Person has_many Children
-Person has_many Meals
-
-Child belongs_to Person
-Child has_many Meals
-
-Meal belongs_to Person
-Meal (sometimes) belongs_to Child
 _________________________
-Written in: Ruby on Rails
+Written in: Ruby on Rails 3.2.13
 

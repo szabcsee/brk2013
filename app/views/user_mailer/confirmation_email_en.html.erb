@@ -5,7 +5,7 @@
 	</head>
 	<body>
 		<p>
-			<%= t('email_dear') %> <%= @user.first_name %>,
+			<%= t('email_dear') %> <%= @user.first_name.capitalize %>,
 		</p>
 		<p>
 			<%= t('email_body_1') %>
@@ -16,7 +16,7 @@
 			<%= t('email_body_3') %>
 		</p>
 		<p>
-			<b><%= t('name') %>: </b><%= @user.first_name %> <%= @user.second_name %>
+			<b><%= t('name') %>: </b><%= @user.first_name.capitalize %> <%= @user.second_name.capitalize %>
 		</p>
 		<p>
 			<b><%= User.human_attribute_name(:home_country) %></b>
@@ -145,16 +145,18 @@
 		</tr>
 		</table>
 		</br>
-		<table border="1px" cellspacing="0" cellpadding="1">
-			<tr>
-				<th><%= Travel.human_attribute_name(:flight_number)%></th>
-				<th><%= Travel.human_attribute_name(:flight_date)%></th>
-			</tr>
-			<tr>
-				<td><%= travel.flight_number %></td>
-				<td><%= l travel.flight_date, :format => :short %></td>
-			</tr>
-		</table>
+			<% unless travel.flight_number.empty? %>
+			<table border="1px" cellspacing="0" cellpadding="1">
+				<tr>
+					<th><%= Travel.human_attribute_name(:flight_number)%></th>
+					<th><%= Travel.human_attribute_name(:flight_date)%></th>
+				</tr>
+				<tr>
+						<td><%= travel.flight_number %></td>
+						<td><%= l travel.flight_date, :format => :short %></td>							
+				</tr>
+			</table>
+			<% end %>
 		<% end %>
 	<% end %>
 				
