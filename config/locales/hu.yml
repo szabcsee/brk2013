@@ -77,7 +77,7 @@ hu:
   price_category_explanation_full: "alap választás"
   price_category_explanation_escort: "nem veszek részt a programokon, csak kísérő vagyok"
   price_category_explanation_discount: "14-18 éves, 60 felett, családi, keleti országból jöttem és a szervezőknél külön regisztráltam"
-  i_participate: "Résztveszek"
+  i_participate: "Részt veszek"
   full_course_participation: "Ha az egész kurzuson részt szeretnél venni, csak jelöld be ezt."
   price_category_title: "Ár kategória"
   price_category:
@@ -141,7 +141,7 @@ hu:
   travel_description: "Amennyiben szeretnél regisztrálni a busz útra Budapest Becske között és a kurzus után vissza, töltsd ki a releváns mezőket lentebb."
   flight_description: "Ha repülőgéppel érkezel Budapestre, akkor megpróbálunk felvenni téged a reptéren. Ehhez vedd fel a kapcsolatot a Budapesti központtal."
   email_dear: "Kedves"
-  email_body_1: "Sikeresen regisztrált a 2013-as becskei guru jóga kurzusra."
+  email_body_1: "Sikeresen regisztrált a 2013-as becskei Guru Jóga kurzusra."
   email_body_2: "A regisztráció referenciaszáma:"
   email_body_2_1: "Kérjük a referenciaszámot jegyezze fel, mert a fizetésnél szüksége lesz rá."
   email_body_3: "A regisztráció további részletei:"
