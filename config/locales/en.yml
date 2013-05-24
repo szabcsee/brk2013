@@ -74,6 +74,8 @@ en:
   logged_in_as: "Logged in as"
   log_out: "Log Out"
   log_in: "Log in"
+  price_method_warning: "Don't forget to choose, when do you want to pay."
+  email_warning: "Please make sure that your email address is correct."
   price_category_explanation_full: "default choice"
   price_category_explanation_escort: "I do not participate on the programs, I am only escort of somebody"
   price_category_explanation_discount: "age 14-18, age over 60, family discount, eastern country discount and I have registered it with the organizers"

@@ -12,9 +12,6 @@
     <th>Currency</th>
     <th>Payment</th>
     <th>Reference number</th>
-    <th></th>
-    <th></th>
-    <th></th>
   </tr>
 
 <% @users.each do |user| %>
@@ -29,13 +26,6 @@
     <td><%= user.currency %></td>
     <td><%= user.payment %></td>
     <td><%= user.reference_number %></td>
-    <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_user_path(user) %></td>
-    <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
-
-<br />
-
-<%= link_to 'New user', new_user_path %>

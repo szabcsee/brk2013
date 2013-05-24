@@ -74,6 +74,8 @@ hu:
   logged_in_as: "Bejelentkezve, mint"
   log_out: "Kijelentkezés"
   log_in: "Belépés"
+  price_method_warning: "Ne felejtsd el kiválasztani, mikor akarsz fizetni."
+  email_warning: "Kérlek győződj meg róla, hogy az email címed helyes."
   price_category_explanation_full: "alap választás"
   price_category_explanation_escort: "nem veszek részt a programokon, csak kísérő vagyok"
   price_category_explanation_discount: "14-18 éves, 60 felett, családi, keleti országból jöttem és a szervezőknél külön regisztráltam"

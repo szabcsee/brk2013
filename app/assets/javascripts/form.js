@@ -9,6 +9,17 @@ $(document).ready(function(){
 	$(".meal_price").val('0');
 	$("#forint").hide();
 	$("#eur").hide();
+	$("#email_warning").hide();
+	$(".price_category_info").hide();
+	$("#price_method_alert").hide();
+
+	$("#user_email_address").focus(function(){
+		$("#email_warning").show();
+	});
+
+	$("#user_email_address").focusout(function(){
+		$("#email_warning").hide();
+	});
 
 	$("#currency_selector").click(function(){
 		lang = $(this).val();
@@ -35,7 +46,10 @@ $(document).ready(function(){
 			$("#escort_fields").hide();
         	$("#program_fields").show();
 		}
+		$('.price_category_info').hide();
 		pricecat = $(this).val();
+		$('#'+$(this).attr('id')+'_info').show();
+		$('#price_method_alert').show();
 		calculateTotal();
 	});
 
@@ -43,10 +57,10 @@ $(document).ready(function(){
 		if ($(".price_category").is(':checked')){
 			if($(this).is(':checked')){
 				if (cat == ""){
-					if (lang == "hu"){
+					if ($("#form_language").val() == "hu"){
 						alert('Válaszd ki a fizetés módját.');
 					}
-					if (lang == "en"){
+					if ($("#form_language").val() == "en"){
 						alert('Choose price method.');	
 					}
 					$(this).prop('checked', false);
@@ -61,10 +75,10 @@ $(document).ready(function(){
 			calculateTotal();
 		}
 		else {
-			if (lang == "hu"){
+			if ($("#form_language").val() == "hu"){
 				alert('Válaszd ki az árkategóriát.');
 			}
-			if (lang == "en"){
+			if ($("#form_language").val() == "en"){
 				alert('Choose price category.');	
 			}
 			$(this).prop('checked', false);
@@ -77,10 +91,10 @@ $(document).ready(function(){
 
 	$(".meal_price").click(function(){
 		if (cat == ''){
-			if (lang == "hu"){
+			if ($("#form_language").val() == "hu"){
 	        	alert('Válaszd ki a fizetés módját');
 	        	}
-	       	if (lang == "en"){
+	       	if ($("#form_language").val() == "en"){
 	        	alert('Choose payment method');	
 	        	}
 			$(this).prop('checked', false);
@@ -92,10 +106,10 @@ $(document).ready(function(){
 
 	$(".program_participation").click(function(){
 		if (pricecat == '' || cat == ''){
-			if (lang == "hu"){
+			if ($("#form_language").val() == "hu"){
 	        	alert('Válassz árkategóriát');
 	        	}
-	       	if (lang == "en"){
+	       	if ($("#form_language").val() == "en"){
 	        	alert('Choose price category');	
 	        	}
 			$(this).prop('checked', false);

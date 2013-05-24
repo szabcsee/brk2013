@@ -36,20 +36,27 @@
   </div>
   <div class="field">
     <%= f.label :email_address %>
-    <%= f.text_field :email_address %>
+    <%= f.email_field :email_address %><br/>
+    <span class="label label-warning" id="email_warning"><%= t 'email_warning' %></span>
   </div>
-  <div class="field">
+  <div class="field" id="price_method_field">
     <%= f.label :price_method %>
     <%= f.select :price_method, price_method_list %>
+  </div>
+  <div class="alert alert-info" id="price_method_alert">
+    <%= t 'price_method_warning' %>
   </div>
   <h2><%= t 'price_category_title' %></h2>
   <div class="field">
     <%= f.label t 'price_category.full' %>
-    <%= f.radio_button :price_category, 'full', :class => 'price_category' %> <p>(<%= t 'price_category_explanation_full' %>)</p>
+    <%= f.radio_button :price_category, 'full', :class => 'price_category' %><br/> 
+    <span class="label label-info price_category_info" id="user_price_category_full_info"><%= t 'price_category_explanation_full' %></span><br/>
     <%= f.label t 'price_category.escort' %>
-    <%= f.radio_button :price_category, 'escort', :class => 'price_category'  %> <p>(<%= t 'price_category_explanation_escort' %>)</p>
+    <%= f.radio_button :price_category, 'escort', :class => 'price_category'  %> <br/>
+    <span class="label label-info price_category_info" id="user_price_category_escort_info"><%= t 'price_category_explanation_escort' %></span><br/>
     <%= f.label t 'price_category.discount' %>
-    <%= f.radio_button :price_category, 'discount', :class => 'price_category'  %><p>(<%= t 'price_category_explanation_discount'%>)</p>
+    <%= f.radio_button :price_category, 'discount', :class => 'price_category'  %><br/>
+    <span class="label label-info price_category_info" id="user_price_category_discount_info"><%= t 'price_category_explanation_discount'%></span><br/>
   </div>
   <div id="price_field">
     <h6><%= t 'total_price' %></h6>
@@ -77,8 +84,8 @@
   </div>
   <div id="program_fields">
   <h2><%= t 'registrations' %></h2>
-  <p><input type="checkbox" id="full_course" value="Részt veszek a teljes kurzuson"/>
-  <%= t 'full_course_participation' %></p>
+  <div class="alert alert-block"><input type="checkbox" id="full_course" value="Részt veszek a teljes kurzuson"/>
+  <%= t 'full_course_participation' %></div>
   <div class="clear"></div>
   <table class="table">
   <tr>
