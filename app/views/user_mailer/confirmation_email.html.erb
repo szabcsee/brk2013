@@ -14,8 +14,10 @@
 					</p>
 					<p>
 						<%= t('email_body_1') %>
-						<%= t('email_body_2') %> <%= @user.reference_number %>.
 						<br/>
+						<%= t('email_body_2') %> <b><%= @user.reference_number %></b>.
+						<br/>
+						<%= t('email_body_2_1') %>
 					</p>
 					<p>
 						<%= t('email_body_3') %>
@@ -46,7 +48,11 @@
 					<p>
 						<b><%= User.human_attribute_name(:payment) %>:</b>
 						<%= @user.payment %>
-						<%= t 'currency' %>
+						<% if @user.payment.to_i > 599 %>
+							<%= "Ft" %>
+						<% else %>
+							<%= "Euro" %>
+						<% end %>
 					</p>
 					<p>
 						<b><%= User.human_attribute_name(:reference_number) %>:</b>

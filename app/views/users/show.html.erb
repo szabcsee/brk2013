@@ -29,7 +29,11 @@
 <p>
 	<b><%= User.human_attribute_name(:payment) %>:</b>
 	<%= @user.payment %>
-	<%= t 'currency' %>
+	<% if @user.payment.to_i > 599 %>
+		<%= "Ft" %>
+	<% else %>
+		<%= "Euro" %>
+	<% end %>
 </p>
 <p>
 	<b><%= User.human_attribute_name(:reference_number) %>:</b>
@@ -73,7 +77,7 @@
 	</tr>
 
 	<tr>
-		<td> <%= Meal.human_attribute_name(:food_type) %> </td>
+		<th> <%= Meal.human_attribute_name(:food_type) %> </th>
 		<td> <%= show_food_type(meal.food_type) %> </td>
 	</tr>
 	<% end %>
