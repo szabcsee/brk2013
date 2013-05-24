@@ -76,7 +76,18 @@ $(document).ready(function(){
 	});
 
 	$(".meal_price").click(function(){
-       calculateTotal();
+		if (cat == ''){
+			if (lang == "hu"){
+	        	alert('Válaszd ki a fizetés módját');
+	        	}
+	       	if (lang == "en"){
+	        	alert('Choose payment method');	
+	        	}
+			$(this).prop('checked', false);
+		}
+		else {
+       		calculateTotal();
+        }
 	});
 
 	$(".program_participation").click(function(){
