@@ -21,11 +21,11 @@ $(document).ready(function(){
 		$("#email_warning").hide();
 	});
 
-	$("#currency_selector").click(function(){
+	$("#currency_selector").change(function(){
 		lang = $(this).val();
 		calculateTotal();
 	});
-	$("#user_price_method").click(function(){
+	$("#user_price_method").change(function(){
 		cat = $(this).val();
 		calculateTotal();
 	});
@@ -89,7 +89,7 @@ $(document).ready(function(){
        calculateTotal();
 	});
 
-	$(".meal_price").click(function(){
+	$(".meal_price").change(function(){
 		if (cat == ''){
 			if ($("#form_language").val() == "hu"){
 	        	alert('Válaszd ki a fizetés módját');
