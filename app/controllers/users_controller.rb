@@ -59,6 +59,9 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     @meal_dates = ["2013-07-08","2013-07-09","2013-07-10","2013-07-11","2013-07-12","2013-07-13","2013-07-14"]
     @programs = Program.all
+    start = DateTime.new(2013,7,10,0,0,0)
+    finish = DateTime.new(2013,7,12,0,0,0)
+    @range = start..finish
     respond_to do |format|
       if @user.save
         session[:user_id] = @user.id
