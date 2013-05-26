@@ -7,16 +7,27 @@
     <%= javascript_include_tag :defaults, "nested_form" %>
     <%= csrf_meta_tag %>
   </head>
-  <body>
+  <body class="<%= controller.controller_name %> <%= controller.action_name %>">
     <div class="red-line">
       <%= link_to_unless_current image_tag("english_flag.png"), locale: "en" %>
       <%= link_to_unless_current image_tag("hungarian_flag.png"), locale: "hu" %>
     </div>
     <div class="logo"><%= image_tag("diamond-way-logo.png")%></div>
     <div id="container">
-      <div id="nav">
-        
-      </div>
+      <% unless @menu_enabled != true %>
+          <div class="navbar">
+            <div class="navbar-inner">
+            <ul class="nav">
+            <li><%= link_to t('activerecord.controllers.static_pages.home.menu_title'), :controller => :static_pages, :action => :home %></li>
+            <li><%= link_to t('activerecord.controllers.static_pages.guru_yoga.menu_title'), :controller => :static_pages, :action => :guru_yoga %></li>
+            <li><%= link_to t('activerecord.controllers.static_pages.karma_paksi.menu_title'), :controller => :static_pages, :action => :karma_paksi %></li>
+            <li><%= link_to t('activerecord.controllers.static_pages.information.menu_title'), :controller => :static_pages, :action => :information %></li>
+            <li><%= link_to t('activerecord.controllers.static_pages.programs.menu_title'), :controller => :static_pages, :action => :programs %></li>
+            <li><%= link_to t('registration'), :controller => :users, :action => :new %></li>
+            </ul>
+            </div>
+          </div>
+      <% end %>
       <%= yield %>
     </div>
   </body>

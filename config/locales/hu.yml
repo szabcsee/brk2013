@@ -1,4 +1,7 @@
 hu:
+  registration: "Regisztráció"
+  escorter: "Kísérő"
+  escort_explain: "Ha csak kísérőként veszel részt a kurzuson, válaszd ki, mely napokon fogsz a területen tartózkodni."
   home_country:
     hungary: "Magyarország"
     argentina: "Argentína"
@@ -158,6 +161,32 @@ hu:
       program: "Program"
       registration: "Regisztráció"
       travel: "Utazás"
+    controllers:
+      static_pages:
+        home:
+          menu_title: "Főoldal"
+          title: "Guru Jóga kurzus Sherab Gyalcen Rinpocséval és Láma Ole Nydahllal"
+          subtitle: "2. Karmapa (Karma Paksi) beavatás és tanítások"
+          date: "Időpont: 2013 július 9-14."
+          location: "Helyszín: Becske, a Gyémánt Út Buddhista Közösség elvonulási központja"
+          teachers: "Utazótanítók - Tommy Boggs és Pedro Gomez"
+          description: "Kérjük, szervezési okokból mindenképpen regisztrálj, akkor is, ha kísérőként érkezel, és nem kívánsz részt venni a programokon!"
+        guru_yoga:
+          menu_title: "Gurujóga"
+          title:
+          description:
+        karma_paksi:
+          menu_title: "Karma Paksi"
+          title:
+          description:
+        information:
+          menu_title: "Információ"
+          title:
+          description:
+        programs:
+          menu_title: "Programok"
+          title:
+          description:
     attributes:
       user:
         email_address: "E-mail"

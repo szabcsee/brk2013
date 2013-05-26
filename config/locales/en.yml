@@ -1,4 +1,7 @@
 en:
+  registration: "Registration"
+  escorter: "Escort"
+  escort_explain: "If you are just escorting someone but not participating on the programs, choose on which days you are going to be on the course site."
   home_country:
     argentina: "Argentina"
     australia: "Australia"
@@ -159,6 +162,32 @@ en:
       program: "Program"
       registration: "Registration"
       travel: "Travel"
+    controllers:
+      static_pages:
+        home:
+          menu_title: "Home"
+          title: "Guru Yoga course with Sherab Gyaltsen Rinpoche and Lama Ole Nydahl"
+          subtitle: "2. Karmapa (Karma Pakshi) empowerment and teachings"
+          date: "Date: 9th to the 14th of July, 2013"
+          location: "Place: Becske, retreat centre of the Diamond Way Buddhist Community"
+          teachers: "Travel teachers - Tommy Boggs and Pedro Gomez"
+          description: "To help us with the organisation, please register even if you only come as a visitor accompanying family or friends and do not wish to participate in the programme."
+        guru_yoga:
+          menu_title: "Guru Yoga"
+          title:
+          description:
+        karma_paksi:
+          menu_title: "Karma Paksi"
+          title:
+          description:
+        information:
+          menu_title: "information"
+          title:
+          description:
+        programs:
+          menu_title: "Programs"
+          title:
+          description:
     attributes:
       user:
         email_address: "Email address"

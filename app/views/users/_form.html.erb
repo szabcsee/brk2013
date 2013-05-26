@@ -77,7 +77,8 @@
   <% end %>
   <%= f.link_to_add t('add_children'), :children, :class => 'btn btn-small btn-success' %>
   <div id="escort_fields">
-    <h2>Kísérő</h2>
+    <h2><%= t 'escorter' %></h2>
+    <p><%= t 'escort_explain' %></p>
   <% (1...7).each do |i| %>
       <%= @meal_dates[i] %> <input type="checkbox" name="escort" class="escort_day" value="1000"><br/>
   <% end %>
@@ -139,7 +140,7 @@
 	</div>
 	<div class="field">
 		<%= travel.label :departure %>
-		<%= travel.select(:departure, [['2013-07-18 20:00', '2013-07-18 20:00']]) %>
+		<%= travel.select(:departure, [['2013-07-14 17:00', '2013-07-14 17:00']]) %>
 	</div>
 	<div class="field">
 		<%= travel.label :departure_seats %>

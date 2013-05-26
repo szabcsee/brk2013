@@ -1,5 +1,15 @@
 Brk2013::Application.routes.draw do
   
+  get "static_pages/home"
+
+  get "static_pages/guru_yoga"
+
+  get "static_pages/karma_paksi"
+
+  get "static_pages/programs"
+
+  get "static_pages/information"
+
   root :to => 'users#new'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
