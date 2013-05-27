@@ -11,8 +11,8 @@ body {
 
  h1 {
  	color: #D11C36;
- 	font-size: 32px;
- 	margin: 25px;
+    font-size: 23px;
+    margin: 18px;
  }
  h2,h3{
  	font-size: 24px;
@@ -126,4 +126,24 @@ input.btn-primary.btn-action {
     height: 40px;
     width: 125px;
     padding: 5px 10px;
+}
+/* Static Pages Styling */
+
+body.static_pages.home span,
+body.static_pages.home strong,
+body.static_pages.home p {
+    display: block;
+    font-size: 16px;
+    line-height: 160%;
+    margin-left: 25px;
+}
+body.static_pages.home p {
+    font-weight: bold;
+    font-style: italic;
+    line-height: 120%;
+    margin: 10px 25px;
+}
+body.static_pages.home #karma_paksi_image {
+    display: block;
+    float: right;
 }
