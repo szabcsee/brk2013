@@ -112,7 +112,7 @@ Program.create(id: 10,
   )
 # . . .
 Program.create(id: 11,
-  program_name_hu: 'Serab Gyalcen rinpocse - Karma Paksi (2. Karmapa)-beavatás (11am)',
+  program_name_hu: 'Serab Gyalcen rinpocse - 2. Karmapa Karma Paksi-beavatás (11am)',
   program_name_en: 'Sherab Gyaltsen Rinpoche - Karmapa Pakshi (2nd Karmapa) empowerment',
   price_full: 7000,
   price_full_eur: 25,
