@@ -1,4 +1,28 @@
 <h1><%= t 'activerecord.controllers.static_pages.programs.menu_title'%></h1>
-<p>
-	Information
-</p>
+<h4><%= t 'activerecord.controllers.static_pages.programs.description'%></h4>
+
+<table>
+  <tr>
+    <th>Program event date</th>
+    <th>Program name hu</th>
+    <th>Program name en</th>
+    <th>Price full</th>
+    <th>Price full EURO</th>
+    <th>Price discount EURO</th>
+    <th>Price discount</th>
+    <th>Exchange rate</th>
+  </tr>
+
+<% @programs.each do |program| %>
+  <tr>
+    <td><%= l program.event_date, :format => :long %></td>
+    <td><%= program.program_name_hu %></td>
+    <td><%= program.program_name_en %></td>
+    <td><%= program.price_full %></td>
+    <td><%= program.price_full_eur %></td>
+    <td><%= program.price_discount_eur %></td>
+    <td><%= program.price_discount %></td>
+    <td><%= program.exchange_rate %></td>
+  </tr>
+<% end %>
+</table>
