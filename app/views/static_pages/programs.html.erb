@@ -1,28 +1,32 @@
 <h1><%= t 'activerecord.controllers.static_pages.programs.menu_title'%></h1>
 <h4><%= t 'activerecord.controllers.static_pages.programs.description'%></h4>
 
-<table>
+<table class="table">
   <tr>
-    <th>Program event date</th>
-    <th>Program name hu</th>
-    <th>Program name en</th>
-    <th>Price full</th>
-    <th>Price full EURO</th>
-    <th>Price discount EURO</th>
-    <th>Price discount</th>
-    <th>Exchange rate</th>
+    <th><%= Program.human_attribute_name(:event_date)%></th>
+    <% if I18n.locale.to_s == "en"%>
+    <th><%= Program.human_attribute_name(:program_name_en)%></th>
+    <% elsif I18n.locale.to_s == "hu"%>
+    <th><%= Program.human_attribute_name(:program_name_hu)%></th>
+    <% end %>
+    <th><%= Program.human_attribute_name(:price_full)%></th>
+    <th><%= Program.human_attribute_name(:price_full_eur)%></th>
+    <th><%= Program.human_attribute_name(:price_discount_eur)%></th>
+    <th><%= Program.human_attribute_name(:price_discount)%></th>
   </tr>
 
 <% @programs.each do |program| %>
   <tr>
     <td><%= l program.event_date, :format => :long %></td>
-    <td><%= program.program_name_hu %></td>
+    <% if I18n.locale.to_s == "en"%>
     <td><%= program.program_name_en %></td>
+    <% elsif I18n.locale.to_s == "hu"%>
+    <td><%= program.program_name_hu %></td>
+    <% end %>
     <td><%= program.price_full %></td>
     <td><%= program.price_full_eur %></td>
     <td><%= program.price_discount_eur %></td>
     <td><%= program.price_discount %></td>
-    <td><%= program.exchange_rate %></td>
   </tr>
 <% end %>
 </table>
