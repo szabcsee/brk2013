@@ -174,20 +174,77 @@ en:
           description: "To help us with the organisation, please register even if you only come as a visitor accompanying family or friends and do not wish to participate in the programme."
         guru_yoga:
           menu_title: "Guru Yoga"
-          title:
-          description:
+          title: "Guru Yoga"
+          description: "description"
         karma_paksi:
           menu_title: "Karma Paksi"
-          title:
-          description:
+          title: "Karma Paksi"
+          description: "description"
         information:
-          menu_title: "information"
-          title:
-          description:
+          menu_title: "Information"
+          accomodation:
+            title: "Accomodation"
+            paragraph_1: "In your own tent on the course area"
+            paragraph_2: "In your own caravan: you may park in a separate area under the Stupa (we cannot supply water and electricity)."
+            paragraph_3: "Pensions and other accommodation around Becske: "
+            link_1: "faradtvandor, "
+            link_2: "towellnesshotel, "
+            link_3: "tengerszempanzio, "
+            link_4: "tavifeszek"
+          parking:
+            title: "Parking"
+            paragraph_1: "Only in the guarded parking area opposite the Stupa (parking fee: Euro 4 for the whole week or Euro 1 / day)"
+            paragraph_2: "No driving into the course area either by car or motorcycle because of the high number of participants. We do count on your cooperation concerning this issue."
+            paragraph_3: "The speed limit in Petőfi utca is 30 kms/hr. Please keep the speed limit."
+            paragraph_4: "Exit from the parking area is opposite the entrance, in the direction of Mikszáth utca."
+          how_to_get_there:
+            title: "How to get there"
+            address: "Address: Becske, Petőfi Sándor utca 47."
+            gps_coordinates: "GPS coordinates: N 47.918729; E 19.382093; or 47°55'7.42\"N; 19°22'55.90\"E"
+            map_link: "Map link"
+            by_car:
+              title: "By car"
+              paragraph_1: "On motorway M3, take the exit at km-stone 39 (towards Bag, Tura, Aszód). Drive through Aszód following the direction of Balassagyarmat: Aszód, Iklad, Galgagyörk, Püspökhatvan, Acsa, Galgaguta, Nógrádkövesd, Becske."
+              paragraph_2: "On motorway M2, take exit ‘Rád, Vácduka’ (between km-stones 38 and 39) and turn towards ‘Rád’ at the crossroads, then – when driving through Acsa – turn towards Balassagyarmat."
+            by_train:
+              title: "By train"
+              paragraph_1: "Timetable – MÁV (Hungarian Railways)-info: +36 40 49 49 49; http://elvira.mav-start.hu/"
+              paragraph_2: "The train leaves from Keleti pályaudvar. You need to change in Aszód and get off the train in Nógrádkövesd."
+              paragraph_3: "Shuttle service is available between the train station and the course area for Euro 2 / ride. You can pay for this on the site."
+            rented_bus:
+              title: "With rented bus"
+              paragraph_1: "Buses run between our Budapest Centre in Huszár utca and Becske and back."
+              paragraph_2: "Budapest-Becske:"
+              paragraph_3: "Becske-Budapest:"
+              paragraph_4: "Bus ticket: Euro 7 / ride, payable together with the course fee. You can register for this service along with your course registration. Further information: transfer@buddhizmusma.hu."
+          usefull_information:
+            title: "Usefull information"
+            paragraph_1: "What to bring with you: tent, plastic sheeting, duck tape, sleeping bag, meditation cushion, rubber boots, raincoat, flashlight, eating utensils, plate, glass, tick repellent, sunscreen, basic medication that you might need."
+            paragraph_2: "If you are on a special diet, please bring food for yourself, and as we cannot provide individual food storage, please bring non-perishable food."
+            paragraph_3: "Please bring an FM radio with headset if you need translation, because Sherab Gyaltsen Rinpoche’s programmes are in English with simultaneous interpretation."
+            paragraph_4: "Please pay special attention to:"
+            paragraph_4_1: "Tick hazard !!!"
+            paragraph_4_2: "Heat hazard"
+            paragraph_4_3: "Saving water"
+            paragraph_4_4: "Piped water in the course area is not drinking water !!!"
+            paragraph_4_5: "Selective rubbish collection"
+          child_care:
+            title: "Child care"
+            description: "Child care is organised during the course programmes with the help of parents. We also reserve a tenting area near the playground for families. Please register your children as well."
+          blood_donation:
+            title: "Blood donation during the course:"
+            description: "Date: from 9 am to 3 pm on 11th-12th July, 2013. If you are an EU citizen and wish to donate, you may do so. You need some proof of identity (passport or ID card) for this."
+          further_information:
+            title: "Further information:"
+            community: "Diamond Way Buddhist Community"
+            address: "H-1074 Budapest, Huszár utca 7-9."
+            phone: "Info phone: +3620-4946-660"
+            email: "e-mail: becske@buddhizmusma.hu"
+            www: "www.buddhizmusma.hu"
         programs:
           menu_title: "Programs"
-          title:
-          description:
+          title: "Programs"
+          description: "Description"
     attributes:
       user:
         email_address: "Email address"
