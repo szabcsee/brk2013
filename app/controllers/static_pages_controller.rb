@@ -13,6 +13,7 @@ class StaticPagesController < ApplicationController
 
   def programs
     @menu_enabled = true
+    @programs = Program.all
   end
 
   def information

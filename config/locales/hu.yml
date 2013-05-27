@@ -186,7 +186,7 @@ hu:
         programs:
           menu_title: "Programok"
           title:
-          description:
+          description: "Tervezett program"
     attributes:
       user:
         email_address: "E-mail"

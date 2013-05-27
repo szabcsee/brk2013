@@ -200,7 +200,7 @@ en:
           how_to_get_there:
             title: "How to get there"
             address: "Address: Becske, Petőfi Sándor utca 47."
-            gps_coordinates: "GPS coordinates: N 47.918729; E 19.382093; or 47°55'7.42\"N; 19°22'55.90\"E"
+            gps_coordinates: "GPS coordinates: N 47.918729; E 19.382093; or 47°55'7.42\'N; 19°22'55.90\'E"
             map_link: "Map link"
             by_car:
               title: "By car"
@@ -244,7 +244,7 @@ en:
         programs:
           menu_title: "Programs"
           title: "Programs"
-          description: "Description"
+          description: "Preliminary schedule"
     attributes:
       user:
         email_address: "Email address"
