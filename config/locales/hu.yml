@@ -165,7 +165,7 @@ hu:
       static_pages:
         home:
           menu_title: "Főoldal"
-          title: "Guru Jóga kurzus Sherab Gyalcen Rinpocséval és Láma Ole Nydahllal"
+          title: "Gurujóga kurzus Sherab Gyalcen Rinpocséval és Láma Ole Nydahllal"
           subtitle: "2. Karmapa (Karma Paksi) beavatás és tanítások"
           date: "Időpont: 2013 július 9-14."
           location: "Helyszín: Becske, a Gyémánt Út Buddhista Közösség elvonulási központja"
@@ -177,8 +177,9 @@ hu:
           description:
         karma_paksi:
           menu_title: "Karma Paksi"
-          title:
-          description:
+          title: "Karma Paksi a második Karmapa"
+          subtitle: "1204 - 1283"
+          description: "A kelet-tibeti Csilé Caktóból származó második Karmapa - Karma Paksi - igazi csodagyerek volt. Hatéves korára magától megtanult írni és olvasni. Tízévesen elég volt egyszer látnia egy szöveget ahhoz, hogy megjegyezze. Amikor Közép-Tibetbe tartott, hogy további oktatást kapjon, Pomdragpa Szönam Dordzséval találkozott, akinek egy látomásban megjelent az első Karmapa - Düszum Tyenpa - , aki közölte vele, hogy ez a fiú lesz a következő vonaltartó. Így Karma Paksi megkapta a Kagyü átadást. Rövid időn belül ismertté vált különleges képességei miatt - Tibetben, Kínában és Mongóliában egyaránt voltak tanítványai. A Paksi mongol eredetû szó, mestert jelent - e néven vált a második Karmapa ismertté, miután a mongol császár magas spirituális pozíciót adományozott neki."
         information:
           menu_title: "Információ"
           title:
