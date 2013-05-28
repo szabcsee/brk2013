@@ -2,7 +2,7 @@
 Program.delete_all
 # . . .
 Program.create(id: 1,
-  program_name_hu: 'Tommy Boggs előadása',
+  program_name_hu: 'Tommy Boggs elöadása',
   program_name_en: 'Tommy Boggs travelling teacher',
   price_full: 1200,
   price_full_eur: 5,
@@ -24,7 +24,7 @@ Program.create(id: 2,
   )
 # . . .
 Program.create(id: 3,
-  program_name_hu: 'Pedro Gomez előadása',
+  program_name_hu: 'Pedro Gomez elöadása',
   program_name_en: 'Pedro Gomez travelling teacher',
   price_full: 1200,
   price_full_eur: 5,
