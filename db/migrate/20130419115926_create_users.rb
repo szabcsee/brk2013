@@ -1,4 +1,4 @@
-class CreatePeople < ActiveRecord::Migration
+class CreateUsers < ActiveRecord::Migration
   def change
     create_table :users do |t|
       t.string :first_name
@@ -10,6 +10,7 @@ class CreatePeople < ActiveRecord::Migration
       t.string :price_category
       t.string :payment
       t.string :reference_number
+      t.string :password_digest
       t.timestamps
     end
   end
