@@ -214,7 +214,7 @@ en:
             rented_bus:
               title: "With rented bus"
               paragraph_1: "Buses run between our Budapest Centre in Huszár utca and Becske and back."
-              paragraph_2: "Budapest-Becske:"
+              paragraph_2: "Budapest-Becske: "
               paragraph_3: "Becske-Budapest:"
               paragraph_4: "Bus ticket: Euro 7 / ride, payable together with the course fee. You can register for this service along with your course registration. Further information: transfer@buddhizmusma.hu."
           usefull_information:
@@ -223,10 +223,10 @@ en:
             paragraph_2: "If you are on a special diet, please bring food for yourself, and as we cannot provide individual food storage, please bring non-perishable food."
             paragraph_3: "Please bring an FM radio with headset if you need translation, because Sherab Gyaltsen Rinpoche’s programmes are in English with simultaneous interpretation."
             paragraph_4: "Please pay special attention to:"
-            paragraph_4_1: "Tick hazard !!!"
+            paragraph_4_1: "Tick hazard"
             paragraph_4_2: "Heat hazard"
             paragraph_4_3: "Saving water"
-            paragraph_4_4: "Piped water in the course area is not drinking water !!!"
+            paragraph_4_4: "Piped water in the course area is not drinking water"
             paragraph_4_5: "Selective rubbish collection"
           child_care:
             title: "Child care"
@@ -240,7 +240,6 @@ en:
             address: "H-1074 Budapest, Huszár utca 7-9."
             phone: "Info phone: +3620-4946-660"
             email: "e-mail: becske@buddhizmusma.hu"
-            www: "www.buddhizmusma.hu"
         programs:
           menu_title: "Programs"
           title: "Programs"
