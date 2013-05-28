@@ -162,8 +162,3 @@ body.static_pages.information p {
     line-height: 120%;
     margin: 10px 25px;
 }
-body.static_pages.information ul {
-    font-size: 16px;
-    line-height: 160%;
-    margin-left: 40px;
-}

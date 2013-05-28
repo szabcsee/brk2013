@@ -181,8 +181,64 @@ hu:
           description:
         information:
           menu_title: "Információ"
-          title:
-          description:
+          accomodation:
+            title: "Szálláslehetőségek"
+            paragraph_1: "Saját sátorban a kurzus területén"
+            paragraph_2: "Lakókocsival külön helyszínen, a Sztúpa alatti területen lesz mód parkolni (víz- és áramellátási lehetőséget nem tudunk külön biztosítani)"
+            paragraph_3: "Becskéhez közelebb eső panziók és szálláshelyek: "
+            link_1: "faradtvandor, "
+            link_2: "towellnesshotel, "
+            link_3: "tengerszempanzio, "
+            link_4: "tavifeszek"
+          parking:
+            title: "Parkolás"
+            paragraph_1: "Csak az őrzött parkolóban, a Sztúpával szembeni területen lehetséges (parkolási díj: 1000 Ft egész hétre vagy 300 Ft egy napra)"
+            paragraph_2: "A kurzus területre sem autóval, sem motorral behajtani nem lehet a várható nagy létszám miatt. Kérjük az együttműködéseteket!"
+            paragraph_3: "A Petőfi Sándor utcában a megengedett legnagyobb sebesség 30 km/h. Kérjük, tartsátok be!"
+            paragraph_4: "Parkolóból való kihajtás a behajtással szemközti oldalon, a Mikszáth utca felé."
+          how_to_get_there:
+            title: "Megközelítés"
+            address: "Cím: Becske, Petőfi Sándor utca 47."
+            gps_coordinates: "GPS koordináták: N 47.918729; E 19.382093; vagy 47°55'7.42\'N; 19°22'55.90\'E"
+            map_link: "Térkép link"
+            by_car:
+              title: "Autóval"
+              paragraph_1: "Az M3-as autópályán a 39. km-nél található kijáratig (Bag, Tura, Aszód felé). Aszódon keresztül Balassagyarmat irányában: Aszód, Iklad, Galgagyörk, Püspökhatvan, Acsa, Galgaguta, Nógrádkövesd, Becske."
+              paragraph_2: "Az M2-es útról „Rád, Vácduka” kijáratnál kell lehajtani (38-39 km között) és Rád felé kell fordulni a kereszteződésben, majd Acsán át Balassagyarmat felé."
+            by_train:
+              title: "Vonattal"
+              paragraph_1: "MÁV menetrend- info: +36 40 49 49 49 és "
+              paragraph_2: "A vonat Budapest-Keleti pályaudvarról indul, Aszódon átszállással, Nógrádkövesdnél kell leszállni."
+              paragraph_3: "Shuttle-buszt biztosítunk a vasútállomás és a táborhely között. 500 Ft / út. Fizetni a helyszínen tudsz."
+            rented_bus:
+              title: "Bérelt autóbusszal"
+              paragraph_1: "Buszokat indítunk a Huszár utcai centrumtól Becskére és vissza."
+              paragraph_2: "Budapest-Becske: 2013-07-09 11:00 és 17:00"
+              paragraph_3: "Becske-Budapest: 2013-07-14 17:00"
+              paragraph_4: "Buszköltség: 2000 Ft / út, amelyet július 19-ig kérünk befizetni. Jelentkezés regisztrációkor. Információ a transfer@buddhizmusma.hu email címen."
+          usefull_information:
+            title: "Hasznos információk"
+            paragraph_1: "Amit érdemes magunkkal hozni: sátor, fólia, ragasztó, hálózsák, ülőpárna, gumicsizma, esőkabát, elemlámpa, evőeszköz, tányér, pohár, kullancsriasztó, naptej, házipatika."
+            paragraph_2: "Ha valakinek speciális étrendje van, kérjük, gondoskodjon az ellátásáról, viszont nem romlandó élelmiszereket hozzon, mert nincs egyedi tárolásra lehetőségünk."
+            paragraph_3: "Fülhallgatós FM-rádiót mindenki hozzon, mert Sherab Gyalcen rinpocse programjai angolul folynak szinkrontolmácsolással!!!"
+            paragraph_4: "Mindenkit kérünk, fokozottan figyeljen:"
+            paragraph_4_1: "Kullancsveszélyre"
+            paragraph_4_2: "Hőségveszélyre"
+            paragraph_4_3: "Víztakarékosságra"
+            paragraph_4_4: "A kurzus területén a vezetékes víz nem iható"
+            paragraph_4_5: "Szelektív hulladékgyűjtésre"
+          child_care:
+            title: "Gyermekfelügyelet"
+            description: "A kurzus programjai alatt biztosítjuk a szülők bevonásával a gyermekek felügyeletét. Külön táborhelyet is fenntartunk a játszótér környékén a családoknak. Kérjük, hogy a gyermekeket is regisztráljátok!! "
+          blood_donation:
+            title: "Véradást is szervezünk a kurzus alatt"
+            description: "Időpont: 2013. Július 11-12., 9:00-15:00-ig. Személyi igazolvány, lakcím- és tb-kártya szükséges hozzá. EU-országokból érkezők szintén adhatnak vért (személyi azonosságot igazoló okmány szükséges)."
+          further_information:
+            title: "További információk"
+            community: "Gyémánt Út Buddhista Közösség"
+            address: "1074 Budapest, Huszár utca 7-9."
+            phone: "információs telefon: +3620-4946-660"
+            email: "e-mail: becske@buddhizmusma.hu"
         programs:
           menu_title: "Programok"
           title:
