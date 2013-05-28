@@ -10,7 +10,7 @@ Brk2013::Application.routes.draw do
 
   get "static_pages/information"
 
-  root :to => 'users#new'
+  root :to => 'static_pages#home'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
