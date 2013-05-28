@@ -270,9 +270,11 @@ en:
       program:
         program_name_hu: "Program"
         program_name_en: "Program"
-        price_full: "Full price"
-        price_member: "Supporter price"
-        price_discount: "Discount price"
+        price_full: "Full price in forint"
+        price_full_eur: "Full price in Euro"
+        price_member: "Supporter price in forint"
+        price_discount: "Discount price in forint"
+        price_discount_eur: "Discount price in Euro"
         event_date: "Event date"
       registration:
       travel:

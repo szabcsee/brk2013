@@ -269,9 +269,11 @@ hu:
       program:
         program_name_hu: 'Program'
         program_name_en: 'Program'
-        price_full: 'Teljes ár'
-        price_member: 'Pártolói ár'
-        price_discount: 'Kedvezményes ár'
+        price_full: 'Teljes ár forintban'
+        price_full_eur: 'Teljes ár euroban'
+        price_member: 'Pártolói ár forintban'
+        price_discount: 'Kedvezményes ár forintban'
+        price_discount_eur: 'Kedvezményes ár euroban'
         event_date: 'Esemény dátuma'
       registration:
       travel:
