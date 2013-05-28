@@ -152,17 +152,11 @@ body.static_pages.karma_paksi #karma_paksi_image {
     float: right;
 }
 
-body.static_pages.information span,
-body.static_pages.information strong,
-body.static_pages.information p {
+body.static_pages.information #container ul li {
     display: block;
     font-size: 16px;
     line-height: 160%;
-    margin-left: 25px;
 }
-body.static_pages.information p {
-    font-weight: bold;
-    font-style: italic;
-    line-height: 120%;
+body.static_pages.information ul {
     margin: 10px 25px;
 }
