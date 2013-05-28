@@ -13,9 +13,9 @@ hu:
     brasil: "Brazília"
     bulgaria: "Bulgária"
     czech: "Csehország"
-    chile: "Csíle"
+    chile: "Chile"
     denmark: "Dánia"
-    south_africa: "Dél Afrika"
+    south_africa: "Dél-Afrika"
     ecuador: "Ecuador"
     united_kingdom: "Egyesült Királyság"
     united_states: "Egyesült Államok"
@@ -45,7 +45,7 @@ hu:
     malta: "Málta"
     mexico: "Mexikó"
     moldova: "Moldova"
-    monaco: "Monakó"
+    monaco: "Monaco"
     montenegro: "Montenegró"
     norway: "Norvégia"
     nepal: "Nepál"
@@ -66,7 +66,7 @@ hu:
     spain: "Spanyolország"
     sweden: "Svédország"
     switzerland: "Svájc"
-    thailand: "Thailand"
+    thailand: "Thaiföld"
     ukraine: "Ukrajna"
     uruguay: "Uruguay"
     venezuela: "Venezuela"
@@ -83,7 +83,7 @@ hu:
   price_category_explanation_escort: "nem veszek részt a programokon, csak kísérő vagyok"
   price_category_explanation_discount: "14-18 éves, 60 felett, családi, keleti országból jöttem és a szervezőknél külön regisztráltam"
   i_participate: "Részt veszek"
-  full_course_participation: "Ha az egész kurzuson részt szeretnél venni, csak jelöld be ezt."
+  full_course_participation: "Az egész kurzuson szeretnék részt venni."
   price_category_title: "Ár kategória"
   price_category:
     full: "teljes"
@@ -124,7 +124,7 @@ hu:
   lunch: "ebéd"
   three_time: "teljes étkezés"
   no_food: "nincs"
-  sitename: "Becskei Guru Jóga Kurzus Regisztráció 2013"
+  sitename: "Becskei Gurujóga Kurzus Regisztráció 2013"
   meals: "Étkezések"
   vegetarian: "vegetáriánus"
   meat: "húsos"
@@ -143,8 +143,8 @@ hu:
   child: "Gyerek"
   registrations: "Program regisztráció"
   travel: "Utazás"
-  travel_description: "Amennyiben szeretnél regisztrálni a busz útra Budapest Becske között és a kurzus után vissza, töltsd ki a releváns mezőket lentebb."
-  flight_description: "Ha repülőgéppel érkezel Budapestre, akkor megpróbálunk felvenni téged a reptéren. Ehhez vedd fel a kapcsolatot a Budapesti központtal."
+  travel_description: "Amennyiben szeretnél regisztrálni a Budapest-Becske buszjáratra és a kurzus után vissza, töltsd ki az alábbi mezőket."
+  flight_description: "Ha repülőgéppel érkezel Budapestre, akkor megpróbálunk felvenni téged a reptéren. Ehhez vedd fel a kapcsolatot a Budapesti Meditációs Központtal."
   email_dear: "Kedves"
   email_body_1: "Sikeresen regisztrált a 2013-as becskei Guru Jóga kurzusra."
   email_body_2: "A regisztráció referenciaszáma:"
@@ -413,7 +413,7 @@ hu:
     select:
       prompt: Válasszon
     submit:
-      create: Regisztrál
+      create: Regisztráció
       submit: ! '%{model} Mentése'
       update: ! '%{model} Módosítása'
   number:
