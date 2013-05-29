@@ -79,11 +79,11 @@ en:
   log_in: "Log in"
   price_method_warning: "Don't forget to choose, when do you want to pay."
   email_warning: "Please make sure that your email address is correct."
-  price_category_explanation_full: "I take part in the full course"
-  price_category_explanation_escort: "I do not participate on the programs, I am only escort of somebody"
-  price_category_explanation_discount: "age 14-18, age over 60, family discount, eastern country discount and I have registered it with the organizers"
+  price_category_explanation_full: "I take part in the full course."
+  price_category_explanation_escort: "I do not participate on the programs, I am only escort of somebody."
+  price_category_explanation_discount: "Age 15-18, age over 60, family discount, or I have registered it with the organizers."
   i_participate: "Participate"
-  full_course_participation: "If you want to participate on the whole course, just click on the checkbox here"
+  full_course_participation: "I would like to participate on the whole course."
   price_category_title: "Price category"
   price_category:
     full: "full"
@@ -168,7 +168,7 @@ en:
           menu_title: "Home"
           title: "Guru Yoga course with Sherab Gyaltsen Rinpoche and Lama Ole Nydahl"
           subtitle: "2. Karmapa (Karma Pakshi) empowerment and teachings"
-          date: "Date: 9th to the 14th of July, 2013"
+          date: "Date: 8th to the 14th of July, 2013"
           location: "Place: Becske, retreat centre of the Diamond Way Buddhist Community"
           teachers: "Travel teachers - Tommy Boggs and Pedro Gomez"
           description: "To help us with the organisation, please register even if you only come as a visitor accompanying family or friends and do not wish to participate in the programme."
@@ -185,7 +185,7 @@ en:
           menu_title: "Information"
           accomodation:
             title: "Accomodation"
-            paragraph_1: "In your own tent on the course area"
+            paragraph_1: "In your own tent on the course area."
             paragraph_2: "In your own caravan: you may park in a separate area under the Stupa (we cannot supply water and electricity)."
             paragraph_3: "Pensions and other accommodation around Becske: "
             link_1: "faradtvandor, "
@@ -194,7 +194,7 @@ en:
             link_4: "tavifeszek"
           parking:
             title: "Parking"
-            paragraph_1: "Only in the guarded parking area opposite the Stupa (parking fee: Euro 4 for the whole week or Euro 1 / day)"
+            paragraph_1: "Only in the guarded parking area opposite the Stupa (parking fee: 2 Euros for the whole week)"
             paragraph_2: "No driving into the course area either by car or motorcycle because of the high number of participants. We do count on your cooperation concerning this issue."
             paragraph_3: "The speed limit in Petőfi utca is 30 kms/hr. Please keep the speed limit."
             paragraph_4: "Exit from the parking area is opposite the entrance, in the direction of Mikszáth utca."
@@ -211,13 +211,13 @@ en:
               title: "By train"
               paragraph_1: "Timetable -MÁV (Hungarian Railways)- info: +36 40 49 49 49 and "
               paragraph_2: "The train leaves from Keleti pályaudvar. You need to change in Aszód and get off the train in Nógrádkövesd."
-              paragraph_3: "Shuttle service is available between the train station and the course area for Euro 2 / ride. You can pay for this on the site."
+              paragraph_3: "Shuttle service is available between the train station and the course area for 2 Euros / ride. You can pay for this on the site."
             rented_bus:
               title: "With rented bus"
               paragraph_1: "Buses run between our Budapest Centre in Huszár utca and Becske and back."
-              paragraph_2: "Budapest-Becske: "
-              paragraph_3: "Becske-Budapest:"
-              paragraph_4: "Bus ticket: Euro 7 / ride, payable together with the course fee. You can register for this service along with your course registration. Further information: transfer@buddhizmusma.hu."
+              paragraph_2: "Budapest-Becske: 09.07.2013. 11:00 és 17:00"
+              paragraph_3: "Becske-Budapest: 14.07.2013. 17:00"
+              paragraph_4: "Bus ticket: 7 Euros / ride, payable together with the course fee. You can register for this service along with your course registration. Further information: transfer@buddhizmusma.hu."
           usefull_information:
             title: "Usefull information"
             paragraph_1: "What to bring with you: tent, plastic sheeting, duck tape, sleeping bag, meditation cushion, rubber boots, raincoat, flashlight, eating utensils, plate, glass, tick repellent, sunscreen, basic medication that you might need."
@@ -480,5 +480,5 @@ en:
     formats:
       default: ! '%a, %d %b %Y %H:%M:%S %z'
       long: ! '%d %B, %Y %H:%M'
-      short: ! '%e. %B %Y. (%A)'
+      short: ! '%e. %B %Y. %H:%M'
     pm: pm

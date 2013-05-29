@@ -151,7 +151,11 @@ body.static_pages.karma_paksi #karma_paksi_image {
     display: block;
     float: right;
 }
-
+body.static_pages.information #page_content strong {
+	display: block;
+	margin: 10px 25px;
+	font-size: 16px;
+}
 body.static_pages.information #page_content ul li {
     display: block;
     font-size: 16px;
@@ -159,4 +163,22 @@ body.static_pages.information #page_content ul li {
 }
 body.static_pages.information #page_content ul {
     margin: 10px 25px;
+}
+body.static_pages.information #page_content h4 {
+    margin: 10px 25px;
+}
+body.static_pages.information #page_content table{
+	margin: 10px 25px;
+    width: 60%;
+}
+body.static_pages.information #page_content td{
+    font-size: 16px;
+    line-height: 160%;
+    height: 100%;
+    text-align: left;
+}
+body.static_pages.information #page_content th{
+    font-size: 16px;
+    line-height: 160%;
+    height: 100%;
 }

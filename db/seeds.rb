@@ -1,9 +1,20 @@
 # encoding: UTF-8
 Program.delete_all
 # . . .
+Program.create(id: 0,
+  program_name_hu: '24 órás gurujóga meditáció a 16. Karmapán',
+  program_name_en: '24 hours Guru Yoga meditation on the 16th Karmapa',
+  price_full: 0,
+  price_full_eur: 0,
+  price_discount_eur: 0,
+  price_discount: 0,
+  exchange_rate: 280,
+  event_date: DateTime.strptime("2013-07-08 14:00+02:00", '%Y-%m-%d %H:%M%z')
+  )
+# . . .
 Program.create(id: 1,
-  program_name_hu: 'Tommy Boggs előadása',
-  program_name_en: 'Tommy Boggs travelling teacher',
+  program_name_hu: 'Tommy Boggs tanítása',
+  program_name_en: 'Tommy Boggs travelling teacher\'s lecture',
   price_full: 1200,
   price_full_eur: 5,
   price_discount_eur: 2,
@@ -24,8 +35,8 @@ Program.create(id: 2,
   )
 # . . .
 Program.create(id: 3,
-  program_name_hu: 'Pedro Gomez előadása',
-  program_name_en: 'Pedro Gomez travelling teacher',
+  program_name_hu: 'Pedro Gomez tanítása',
+  program_name_en: 'Pedro Gomez travelling teacher\'s lecture',
   price_full: 1200,
   price_full_eur: 5,
   price_discount_eur: 2,
@@ -79,7 +90,7 @@ Program.create(id: 7,
   )
 # . . .
 Program.create(id: 8,
-  program_name_hu: 'Láma Ole Nydahl tanítása (20pm)',
+  program_name_hu: 'Láma Ole Nydahl tanítása',
   program_name_en: 'Lama Ole Nydahl\'s lecture',
   price_full: '3500',
   price_full_eur: 12.5,
@@ -112,7 +123,7 @@ Program.create(id: 10,
   )
 # . . .
 Program.create(id: 11,
-  program_name_hu: 'Serab Gyalcen rinpocse - 2. Karmapa Karma Paksi-beavatás (11am)',
+  program_name_hu: 'Serab Gyalcen rinpocse - 2. Karmapa Karma Paksi-beavatás',
   program_name_en: 'Sherab Gyaltsen Rinpoche - Karmapa Pakshi (2nd Karmapa) empowerment',
   price_full: 7000,
   price_full_eur: 25,
