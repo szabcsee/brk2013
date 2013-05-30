@@ -14,7 +14,16 @@
     <th><%= Program.human_attribute_name(:price_discount_eur)%></th>
     <th><%= Program.human_attribute_name(:price_discount)%></th>
   </tr>
-
+  <tr>
+  	<td><%= t 'activerecord.controllers.static_pages.programs.24hours_meditation_date' %></td>
+  	<td><%= t 'activerecord.controllers.static_pages.programs.24hours_meditation_description' %></td>
+  	<td/><td/><td/><td/>
+  </tr>
+  <tr>
+  	<td><%= t 'activerecord.controllers.static_pages.programs.daily_meditation_date' %></td>
+  	<td><%= t 'activerecord.controllers.static_pages.programs.daily_meditation_description' %></td>
+  	<td/><td/><td/><td/>
+  </tr>
 <% @programs.each do |program| %>
   <tr>
     <td><%= l program.event_date, :format => :long %></td>

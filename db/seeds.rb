@@ -1,17 +1,6 @@
 # encoding: UTF-8
 Program.delete_all
 # . . .
-Program.create(id: 0,
-  program_name_hu: '24 órás gurujóga meditáció a 16. Karmapán',
-  program_name_en: '24 hours Guru Yoga meditation on the 16th Karmapa',
-  price_full: 0,
-  price_full_eur: 0,
-  price_discount_eur: 0,
-  price_discount: 0,
-  exchange_rate: 280,
-  event_date: DateTime.strptime("2013-07-08 14:00+02:00", '%Y-%m-%d %H:%M%z')
-  )
-# . . .
 Program.create(id: 1,
   program_name_hu: 'Tommy Boggs tanítása',
   program_name_en: 'Tommy Boggs travelling teacher\'s lecture',

@@ -192,9 +192,9 @@ hu:
             full_3_1: "Beavatás"
             full_3_2: "7 000 Ft"
             full_4_1: "Láma Ole Nydahl és Serab Gyalcen rinpocse tanítása"
-            full_4_2: "3 500 Ft"
+            full_4_2: "3 500 Ft / tanítás"
             full_5_1: "Utazótanítók tanítása"
-            full_5_2: "1 200 Ft"
+            full_5_2: "1 200 Ft / tanítás"
             discount: "Kedvezményes ár"
             discount_1_1: "Teljes kurzus"
             discount_1_2: "17 500 Ft"
@@ -241,6 +241,8 @@ hu:
             pay_there_2_1: "július 9-14."
             pay_there_2_2: "csak ebéd"
             pay_there_2_3: "1 200 Ft / nap"
+            info: "A konyha glutén- és laktóz- mentesen főz idén is. Kérhetsz étkezést a teljes kurzusra vagy csak bizonyos napokra."
+            info_3_meals: "Javasoljuk, vedd igénybe a napi háromszori regisztrált étkezést."
           accomodation:
             title: "Szálláslehetőségek"
             paragraph_1: "Saját sátorban a kurzus területén."
@@ -260,7 +262,8 @@ hu:
             title: "Megközelítés"
             address: "Cím: Becske, Petőfi Sándor utca 47."
             gps_coordinates: "GPS koordináták: N 47.918729; E 19.382093; vagy 47°55'7.42\'N; 19°22'55.90\'E"
-            map_link: "Térkép link"
+            map: "Térkép linkje"
+            map_link: "http://maps.google.hu/maps/empw?url=http:%2F%2Fmaps.google.hu%2Fmaps%2Fms%3Fmsid%3D206542884478124380009.0004bad02bbd01cace4cd%26msa%3D0%26ie%3DUTF8%26ll%3D47.706862,19.227672%26spn%3D0.413073,0.301613%26t%3Dm%26vpsrc%3D6%26output%3Dembed&hl=hu&gl=hu"
             by_car:
               title: "Autóval"
               paragraph_1: "Az M3-as autópályán a 39. km-nél található kijáratig (Bag, Tura, Aszód felé). Aszódon keresztül Balassagyarmat irányában: Aszód, Iklad, Galgagyörk, Püspökhatvan, Acsa, Galgaguta, Nógrádkövesd, Becske."
@@ -278,6 +281,7 @@ hu:
               paragraph_4: "Buszköltség: 2000 Ft / út, amelyet július 19-ig kérünk befizetni. Jelentkezés regisztrációkor. Információ a transfer@buddhizmusma.hu email címen."
           usefull_information:
             title: "Hasznos információk"
+            paragraph_0: "Kutyát és egyéb háziállatot a kurzus területére tilos behozni!"
             paragraph_1: "Amit érdemes magunkkal hozni: sátor, fólia, ragasztó, hálózsák, ülőpárna, gumicsizma, esőkabát, elemlámpa, evőeszköz, tányér, pohár, kullancsriasztó, naptej, házipatika."
             paragraph_2: "A speciális étrenddel kapcsolatos külön kéréseket a konyha nem tudja kiszolgálni és ételek egyéni tárolására sincs lehetőség"
             paragraph_3: "Fülhallgatós FM-rádiót mindenki hozzon, mert Serab Gyalcen rinpocse programjai angolul folynak szinkrontolmácsolással."
@@ -301,8 +305,12 @@ hu:
             email: "e-mail: becske@buddhizmusma.hu"
         programs:
           menu_title: "Programok"
-          title:
+          title: "Programok"
           description: "Tervezett program"
+          24hours_meditation_date: "2013. július 8. 14:00"
+          24hours_meditation_description: "24 órás gurujóga meditáció a 16. Karmapán"
+          daily_meditation_date: "2013. július 10-13. 10:00"
+          daily_meditation_description: "Gurujóga meditáció a 16. Karmapán"
     attributes:
       user:
         email_address: "E-mail"
@@ -328,11 +336,11 @@ hu:
       program:
         program_name_hu: 'Program'
         program_name_en: 'Program'
-        price_full: 'Teljes ár forintban'
-        price_full_eur: 'Teljes ár euroban'
-        price_member: 'Pártolói ár forintban'
-        price_discount: 'Kedvezményes ár forintban'
-        price_discount_eur: 'Kedvezményes ár euroban'
+        price_full: 'Teljes ár Forintban'
+        price_full_eur: 'Teljes ár Euroban'
+        price_member: 'Pártolói ár Forintban'
+        price_discount: 'Kedvezményes ár Forintban'
+        price_discount_eur: 'Kedvezményes ár Euroban'
         event_date: 'Esemény dátuma'
       registration:
       travel:
@@ -531,6 +539,6 @@ hu:
     am: de.
     formats:
       default: ! '%Y. %b %e., %H:%M'
-      long: ! '%Y. %B %e., %H:%M'
-      short: ! '%Y. %b %e., %H:%M'
+      long: ! '%Y. %B %e. %H:%M'
+      short: ! '%Y. %b %e. %H:%M'
     pm: du.
