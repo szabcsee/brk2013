@@ -146,7 +146,7 @@ hu:
   travel_description: "Amennyiben szeretnél regisztrálni a Budapest-Becske buszjáratra és a kurzus után vissza, töltsd ki az alábbi mezőket."
   flight_description: "Ha repülőgéppel érkezel Budapestre, akkor megpróbálunk felvenni téged a reptéren. Ehhez vedd fel a kapcsolatot a Budapesti Meditációs Központtal."
   email_dear: "Kedves"
-  email_body_1: "Sikeresen regisztrált a 2013-as becskei Guru Jóga kurzusra."
+  email_body_1: "Sikeresen regisztrált a 2013-as becskei Gurujóga kurzusra."
   email_body_2: "A regisztráció referenciaszáma:"
   email_body_2_1: "Kérjük a referenciaszámot jegyezd fel, mert a fizetésnél szüksége lesz rá."
   email_body_3: "A regisztráció további részletei:"
@@ -256,7 +256,7 @@ hu:
             bannk_accout_currency: "Deviza számla"
             bannk_accout_currency_address: "Unicredit Bank Zrt. - HU98109180010000001740990125"
             bannk_accout_currency_swift: "SWIFT: BACXHUHB"
-            bank_account_comment: "In the comments box, please give course/meals/bus fee."
+            bank_account_comment: "A közleménybe kérjük, írd be: kurzus/étkezés/busz díja."
           accomodation:
             title: "Szálláslehetőségek"
             paragraph_1: "Saját sátorban a kurzus területén."
