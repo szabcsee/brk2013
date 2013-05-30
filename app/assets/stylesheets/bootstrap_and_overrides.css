@@ -183,3 +183,7 @@ body.static_pages.information #page_content th{
     line-height: 160%;
     height: 100%;
 }
+body.static_pages.information #paragraph li{
+    list-style-type: square;
+    margin-left: 35px;
+}
