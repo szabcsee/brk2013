@@ -144,7 +144,7 @@ en:
   child: "Child"
   registrations: "Program registration"
   travel: "Travel, shuttle registration"
-  travel_description: "If you require assistance with travel, please fill in the fields below. We try to assist you with airport pick-up and will provide shuttle service between the Budapest centre and Becske and return after the course."
+  travel_description: "If you require assistance with travel, please fill in the fields below."
   flight_description: ""
   email_dear: "Dear"
   email_body_1: "You have successfully registered to the Becske - Guru Yoga course, 2013."

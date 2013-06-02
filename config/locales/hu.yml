@@ -144,7 +144,7 @@ hu:
   registrations: "Program regisztráció"
   travel: "Utazás"
   travel_description: "Amennyiben szeretnél regisztrálni a Budapest-Becske buszjáratra és a kurzus után vissza, töltsd ki az alábbi mezőket."
-  flight_description: "Ha repülőgéppel érkezel Budapestre, akkor megpróbálunk felvenni téged a reptéren. Ehhez vedd fel a kapcsolatot a Budapesti Meditációs Központtal."
+  flight_description: ""
   email_dear: "Kedves"
   email_body_1: "Sikeresen regisztrált a 2013-as becskei Gurujóga kurzusra."
   email_body_2: "A regisztráció referenciaszáma:"
