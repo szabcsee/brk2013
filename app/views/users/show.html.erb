@@ -47,10 +47,12 @@
 		<th><%= Meal.human_attribute_name(:meal_date) %></th>
 		<th><%= Meal.human_attribute_name(:meal_type) %></th>
 	</tr>
+	<!--
 	<tr>
-		<td> <%= l meal.first_day, :format => :long %> </td>
-		<td> <%= show_meal_type(meal.first_day_meal_type) %> </td>
+		<td> <%# l meal.first_day, :format => :long %> </td>
+		<td> <%# show_meal_type(meal.first_day_meal_type) %> </td>
 	</tr>
+	-->
 	<tr>
 		<td> <%= l meal.second_day, :format => :long %> </td>
 		<td> <%= show_meal_type(meal.second_day_meal_type) %> </td>

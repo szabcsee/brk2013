@@ -8,10 +8,9 @@
 		</div>
 		<table>
 			<tr class = "fields">
-				<td class="field"> <%= @meal_dates[0] %>
-				<br />
+				<td class="field"> 
 				<%= f.hidden_field :first_day, :value => @meal_dates[0] %> </td>
-				<td class="field"> <%= f.select :first_day_meal_type, first_day_meal_type_list, {}, {:class => "meal_price first_day"}%> </td>
+				<td class="field"> <%= f.hidden_field :first_day_meal_type, :value => 0 , :class => "meal_price first_day"%> </td>
 			</tr>
 			<tr>
 				<td class="field"> <%= @meal_dates[1] %>
