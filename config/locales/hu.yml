@@ -1,5 +1,6 @@
 hu:
   registration: "Regisztráció"
+  back: "Vissza"
   escorter: "Kísérő"
   escort_explain: "Ha csak kísérőként veszel részt a kurzuson, válaszd ki, mely napokon fogsz a területen tartózkodni."
   home_country:
@@ -363,7 +364,7 @@ hu:
         bus_trip: 'Busszal utazok'
         departure: 'Busszal Budapestre'
         departure_seats: 'Ülőhelyek száma'
-        flight_date: 'Repülő érkezési idelye'
+        flight_date: 'Repülő érkezési ideje'
         flight_number: 'Járatszám'
   date:
     abbr_day_names:
