@@ -151,6 +151,10 @@ body.static_pages.karma_paksi #karma_paksi_image {
     display: block;
     float: right;
 }
+body.static_pages.information a,
+body.static_pages.information a:visited {
+    color: #D11C36;
+}
 body.static_pages.information p,
 body.static_pages.information #page_content strong {
 	display: block;
@@ -186,4 +190,9 @@ body.static_pages.information #page_content th{
 body.static_pages.information #paragraph li{
     list-style-type: square;
     margin-left: 35px;
+}
+body.static_pages.home img#home_pic {
+    display: block;
+    margin: 10px auto;
+    width: 696px;
 }
