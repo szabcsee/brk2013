@@ -127,10 +127,11 @@ input.btn-primary.btn-action {
     width: 125px;
     padding: 5px 10px;
 }
+a#back_button {
+    margin: 10px 0px;
+}
 /* Static Pages Styling */
-body.static_pages.guru_yoga span, h1, h2, h3, span,
-
-
+body.static_pages.guru_yoga span,
 body.static_pages.home span,
 body.static_pages.home strong,
 body.static_pages.home p {
