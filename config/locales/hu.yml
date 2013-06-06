@@ -1,6 +1,7 @@
 hu:
   registration: "Regisztráció"
   back: "Vissza"
+  read_the_information_pages: "Regisztrációhoz kérem olvassa el az Információk és Programok oldalakat!"
   escorter: "Kísérő"
   escort_explain: "Ha csak kísérőként veszel részt a kurzuson, válaszd ki, mely napokon fogsz a területen tartózkodni."
   home_country:

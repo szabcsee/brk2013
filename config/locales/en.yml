@@ -1,6 +1,7 @@
 en:
   registration: "Registration"
-  back: "Vissza"
+  back: "Back"
+  read_the_information_pages: "Please read the Information and Program menus before you start to register!"
   escorter: "Escort"
   escort_explain: "If you are just escorting someone but not participating on the programs, choose on which days you are going to be on the course site."
   home_country:
