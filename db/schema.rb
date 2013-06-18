@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130519082843) do
+ActiveRecord::Schema.define(:version => 20130618130512) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -81,17 +81,28 @@ ActiveRecord::Schema.define(:version => 20130519082843) do
 
   add_index "meals", ["user_id"], :name => "index_meals_on_user_id"
 
+  create_table "payments", :force => true do |t|
+    t.datetime "date"
+    t.string   "comment"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "amount"
+  end
+
+  add_index "payments", ["user_id"], :name => "index_payments_on_user_id"
+
   create_table "programs", :force => true do |t|
     t.string   "program_name_hu"
     t.string   "program_name_en"
     t.integer  "price_full"
+    t.decimal  "price_full_eur",     :precision => 8, :scale => 2
+    t.decimal  "price_discount_eur", :precision => 8, :scale => 2
     t.integer  "price_discount"
     t.integer  "exchange_rate"
     t.datetime "event_date"
     t.datetime "created_at",                                       :null => false
     t.datetime "updated_at",                                       :null => false
-    t.decimal  "price_full_eur",     :precision => 8, :scale => 2
-    t.decimal  "price_discount_eur", :precision => 8, :scale => 2
   end
 
   create_table "registrations", :force => true do |t|
@@ -125,9 +136,9 @@ ActiveRecord::Schema.define(:version => 20130519082843) do
     t.string   "price_category"
     t.string   "payment"
     t.string   "reference_number"
+    t.string   "password_digest"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
-    t.string   "password_digest"
   end
 
 end

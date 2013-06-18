@@ -1,5 +1,5 @@
 Brk2013::Application.routes.draw do
-  
+
   get "static_pages/home"
 
   get "static_pages/guru_yoga"
@@ -17,16 +17,18 @@ Brk2013::Application.routes.draw do
 
   get "sessions/new"
 
-  resources :meals
-
-
   scope ":locale" do
     resources :users
     resources :children
     resources :registrations
-    resources :meals
+    resources :meals do
+      resources :meal_report
+    end
     resources :programs
-    resources :travels
+    resources :payments
+    resources :travels do
+      resources :travel_report
+    end
     resources :sessions
   end
 

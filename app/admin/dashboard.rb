@@ -17,6 +17,7 @@ ActiveAdmin.register_page "Dashboard" do
          panel "Special Reports" do
            ul do
                li link_to('Meal Reports', '/admin/meals/meal_report/')
+               li link_to('Travel Reports', '/admin/travels/travel_report')
            end
          end
        end

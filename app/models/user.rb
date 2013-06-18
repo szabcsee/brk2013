@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
   has_many :programs, :through => :registrations
   has_many :children, :dependent => :destroy
   has_many :travels, :dependent => :destroy
+  has_many :payments, :dependent => :destroy
 
   attr_accessible :email_address, :password, :password_confirmation, :first_name, :home_country, :payment, :phone_number, :price_category, :price_method, :reference_number, :second_name, :meals_attributes, :registrations_attributes, :children_attributes, :travels_attributes
   
