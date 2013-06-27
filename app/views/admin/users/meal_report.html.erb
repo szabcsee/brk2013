@@ -1,0 +1,88 @@
+
+<table class="table">
+<tr>
+<th>Dátum</th>
+<th>Vegetáriánus reggeli</th>
+<th>Vegetáriánus ebéd</th>
+<th>Vegetáriánus vacsora</th>
+<th>Húsos reggeli</th>
+<th>Húsos ebéd</th>
+<th>Húsos vacsora</th>
+<th>Programon résztvevők</th>
+</tr>
+<tr>
+<td><%= @meal_dates[0] %></td>
+<td><%= Meal.where(:food_type => 'vegetarian', :first_day_meal_type => 3).size %></td>
+<td><%= Meal.where(:food_type => 'vegetarian', :first_day_meal_type => 1).size + Meal.where(:food_type => 'meat', :first_day_meal_type => 3).size %></td>
+<td><%= Meal.where(:food_type => 'vegetarian', :first_day_meal_type => 3).size %></td>
+<td><%= Meal.where(:food_type => 'meat', :first_day_meal_type => 3).size %></td>
+<td><%= Meal.where(:food_type => 'meat', :first_day_meal_type => 1).size + Meal.where(:food_type => 'meat', :first_day_meal_type => 3).size %></td>
+<td><%= Meal.where(:food_type => 'meat', :first_day_meal_type => 3).size %></td>
+<td>Nincs program</td>
+</tr>
+<tr>
+<td><%= @meal_dates[1] %></td>
+<td><%= Meal.where(:food_type => 'vegetarian', :second_day_meal_type => 3).size %></td>
+<td><%= Meal.where(:food_type => 'vegetarian', :second_day_meal_type => 1).size + Meal.where(:food_type => 'vegetarian', :second_day_meal_type => 3).size %></td>
+<td><%= Meal.where(:food_type => 'vegetarian', :second_day_meal_type => 3).size %></td>
+<td><%= Meal.where(:food_type => 'meat', :second_day_meal_type => 3).size %></td>
+<td><%= Meal.where(:food_type => 'meat', :second_day_meal_type => 1).size + Meal.where(:food_type => 'meat', :second_day_meal_type => 3).size %></td>
+<td><%= Meal.where(:food_type => 'meat', :second_day_meal_type => 3).size %></td>
+<td>de: <%= Registration.where(:program_id => 1).size + Registration.where(:program_id => 12).size %>
+	du: <%= Registration.where(:program_id => 2).size + Registration.where(:program_id => 13).size %></td>
+</tr>
+<tr>
+<td><%= @meal_dates[2] %></td>
+<td><%= Meal.where(:food_type => 'vegetarian', :third_day_meal_type => 3).size %></td>
+<td><%= Meal.where(:food_type => 'vegetarian', :third_day_meal_type => 1).size + Meal.where(:food_type => 'vegetarian', :third_day_meal_type => 3).size %></td>
+<td><%= Meal.where(:food_type => 'vegetarian', :third_day_meal_type => 3).size %></td>
+<td><%= Meal.where(:food_type => 'meat', :third_day_meal_type => 3).size %></td>
+<td><%= Meal.where(:food_type => 'meat', :third_day_meal_type => 1).size + Meal.where(:food_type => 'meat', :third_day_meal_type => 3).size %></td>
+<td><%= Meal.where(:food_type => 'meat', :third_day_meal_type => 3).size %></td>
+<td>de: <%= Registration.where(:program_id => 3).size + Registration.where(:program_id => 14).size %>
+	du: <%= Registration.where(:program_id => 4).size + Registration.where(:program_id => 15).size %></td>
+</tr>
+<tr>
+<td><%= @meal_dates[3] %></td>
+<td><%= Meal.where(:food_type => 'vegetarian', :fourth_day_meal_type => 3).size %></td>
+<td><%= Meal.where(:food_type => 'vegetarian', :fourth_day_meal_type => 1).size + Meal.where(:food_type => 'vegetarian', :fourth_day_meal_type => 3).size %></td>
+<td><%= Meal.where(:food_type => 'vegetarian', :fourth_day_meal_type => 3).size %></td>
+<td><%= Meal.where(:food_type => 'meat', :fourth_day_meal_type => 3).size %></td>
+<td><%= Meal.where(:food_type => 'meat', :fourth_day_meal_type => 1).size + Meal.where(:food_type => 'meat', :fourth_day_meal_type => 3).size %></td>
+<td><%= Meal.where(:food_type => 'meat', :fourth_day_meal_type => 3).size %></td>
+<td>de: <%= Registration.where(:program_id => 5).size + Registration.where(:program_id => 16).size %>
+	du: <%= Registration.where(:program_id => 6).size + Registration.where(:program_id => 17).size %></td>
+</tr>
+<tr>
+<td><%= @meal_dates[4] %></td>
+<td><%= Meal.where(:food_type => 'vegetarian', :fifth_day_meal_type => 3).size %></td>
+<td><%= Meal.where(:food_type => 'vegetarian', :fifth_day_meal_type => 1).size + Meal.where(:food_type => 'vegetarian', :fifth_day_meal_type => 3).size %></td>
+<td><%= Meal.where(:food_type => 'vegetarian', :fifth_day_meal_type => 3).size %></td>
+<td><%= Meal.where(:food_type => 'meat', :fifth_day_meal_type => 3).size %></td>
+<td><%= Meal.where(:food_type => 'meat', :fifth_day_meal_type => 1).size + Meal.where(:food_type => 'meat', :fifth_day_meal_type => 3).size %></td>
+<td><%= Meal.where(:food_type => 'meat', :fifth_day_meal_type => 3).size %></td>
+<td>de: <%= Registration.where(:program_id => 7).size + Registration.where(:program_id => 18).size %>
+	du: <%= Registration.where(:program_id => 8).size + Registration.where(:program_id => 19).size %></td>
+</tr>
+<tr>
+<td><%= @meal_dates[5] %></td>
+<td><%= Meal.where(:food_type => 'vegetarian', :sixth_day_meal_type => 3).size %></td>
+<td><%= Meal.where(:food_type => 'vegetarian', :sixth_day_meal_type => 1).size + Meal.where(:food_type => 'vegetarian', :sixth_day_meal_type => 3).size %></td>
+<td><%= Meal.where(:food_type => 'vegetarian', :sixth_day_meal_type => 3).size %></td>
+<td><%= Meal.where(:food_type => 'meat', :sixth_day_meal_type => 3).size %></td>
+<td><%= Meal.where(:food_type => 'meat', :sixth_day_meal_type => 1).size + Meal.where(:food_type => 'meat', :sixth_day_meal_type => 3).size %></td>
+<td><%= Meal.where(:food_type => 'meat', :sixth_day_meal_type => 3).size %></td>
+<td>de: <%= Registration.where(:program_id => 9).size + Registration.where(:program_id => 20).size %>
+	du: <%= Registration.where(:program_id => 10).size + Registration.where(:program_id => 21).size %></td>
+</tr>
+<tr>
+<td><%= @meal_dates[6] %></td>
+<td><%= Meal.where(:food_type => 'vegetarian', :seventh_day_meal_type => 3).size %></td>
+<td><%= Meal.where(:food_type => 'vegetarian', :seventh_day_meal_type => 1).size + Meal.where(:food_type => 'vegetarian', :seventh_day_meal_type => 3).size %></td>
+<td><%= Meal.where(:food_type => 'vegetarian', :seventh_day_meal_type => 3).size %></td>
+<td><%= Meal.where(:food_type => 'meat', :seventh_day_meal_type => 3).size %></td>
+<td><%= Meal.where(:food_type => 'meat', :seventh_day_meal_type => 1).size + Meal.where(:food_type => 'meat', :seventh_day_meal_type => 3).size %></td>
+<td><%= Meal.where(:food_type => 'meat', :seventh_day_meal_type => 3).size %></td>
+<td><%= Registration.where(:program_id => 11).size + Registration.where(:program_id => 22).size %></td>
+</tr>
+</table>

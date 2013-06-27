@@ -93,7 +93,6 @@ en:
     discount: "discount"
   price_method:
     after: "from 20th June"
-    before: "until 19th June"
     null: " -- choose --" 
   first_day_meal_type:
     1: "Lunch"

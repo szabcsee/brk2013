@@ -16,8 +16,8 @@ ActiveAdmin.register_page "Dashboard" do
        column do
          panel "Special Reports" do
            ul do
-               li link_to('Meal Reports', '/admin/meals/meal_report/')
-               li link_to('Travel Reports', '/admin/travels/travel_report')
+               li link_to('Meal Reports', '/admin/users/meal_report/')
+               li link_to('Travel Reports', '/admin/users/travel_report')
            end
          end
        end

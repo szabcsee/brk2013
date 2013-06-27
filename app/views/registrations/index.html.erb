@@ -3,14 +3,15 @@
 <table>
   <tr>
     <th>Registration date</th>
-    <th></th>
+    <th>Program id</th>
     <th></th>
     <th></th>
   </tr>
 
 <% @registrations.each do |registration| %>
   <tr>
-    <td><%= registration.registration_date %></td>
+    <td><%= registration.participate %></td>
+    <td><%= registration.program_id %></td>
     <td><%= link_to 'Show', registration %></td>
     <td><%= link_to 'Edit', edit_registration_path(registration) %></td>
     <td><%= link_to 'Destroy', registration, method: :delete, data: { confirm: 'Are you sure?' } %></td>
