@@ -1,5 +1,5 @@
 ActiveAdmin.register User do
-  
+
   index do
     column :first_name
     column :second_name
@@ -14,6 +14,9 @@ ActiveAdmin.register User do
     end
     column "Travels" do |user|
         link_to('Travels', admin_user_travels_path(user))
+    end
+    column "Children" do |user|
+        link_to('Children', admin_user_children_path(user))
     end
     column "Payments" do |user|
         link_to('Payments', admin_user_payments_path(user))
@@ -91,6 +94,7 @@ ActiveAdmin.register User do
   end
 
   collection_action :meal_report do 
+        @day_filter = params[:day_filter]
         @meal_dates = ["2013-07-08","2013-07-09","2013-07-10","2013-07-11","2013-07-12","2013-07-13","2013-07-14"]
         @programs = Program.all
         # This will render app/views/admin/meals/meal_report.html.erb
@@ -100,6 +104,8 @@ ActiveAdmin.register User do
             @flyers = Travel.where("flight_number <> ''" )
             @doggers = Travel.where('arrival_seats > 0' || 'departure_seats > 0')
   end
-  
 
+  collection_action :child_report do
+            @children = Child.all
+  end
 end

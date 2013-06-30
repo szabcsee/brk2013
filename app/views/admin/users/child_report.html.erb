@@ -1,0 +1,23 @@
+<h1>Listing children</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Language</th>
+    <th>Child care</th>
+    <th>Parent</th>
+    <th>Parent email</th>
+  </tr>
+
+<% @children.each do |child| %>
+  <tr>
+    <td><%= child.name %></td>
+    <td><%= child.age %></td>
+    <td><%= child.language %></td>
+    <td><%= child.child_care %></td>
+    <td><%= child.user.first_name %> <%= child.user.second_name %></td>
+    <td><%= child.user.email_address %></td>
+  </tr>
+<% end %>
+</table>

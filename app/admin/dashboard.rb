@@ -18,13 +18,21 @@ ActiveAdmin.register_page "Dashboard" do
            ul do
                li link_to('Meal Reports', '/admin/users/meal_report/')
                li link_to('Travel Reports', '/admin/users/travel_report')
+               li link_to('Children Reports', '/admin/users/child_report/')
+           end
+         end
+         panel "Front End User Management" do
+           ul do
+               li link_to('New User', '/hu/users/new/')
+               li link_to('Quick Query User', '/login/')
            end
          end
        end
 
        column do
          panel "Info" do
-           para "Welcome to ActiveAdmin."
+           para "Welcome to Becske Course Management."
+           para "On the left you can see the overall reports for meals, travels and children, you can add quickly a user or query one."
          end
        end
      end
