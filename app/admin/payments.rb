@@ -20,7 +20,7 @@ ActiveAdmin.register Payment do
 
   form do |f|
   	f.inputs "Payment Details" do
-	   f.input :date
+	   f.input :date, :as => :hidden, :value => DateTime.now.to_date
 	   f.input :amount
 	   f.input :comment, :as => :select, :collection => [['bank transfer'],['cash']]
   	 f.buttons

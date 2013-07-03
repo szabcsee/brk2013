@@ -7,8 +7,8 @@ ActiveAdmin.register User do
     column :home_country 
     column :price_category
     column :price_method
+    column :payment
     column :reference_number
-    column :created_at
     column "Meals" do |user|
         link_to('Meals', admin_user_meals_path(user))
     end
@@ -32,6 +32,8 @@ ActiveAdmin.register User do
         row :home_country 
         row :price_category
         row :price_method
+        row :payment
+        row :reference_number
     end
 
     if user.meals && user.meals.count > 0
