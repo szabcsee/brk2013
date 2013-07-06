@@ -19,6 +19,7 @@ ActiveAdmin.register Meal do
  	column :seventh_day
  	column :seventh_day_meal_type
  	column :food_type
+ 	default_actions
  end
 
  form do |f|
