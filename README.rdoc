@@ -1,7 +1,12 @@
-- Registration and administration for the Becske 2013 Course
+## Registration and administration for the Becske 2013 Course
 
-v.1.0 beta
------------
+The application is very tailor made as it uses a lot of front-end javascript for price calculation as the event's pricing model was rather complicated.
+
+The followings are used for the application:
+
+- nested form
+- active admin
+- bootstrap
 
 
 _________________________
