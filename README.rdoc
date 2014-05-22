@@ -1,4 +1,4 @@
-## Registration and administration for the Becske 2013 Course
+# Registration and administration for the Becske 2013 Course
 
 The application is very tailor made as it uses a lot of front-end javascript for price calculation as the event's pricing model was rather complicated.
 
